@@ -111,10 +111,55 @@ export default function RolesPage() {
       salary: "$50K-$95K",
       type: "Full-time",
       postedDays: 3
+    },
+    {
+      category: "Insurance",
+      title: "Life Insurance Sales Agent",
+      company: "National Life Insurance Co",
+      location: "Chicago, IL",
+      salary: "$55K-$110K",
+      type: "Full-time",
+      postedDays: 4
+    },
+    {
+      category: "Insurance",
+      title: "Final Expense Sales Representative",
+      company: "Senior Life Services",
+      location: "Tampa, FL",
+      salary: "$50K-$100K",
+      type: "Full-time",
+      postedDays: 6
+    },
+    {
+      category: "Landscaping",
+      title: "Lawn Care Sales Consultant",
+      company: "GreenScape Solutions",
+      location: "Charlotte, NC",
+      salary: "$45K-$85K",
+      type: "Full-time",
+      postedDays: 3
+    },
+    {
+      category: "Gas & Electric",
+      title: "Energy Solutions Specialist",
+      company: "Power Choice Energy",
+      location: "Columbus, OH",
+      salary: "$55K-$95K",
+      type: "Full-time",
+      postedDays: 5
+    },
+    {
+      category: "Home Services",
+      title: "Home Improvement Consultant",
+      company: "Complete Home Services",
+      location: "Seattle, WA",
+      salary: "$60K-$105K",
+      type: "Full-time",
+      postedDays: 2
     }
   ];
 
-  const categories = ["All", "Solar", "Roofing", "Pest Control", "Windows", "HVAC", "Security", "Fiber/Telecom", "Water Treatment"];
+  const categories = ["All", "Solar", "Roofing", "Windows", "Pest Control", "HVAC", "Security", "Water Treatment", "Fiber/Telecom", "Insurance", "Landscaping", "Gas & Electric", "Home Services"];
 
   return (
     <main className="relative" style={{ backgroundColor: '#F5F3EF' }}>
