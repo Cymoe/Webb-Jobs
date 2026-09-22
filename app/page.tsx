@@ -83,10 +83,27 @@ export default function Home() {
       <header className="fixed top-0 left-0 right-0 z-50 py-6 px-8 border-b border-gray-200" style={{ backgroundColor: 'rgba(245, 243, 239, 0.98)' }}>
         <div className="max-w-7xl mx-auto flex items-center justify-between">
           <a href="/" className="flex items-center gap-3 group">
-            <svg width="32" height="48" viewBox="0 0 32 48" fill="none" xmlns="http://www.w3.org/2000/svg">
-              <path d="M 8 2 L 14 4 L 14 44 L 8 46 Z" fill="#DC2626"/>
-              <line x1="8" y1="2" x2="8" y2="46" stroke="#991B1B" strokeWidth="1.5"/>
-              <circle cx="9.5" cy="24" r="1.5" fill="#991B1B"/>
+            <svg width="40" height="40" viewBox="0 0 40 40" fill="none" xmlns="http://www.w3.org/2000/svg">
+              {/* Outer gear circle representing "Engine" */}
+              <circle cx="20" cy="20" r="18" stroke="#DC2626" strokeWidth="2.5" fill="none"/>
+              
+              {/* Gear teeth - 8 small rectangles around the circle */}
+              <rect x="19" y="0" width="2" height="5" fill="#DC2626"/>
+              <rect x="19" y="35" width="2" height="5" fill="#DC2626"/>
+              <rect x="0" y="19" width="5" height="2" fill="#DC2626"/>
+              <rect x="35" y="19" width="5" height="2" fill="#DC2626"/>
+              
+              {/* Diagonal teeth */}
+              <rect x="6" y="6" width="2" height="4" fill="#DC2626" transform="rotate(-45 7 8)"/>
+              <rect x="32" y="6" width="2" height="4" fill="#DC2626" transform="rotate(45 33 8)"/>
+              <rect x="6" y="30" width="2" height="4" fill="#DC2626" transform="rotate(45 7 32)"/>
+              <rect x="32" y="30" width="2" height="4" fill="#DC2626" transform="rotate(-45 33 32)"/>
+              
+              {/* Person icon in center - head */}
+              <circle cx="20" cy="15" r="4" fill="#DC2626"/>
+              
+              {/* Person icon - shoulders/body */}
+              <path d="M 20 20 C 20 20, 14 22, 14 26 L 26 26 C 26 22, 20 20, 20 20 Z" fill="#DC2626"/>
             </svg>
             <span className="text-xl font-medium tracking-tight" style={{ fontFamily: 'Inter, sans-serif' }}>
               Rep Engine
