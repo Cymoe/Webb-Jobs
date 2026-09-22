@@ -157,15 +157,31 @@ export default function RolesPage() {
             <h1 className="text-5xl md:text-6xl font-bold mb-6 text-gray-900 leading-tight">
               Current Open Roles
             </h1>
-            <p className="text-2xl text-gray-600 max-w-3xl mx-auto">
+            <p className="text-2xl text-gray-600 max-w-3xl mx-auto mb-8">
               High-earning D2D sales positions we're actively recruiting for. Apply below or submit your resume for future opportunities.
             </p>
+            
+            <div className="flex flex-col sm:flex-row gap-4 justify-center">
+              <a
+                href="#roles-grid"
+                className="inline-block px-8 py-4 text-center font-medium rounded transition-colors hover:opacity-90"
+                style={{ backgroundColor: '#DC2626', color: '#FFFFFF' }}
+              >
+                Browse Open Roles
+              </a>
+              <a
+                href="/#talent-pool"
+                className="inline-block px-8 py-4 bg-white hover:bg-gray-50 text-gray-900 text-center font-medium rounded border-2 border-gray-900 transition-colors"
+              >
+                Join Talent Pool
+              </a>
+            </div>
           </div>
         </div>
       </section>
 
       {/* Roles Grid */}
-      <section className="py-20 px-4">
+      <section id="roles-grid" className="py-20 px-4">
         <div className="max-w-6xl mx-auto">
           <div className="grid md:grid-cols-2 lg:grid-cols-3 gap-8">
             {roles.map((role, idx) => (

@@ -145,21 +145,12 @@ export default function Home() {
                 We build, run, and scale your recruiting engine, <span className="font-semibold text-gray-900">automate the pipeline</span>, and fill your calendar with <span className="font-semibold text-gray-900">A-players</span>.
               </p>
               
-              <div className="flex flex-col sm:flex-row gap-4 mb-6">
-                <a
-                  href="#featured-roles"
-                  className="inline-block px-8 py-4 text-center font-medium rounded transition-colors hover:opacity-90"
-                  style={{ backgroundColor: '#DC2626', color: '#FFFFFF' }}
-                >
-                  Browse Open Roles
-                </a>
-                <a
-                  href="#talent-pool"
-                  className="inline-block px-8 py-4 bg-white hover:bg-gray-50 text-gray-900 text-center font-medium rounded border-2 border-gray-900 transition-colors"
-                >
-                  Join Talent Pool
-                </a>
-              </div>
+              <a
+                href="#contact"
+                className="inline-block px-8 py-4 bg-gray-900 hover:bg-gray-800 text-white font-medium rounded transition-colors mb-6"
+              >
+                Book a Call
+              </a>
 
               <p className="text-sm text-gray-500">
                 First interviews in 5 days. Risk-free.
