@@ -114,7 +114,7 @@ export default function Home() {
               className="px-6 py-2 bg-gray-900 hover:bg-gray-800 text-white font-medium rounded transition-colors"
               style={{ fontFamily: 'Inter, sans-serif' }}
             >
-              Book Your Free Intro Call
+              Book Call
             </a>
           </nav>
         </div>
