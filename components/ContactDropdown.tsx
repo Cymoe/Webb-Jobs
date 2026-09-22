@@ -2,9 +2,27 @@
 
 import { useState } from 'react';
 import Link from 'next/link';
+import { useRouter } from 'next/navigation';
 
 export default function ContactDropdown() {
   const [isOpen, setIsOpen] = useState(false);
+  const router = useRouter();
+
+  const handleBookCall = (e: React.MouseEvent) => {
+    e.preventDefault();
+    setIsOpen(false);
+    
+    // If we're already on the homepage, just scroll to contact
+    if (window.location.pathname === '/') {
+      const contactSection = document.getElementById('contact');
+      if (contactSection) {
+        contactSection.scrollIntoView({ behavior: 'smooth' });
+      }
+    } else {
+      // Navigate to homepage with contact hash
+      router.push('/#contact');
+    }
+  };
 
   return (
     <div 
@@ -32,9 +50,10 @@ export default function ContactDropdown() {
           className="absolute top-full left-1/2 -translate-x-1/2 mt-2 w-80 rounded-lg shadow-xl border border-gray-200 overflow-hidden"
           style={{ backgroundColor: '#FFFFFF' }}
         >
-          <Link 
+          <a 
             href="/#contact"
-            className="block px-6 py-4 hover:bg-gray-50 transition-colors border-b border-gray-100"
+            onClick={handleBookCall}
+            className="block px-6 py-4 hover:bg-gray-50 transition-colors border-b border-gray-100 cursor-pointer"
           >
             <div className="font-semibold text-gray-900 mb-1" style={{ fontFamily: 'Inter, sans-serif' }}>
               Book Your Free Intro Call
@@ -42,7 +61,7 @@ export default function ContactDropdown() {
             <div className="text-sm text-gray-600" style={{ fontFamily: 'Inter, sans-serif' }}>
               Partner with us to build your sales team
             </div>
-          </Link>
+          </a>
 
           <Link 
             href="/talent-pool"
