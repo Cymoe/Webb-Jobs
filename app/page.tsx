@@ -108,16 +108,8 @@ export default function Home() {
               </p>
             </div>
 
-            <div className="relative">
-              <div className="rounded-2xl overflow-hidden shadow-2xl">
-                <Image
-                  src="/images/founder.jpg"
-                  alt="Founder"
-                  width={600}
-                  height={700}
-                  className="w-full h-auto object-cover"
-                />
-              </div>
+            <div className="relative flex items-center justify-center">
+              <div className="w-80 h-80 md:w-96 md:h-96 rounded-full bg-primary"></div>
             </div>
           </div>
         </div>
