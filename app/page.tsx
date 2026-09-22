@@ -92,6 +92,23 @@ export default function Home() {
               Red Door Reps
             </span>
           </a>
+          
+          <div className="flex items-center gap-8">
+            <a 
+              href="tel:+1234567890" 
+              className="text-gray-700 hover:text-gray-900 font-medium transition-colors"
+              style={{ fontFamily: 'Inter, sans-serif' }}
+            >
+              (555) 123-4567
+            </a>
+            <a
+              href="#contact"
+              className="px-6 py-2 bg-gray-900 hover:bg-gray-800 text-white font-medium rounded transition-colors"
+              style={{ fontFamily: 'Inter, sans-serif' }}
+            >
+              Book a Call
+            </a>
+          </div>
         </div>
       </header>
       {/* Hero Section */}
