@@ -80,52 +80,51 @@ export default function Home() {
   return (
     <main className="relative bg-white">
       {/* Hero Section */}
-      <section className="relative overflow-hidden py-20 md:py-32 px-4">
-        <div className="absolute inset-0 bg-gray-50" />
-        
-        <div className="relative max-w-container mx-auto">
-          <div className="flex flex-col items-center text-center mb-12">
-            <div className="mb-6 inline-flex items-center gap-2 px-4 py-2 bg-success/10 text-success rounded-full text-sm font-semibold">
-              Trusted by D2D Sales Leaders Nationwide
-            </div>
-            
-            <h1 className="text-5xl md:text-7xl font-bold mb-6 text-gray-900">
-              Add 25+ Experienced Salespeople to Your Team in 6 Months. Guaranteed.
-            </h1>
-            
-            <p className="text-xl md:text-2xl text-gray-600 mb-8 max-w-3xl">
-              First qualified interviews in <span className="font-semibold text-gray-900">5 days</span>. 
-              Guaranteed results or you don't pay.
-            </p>
-            
-            <div className="flex flex-col sm:flex-row gap-4 mb-12">
-              <a
-                href="#contact"
-                className="group px-8 py-4 bg-primary hover:bg-primary-dark text-white font-semibold rounded-xl shadow-lg hover:shadow-xl transition-all transform hover:-translate-y-0.5"
-              >
-                Book a Strategy Call
-                <span className="inline-block ml-2 group-hover:translate-x-1 transition-transform">→</span>
-              </a>
-              <a
-                href="#how-it-works"
-                className="px-8 py-4 bg-white hover:bg-gray-50 text-primary font-semibold rounded-xl border-2 border-primary shadow-md hover:shadow-lg transition-all"
-              >
-                See How It Works
-              </a>
+      <section className="relative py-20 md:py-32 px-4 bg-white">
+        <div className="max-w-6xl mx-auto">
+          <div className="grid md:grid-cols-2 gap-12 items-center">
+            <div>
+              <div className="inline-block px-3 py-1 bg-gray-100 text-gray-700 rounded-full text-sm font-medium mb-6">
+                Door-to-Door Sales Recruiting
+              </div>
+              
+              <h1 className="text-5xl md:text-6xl font-bold mb-6 text-gray-900 leading-tight">
+                Hire 5 to 50+ Door-to-Door Sales Reps Every Month
+              </h1>
+              
+              <p className="text-xl text-gray-600 mb-8 leading-relaxed">
+                We build, run, and scale your recruiting engine. From Indeed and Meta ads to qualified interviews on your calendar.
+              </p>
+              
+              <div className="flex flex-col sm:flex-row gap-4 mb-8">
+                <a
+                  href="#contact"
+                  className="px-8 py-4 bg-gray-900 hover:bg-gray-800 text-white font-semibold rounded-lg transition-colors text-center"
+                >
+                  Book a Strategy Call
+                </a>
+                <a
+                  href="#how-it-works"
+                  className="px-8 py-4 bg-white hover:bg-gray-50 text-gray-900 font-semibold rounded-lg border-2 border-gray-200 transition-colors text-center"
+                >
+                  How It Works
+                </a>
+              </div>
+
+              <p className="text-sm text-gray-500">
+                First interviews in 5 days. Risk-free model.
+              </p>
             </div>
 
-            <div className="flex items-center gap-8 text-sm text-gray-600">
-              <div className="flex items-center gap-2">
-                <svg className="w-5 h-5 text-success" fill="currentColor" viewBox="0 0 20 20">
-                  <path fillRule="evenodd" d="M10 18a8 8 0 100-16 8 8 0 000 16zm3.707-9.293a1 1 0 00-1.414-1.414L9 10.586 7.707 9.293a1 1 0 00-1.414 1.414l2 2a1 1 0 001.414 0l4-4z" clipRule="evenodd" />
-                </svg>
-                <span className="font-medium">6,000+ reps hired</span>
-              </div>
-              <div className="flex items-center gap-2">
-                <svg className="w-5 h-5 text-success" fill="currentColor" viewBox="0 0 20 20">
-                  <path fillRule="evenodd" d="M10 18a8 8 0 100-16 8 8 0 000 16zm3.707-9.293a1 1 0 00-1.414-1.414L9 10.586 7.707 9.293a1 1 0 00-1.414 1.414l2 2a1 1 0 001.414 0l4-4z" clipRule="evenodd" />
-                </svg>
-                <span className="font-medium">Results guaranteed</span>
+            <div className="relative">
+              <div className="rounded-2xl overflow-hidden shadow-2xl">
+                <Image
+                  src="/images/founder.jpg"
+                  alt="Founder"
+                  width={600}
+                  height={700}
+                  className="w-full h-auto object-cover"
+                />
               </div>
             </div>
           </div>
