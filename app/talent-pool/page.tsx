@@ -45,18 +45,13 @@ export default function TalentPoolPage() {
       </header>
 
       {/* Hero Section */}
-      <section className="relative py-20 md:py-32 px-4 pt-40 md:pt-48" style={{ backgroundColor: '#FAF8F5' }}>
+      <section className="relative py-32 md:py-40 px-4 pt-40 md:pt-48" style={{ backgroundColor: '#1F2937' }}>
         <div className="max-w-4xl mx-auto">
           <div className="text-center mb-12">
-            <div className="inline-flex items-center gap-2 px-4 py-2 text-gray-700 text-sm font-medium mb-6 rounded-full" style={{ backgroundColor: 'rgba(220, 38, 38, 0.1)' }}>
-              <span className="w-2 h-2 rounded-full" style={{ backgroundColor: '#DC2626' }}></span>
-              JOIN OUR TALENT NETWORK
-            </div>
-            
-            <h1 className="text-5xl md:text-6xl font-bold mb-6 text-gray-900 leading-tight">
+            <h1 className="text-5xl md:text-6xl font-bold mb-6 leading-tight" style={{ color: '#F5F3EF' }}>
               Join Our Talent Pool
             </h1>
-            <p className="text-2xl text-gray-600 max-w-3xl mx-auto">
+            <p className="text-xl md:text-2xl max-w-3xl mx-auto" style={{ color: 'rgba(245, 243, 239, 0.8)' }}>
               Submit your information and we'll match you with high-earning D2D sales opportunities that fit your experience and goals.
             </p>
           </div>
