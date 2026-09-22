@@ -8,7 +8,7 @@ export default function IndustriesPage() {
         <div className="max-w-7xl mx-auto flex items-center justify-between">
           <Link href="/" className="flex items-center group">
             <span className="text-2xl font-semibold tracking-tight" style={{ color: '#DC2626', fontFamily: 'Inter, sans-serif' }}>
-              RepEngine
+              Webb Jobs
             </span>
           </Link>
           
