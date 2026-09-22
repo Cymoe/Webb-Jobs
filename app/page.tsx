@@ -192,6 +192,38 @@ export default function Home() {
         </div>
       </section>
 
+      {/* Industries Marquee */}
+      <section className="py-12 border-y border-gray-200" style={{ backgroundColor: '#FFFFFF' }}>
+        <div className="mb-8 text-center">
+          <p className="text-sm text-gray-500 font-medium">Industries We Serve</p>
+        </div>
+        <Marquee className="py-4" pauseOnHover>
+          {[
+            "Roofing",
+            "Solar",
+            "Windows & Doors",
+            "Pest Control",
+            "HVAC",
+            "Home Security",
+            "Water Treatment",
+            "Landscaping",
+            "Telecommunications",
+            "Home Services",
+            "Exterior Remodeling",
+            "Energy Efficiency",
+          ].map((industry, idx) => (
+            <div
+              key={idx}
+              className="mx-6 px-6 py-3 bg-gray-50 border border-gray-200 rounded-lg"
+            >
+              <span className="text-gray-700 font-medium whitespace-nowrap">
+                {industry}
+              </span>
+            </div>
+          ))}
+        </Marquee>
+      </section>
+
       {/* Founder Section */}
       <section className="py-20 md:py-32 px-4" style={{ backgroundColor: '#FAF8F5' }}>
         <div className="max-w-5xl mx-auto">
