@@ -111,45 +111,49 @@ export default function Home() {
             <div className="relative flex items-center justify-center">
               <svg
                 className="w-64 h-96 md:w-80 md:h-[32rem]"
-                viewBox="0 0 200 320"
+                viewBox="0 0 280 320"
                 fill="none"
                 xmlns="http://www.w3.org/2000/svg"
               >
                 {/* Door frame */}
                 <rect
-                  x="10"
+                  x="20"
                   y="10"
-                  width="180"
+                  width="160"
                   height="300"
-                  stroke="#DC2626"
-                  strokeWidth="4"
-                  fill="none"
+                  fill="#8B8680"
                 />
-                {/* Door panels */}
+                
+                {/* Open door - perspective view */}
+                <path
+                  d="M 180 10 L 260 50 L 260 290 L 180 310 Z"
+                  fill="#DC2626"
+                />
+                
+                {/* Door edge (darker for depth) */}
                 <rect
-                  x="25"
-                  y="30"
-                  width="150"
-                  height="120"
-                  stroke="#DC2626"
-                  strokeWidth="3"
-                  fill="none"
+                  x="180"
+                  y="10"
+                  width="6"
+                  height="300"
+                  fill="#991B1B"
                 />
-                <rect
-                  x="25"
-                  y="170"
-                  width="150"
-                  height="120"
-                  stroke="#DC2626"
-                  strokeWidth="3"
-                  fill="none"
-                />
+                
                 {/* Door handle */}
                 <circle
-                  cx="160"
+                  cx="200"
                   cy="160"
-                  r="8"
-                  fill="#DC2626"
+                  r="6"
+                  fill="#991B1B"
+                />
+                
+                {/* Shadow inside doorway */}
+                <rect
+                  x="30"
+                  y="20"
+                  width="140"
+                  height="280"
+                  fill="#6B6660"
                 />
               </svg>
             </div>
