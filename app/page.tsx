@@ -110,31 +110,32 @@ export default function Home() {
 
             <div className="relative flex items-center justify-center">
               <svg
-                className="w-64 h-96 md:w-80 md:h-[32rem]"
-                viewBox="0 0 200 320"
+                className="w-48 h-96 md:w-64 md:h-[32rem]"
+                viewBox="0 0 160 320"
                 fill="none"
                 xmlns="http://www.w3.org/2000/svg"
               >
-                {/* Door - slightly ajar */}
+                {/* Door - barely cracked open */}
                 <path
-                  d="M 50 10 L 110 30 L 110 290 L 50 310 Z"
+                  d="M 40 10 L 70 20 L 70 300 L 40 310 Z"
                   fill="#DC2626"
                 />
                 
-                {/* Door edge (darker for depth) */}
-                <rect
-                  x="50"
-                  y="10"
-                  width="4"
-                  height="300"
-                  fill="#991B1B"
+                {/* Door edge */}
+                <line
+                  x1="40"
+                  y1="10"
+                  x2="40"
+                  y2="310"
+                  stroke="#991B1B"
+                  strokeWidth="3"
                 />
                 
                 {/* Door handle */}
                 <circle
-                  cx="65"
+                  cx="48"
                   cy="160"
-                  r="5"
+                  r="4"
                   fill="#991B1B"
                 />
               </svg>
