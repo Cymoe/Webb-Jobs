@@ -323,7 +323,7 @@ export default function Home() {
               Don't see your ideal role? We're always recruiting for top D2D sales talent.
             </p>
             <a
-              href="#contact"
+              href="/roles"
               className="inline-block px-8 py-3 border-2 border-gray-900 text-gray-900 hover:bg-gray-900 hover:text-white font-medium rounded transition-colors"
             >
               View All Open Roles
