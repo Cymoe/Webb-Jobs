@@ -98,7 +98,7 @@ export default function Home() {
               
               <a
                 href="#contact"
-                className="inline-block px-8 py-4 bg-primary hover:bg-primary-dark text-white font-medium rounded transition-colors mb-6"
+                className="inline-block px-8 py-4 bg-gray-900 hover:bg-gray-800 text-white font-medium rounded transition-colors mb-6"
               >
                 Book a Call
               </a>

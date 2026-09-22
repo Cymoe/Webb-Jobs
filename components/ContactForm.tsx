@@ -173,7 +173,7 @@ export default function ContactForm() {
           disabled={!isValid || isSubmitting}
           className={`w-full py-4 rounded font-medium text-white transition-all ${
             isValid && !isSubmitting
-              ? 'bg-primary hover:bg-primary-dark'
+              ? 'bg-gray-900 hover:bg-gray-800'
               : 'bg-gray-300 cursor-not-allowed'
           }`}
         >
