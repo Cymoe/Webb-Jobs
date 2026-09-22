@@ -263,7 +263,46 @@ export default function Home() {
         </div>
       </section>
 
-      {/* Services/What You Get Section */}
+      {/* Process Section - Moved before What You Get */}
+      <section id="how-it-works" className="py-20 md:py-32 px-4">
+        <div className="max-w-container mx-auto">
+          <div className="text-center mb-16">
+            <h2 className="text-4xl md:text-5xl font-bold mb-4 text-gray-900">How It Works</h2>
+            <p className="text-xl text-gray-600">From kickoff to qualified interviews in 4 weeks</p>
+          </div>
+
+          <div className="grid md:grid-cols-3 gap-8">
+            {[
+              {
+                week: "Week 1",
+                title: "Kickoff",
+                description: "Define your ideal rep profile, build compelling job ads, and launch campaigns across Indeed and Meta. We build your employer brand.",
+              },
+              {
+                week: "Week 2-3",
+                title: "Pipeline",
+                description: "Applications flow in. We screen every candidate, qualify with your criteria, and run automated follow-up. You never touch a resume.",
+              },
+              {
+                week: "Week 4",
+                title: "Interviews",
+                description: "Qualified candidates land on your calendar. You focus on final interviews. Most clients hire within 40 days.",
+              },
+            ].map((step, idx) => (
+              <div
+                key={idx}
+                className="p-8 border-l-2 border-gray-300"
+              >
+                <div className="text-sm font-medium text-gray-500 mb-2">{step.week}</div>
+                <h3 className="text-2xl font-bold mb-4">{step.title}</h3>
+                <p className="text-gray-600">{step.description}</p>
+              </div>
+            ))}
+          </div>
+        </div>
+      </section>
+
+      {/* Services/What You Get Section - Moved after How It Works */}
       <section className="py-20 md:py-32 px-4" style={{ backgroundColor: '#FAF8F5' }}>
         <div className="max-w-6xl mx-auto">
           <div className="text-center mb-16">
@@ -338,45 +377,6 @@ export default function Home() {
                     </li>
                   ))}
                 </ul>
-              </div>
-            ))}
-          </div>
-        </div>
-      </section>
-
-      {/* Process Section */}
-      <section id="how-it-works" className="py-20 md:py-32 px-4">
-        <div className="max-w-container mx-auto">
-          <div className="text-center mb-16">
-            <h2 className="text-4xl md:text-5xl font-bold mb-4 text-gray-900">How It Works</h2>
-            <p className="text-xl text-gray-600">From kickoff to qualified interviews in 4 weeks</p>
-          </div>
-
-          <div className="grid md:grid-cols-3 gap-8">
-            {[
-              {
-                week: "Week 1",
-                title: "Kickoff",
-                description: "Define your ideal rep profile, build compelling job ads, and launch campaigns across Indeed and Meta. We build your employer brand.",
-              },
-              {
-                week: "Week 2-3",
-                title: "Pipeline",
-                description: "Applications flow in. We screen every candidate, qualify with your criteria, and run automated follow-up. You never touch a resume.",
-              },
-              {
-                week: "Week 4",
-                title: "Interviews",
-                description: "Qualified candidates land on your calendar. You focus on final interviews. Most clients hire within 40 days.",
-              },
-            ].map((step, idx) => (
-              <div
-                key={idx}
-                className="p-8 border-l-2 border-gray-300"
-              >
-                <div className="text-sm font-medium text-gray-500 mb-2">{step.week}</div>
-                <h3 className="text-2xl font-bold mb-4">{step.title}</h3>
-                <p className="text-gray-600">{step.description}</p>
               </div>
             ))}
           </div>
