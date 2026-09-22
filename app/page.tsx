@@ -90,7 +90,7 @@ export default function Home() {
             </div>
             
             <h1 className="text-5xl md:text-7xl font-bold mb-6 text-gray-900">
-              Add <span className="text-primary">25+ Experienced Salespeople</span> to Your Team in 6 Months. Guaranteed.
+              Add 25+ Experienced Salespeople to Your Team in 6 Months. Guaranteed.
             </h1>
             
             <p className="text-xl md:text-2xl text-gray-600 mb-8 max-w-3xl">
@@ -280,7 +280,7 @@ export default function Home() {
                   {idx + 1}
                 </div>
                 <div className="pt-6">
-                  <div className="text-sm font-semibold text-blue-600 mb-2">{step.week}</div>
+                  <div className="text-sm font-semibold text-gray-500 mb-2">{step.week}</div>
                   <h3 className="text-2xl font-bold mb-4">{step.title}</h3>
                   <p className="text-gray-600">{step.description}</p>
                 </div>
