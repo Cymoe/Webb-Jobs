@@ -230,10 +230,6 @@ export default function RolesPage() {
           >
             Find a job
           </a>
-          
-          <p className="mt-6 text-gray-600">
-            Already work with Webb Jobs? <a href="/talent-pool" className="underline hover:text-gray-900">Browse privately</a>
-          </p>
         </div>
       </section>
 
