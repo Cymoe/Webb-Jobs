@@ -20,7 +20,9 @@ const config: Config = {
         'gray-900': '#111827',
       },
       fontFamily: {
-        sans: ['Inter', 'system-ui', 'sans-serif'],
+        sans: ['Crimson Text', 'Georgia', 'serif'],
+        serif: ['Crimson Text', 'Georgia', 'serif'],
+        mono: ['IBM Plex Mono', 'Courier', 'monospace'],
       },
       maxWidth: {
         'container': '1200px',
