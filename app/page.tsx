@@ -159,10 +159,7 @@ export default function Home() {
         </div>
       </section>
 
-      {/* Video Section - Right After Hero */}
-      <VideoSection />
-
-      {/* Industries Marquee */}
+      {/* Industries Marquee - Moved before video */}
       <section className="py-12 border-y border-gray-200" style={{ backgroundColor: '#FFFFFF' }}>
         <div className="mb-8 text-center">
           <p className="text-sm text-gray-500 font-medium">Industries We Serve</p>
@@ -194,6 +191,9 @@ export default function Home() {
           ))}
         </Marquee>
       </section>
+
+      {/* Video Section - After Industries */}
+      <VideoSection />
 
 {/* Founder Section */}
       <section className="py-20 md:py-32 px-4" style={{ backgroundColor: '#FAF8F5' }}>
