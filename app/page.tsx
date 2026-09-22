@@ -89,35 +89,35 @@ export default function Home() {
               <circle cx="9.5" cy="24" r="1.5" fill="#991B1B"/>
             </svg>
             <span className="text-xl font-medium tracking-tight" style={{ fontFamily: 'Inter, sans-serif' }}>
-              Red Door Reps
+              Rep Engine
             </span>
           </a>
           
           <nav className="hidden md:flex items-center gap-8">
             <a 
               href="#about" 
-              className="text-gray-700 hover:text-gray-900 font-medium transition-colors"
+              className="text-sm text-gray-700 hover:text-gray-900 transition-colors"
               style={{ fontFamily: 'Inter, sans-serif' }}
             >
               About
             </a>
             <a 
               href="#how-it-works" 
-              className="text-gray-700 hover:text-gray-900 font-medium transition-colors"
+              className="text-sm text-gray-700 hover:text-gray-900 transition-colors"
               style={{ fontFamily: 'Inter, sans-serif' }}
             >
               How It Works
             </a>
             <a 
               href="#industries" 
-              className="text-gray-700 hover:text-gray-900 font-medium transition-colors"
+              className="text-sm text-gray-700 hover:text-gray-900 transition-colors"
               style={{ fontFamily: 'Inter, sans-serif' }}
             >
               Industries
             </a>
             <a 
               href="#contact" 
-              className="text-gray-700 hover:text-gray-900 font-medium transition-colors"
+              className="text-sm text-gray-700 hover:text-gray-900 transition-colors"
               style={{ fontFamily: 'Inter, sans-serif' }}
             >
               Contact
