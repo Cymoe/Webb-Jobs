@@ -33,7 +33,7 @@ export default function ContactDropdown() {
           style={{ backgroundColor: '#FFFFFF' }}
         >
           <Link 
-            href="#contact"
+            href="/#contact"
             className="block px-6 py-4 hover:bg-gray-50 transition-colors border-b border-gray-100"
           >
             <div className="font-semibold text-gray-900 mb-1" style={{ fontFamily: 'Inter, sans-serif' }}>
