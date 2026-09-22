@@ -58,7 +58,7 @@ const features = [
       </svg>
     ),
     name: "D2D Expertise",
-    description: "6,000+ door-to-door sales reps hired and counting",
+    description: "Years of door-to-door sales recruiting experience",
     href: "#",
     cta: "Learn more",
     className: "col-span-3 lg:col-span-1",
@@ -287,7 +287,7 @@ export default function Home() {
             
             <div className="bg-gray-50 p-8 rounded-2xl border border-gray-200 mt-8">
               <p className="text-xl font-semibold text-gray-900">
-                We do. We've hired 6,000+ D2D reps. We know what good looks like because we've done it hundreds of times.
+                We do. We've spent years building D2D sales teams. We know what good looks like because we've done it.
               </p>
             </div>
           </div>

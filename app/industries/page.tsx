@@ -160,7 +160,7 @@ export default function IndustriesPage() {
             <div className="p-8 bg-white rounded-2xl border border-gray-200">
               <h3 className="text-2xl font-bold mb-4 text-gray-900">We Know What Good Looks Like</h3>
               <p className="text-lg text-gray-600">
-                After hiring 6,000+ D2D reps across every major industry, we've seen every type of candidate. We know the difference between a retail worker who "likes people" and a rep who can actually close on a doorstep. We've refined our screening to identify true door-to-door talent.
+                After years of hiring D2D reps across every major industry, we've seen every type of candidate. We know the difference between a retail worker who "likes people" and a rep who can actually close on a doorstep. We've refined our screening to identify true door-to-door talent.
               </p>
             </div>
             
