@@ -226,36 +226,7 @@ export default function Home() {
         </Marquee>
       </section>
 
-      {/* Results/Metrics Section */}
-      <section className="py-20 md:py-32 px-4">
-        <div className="max-w-6xl mx-auto">
-          <div className="text-center mb-16">
-            <h2 className="text-4xl md:text-5xl font-bold mb-4 text-gray-900">
-              The Numbers Speak for Themselves
-            </h2>
-            <p className="text-xl text-gray-600">
-              Real results from real D2D companies
-            </p>
-          </div>
-          
-          <div className="grid md:grid-cols-3 gap-8">
-            <div className="text-center p-8 bg-gray-50 rounded-2xl border border-gray-200">
-              <div className="text-5xl font-bold text-gray-900 mb-2">6,000+</div>
-              <div className="text-lg text-gray-600">D2D Reps Hired</div>
-            </div>
-            <div className="text-center p-8 bg-gray-50 rounded-2xl border border-gray-200">
-              <div className="text-5xl font-bold text-gray-900 mb-2">5 Days</div>
-              <div className="text-lg text-gray-600">To First Interview</div>
-            </div>
-            <div className="text-center p-8 bg-gray-50 rounded-2xl border border-gray-200">
-              <div className="text-5xl font-bold text-gray-900 mb-2">40 Days</div>
-              <div className="text-lg text-gray-600">Average Time to Hire</div>
-            </div>
-          </div>
-        </div>
-      </section>
-
-      {/* Founder Section */}
+{/* Founder Section */}
       <section className="py-20 md:py-32 px-4" style={{ backgroundColor: '#FAF8F5' }}>
         <div className="max-w-5xl mx-auto">
           <div className="grid md:grid-cols-2 gap-12 items-center">
