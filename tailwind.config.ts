@@ -9,22 +9,21 @@ const config: Config = {
   theme: {
     extend: {
       colors: {
-        'professional-blue': '#3B82F6',
-        'carbon-black': '#111827',
-        'slate-gray': '#1F2937',
-        'action-yellow': '#EAB308',
-        'link-blue': '#60A5FA',
-        'success-green': '#10B981',
-        'warning-red': '#EF4444',
-        'neutral-gray': '#6B7280',
-        'bg-light': '#374151',
+        'primary': '#2563EB',
+        'primary-dark': '#1E40AF',
+        'success': '#10B981',
+        'gray-50': '#F9FAFB',
+        'gray-100': '#F3F4F6',
+        'gray-200': '#E5E7EB',
+        'gray-600': '#4B5563',
+        'gray-700': '#374151',
+        'gray-900': '#111827',
       },
       fontFamily: {
         sans: ['Inter', 'system-ui', 'sans-serif'],
-        mono: ['JetBrains Mono', 'monospace'],
       },
-      borderRadius: {
-        'md': '8px',
+      maxWidth: {
+        'container': '1200px',
       },
     },
   },

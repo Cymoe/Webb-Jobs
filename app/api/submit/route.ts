@@ -4,10 +4,18 @@ export async function POST(request: Request) {
   try {
     const data = await request.json();
 
+    console.log('Form submission received:', {
+      companyName: data.companyName,
+      industry: data.industry,
+      name: data.name,
+      email: data.email,
+      phone: data.phone,
+      timestamp: data.timestamp,
+    });
+
     const googleSheetsWebhookUrl = process.env.GOOGLE_SHEETS_WEBHOOK_URL;
 
     if (!googleSheetsWebhookUrl) {
-      console.log('Form submission received:', data);
       return NextResponse.json(
         { 
           message: 'Form submitted successfully (no webhook configured)',
