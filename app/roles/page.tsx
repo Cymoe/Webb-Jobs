@@ -9,92 +9,112 @@ export default function RolesPage() {
       title: "Solar Sales Representative",
       company: "Leading Solar Company",
       location: "Phoenix, AZ",
-      salary: "$60K-$120K + Commission",
-      description: "Residential solar sales. Experienced closers preferred. Average rep makes $90K+ first year. Full training on solar technology, financing options, and consultation process.",
+      salary: "$60K-$120K",
       type: "Full-time",
-      requirements: ["1+ years D2D sales experience", "Valid driver's license", "Own transportation"]
+      postedDays: 2
     },
     {
       category: "Roofing",
       title: "Storm Damage Sales Rep",
       company: "National Roofing Company",
       location: "Dallas, TX",
-      salary: "$70K-$150K + Commission",
-      description: "Storm season recruiting. Insurance claim experience a plus. Top reps earn $150K+. Work storm-damaged areas and help homeowners navigate insurance claims.",
+      salary: "$70K-$150K",
       type: "Full-time",
-      requirements: ["2+ years roofing or insurance sales", "Strong negotiation skills", "Willing to travel"]
+      postedDays: 3
     },
     {
       category: "Pest Control",
       title: "Pest Control Sales Rep",
       company: "Regional Pest Control",
       location: "Atlanta, GA",
-      salary: "$50K-$90K + Commission",
-      description: "Year-round residential pest control sales. Full training provided. Average first-year earnings $65K. Protected territories and recurring revenue structure.",
+      salary: "$50K-$90K",
       type: "Full-time",
-      requirements: ["High school diploma", "Sales experience preferred", "Clean driving record"]
+      postedDays: 5
     },
     {
       category: "Windows",
       title: "Window Replacement Consultant",
       company: "Home Improvement Leader",
       location: "Denver, CO",
-      salary: "$55K-$100K + Commission",
-      description: "In-home consultations for energy-efficient window replacements. Protected territories available. Company leads provided plus self-generated opportunities.",
+      salary: "$55K-$100K",
       type: "Full-time",
-      requirements: ["Sales experience required", "Home improvement knowledge a plus", "Professional appearance"]
+      postedDays: 4
     },
     {
       category: "Security",
       title: "Home Security Sales Rep",
       company: "Smart Home Security Co",
       location: "Las Vegas, NV",
-      salary: "$45K-$85K + Residuals",
-      description: "Smart home security systems. Recurring commission structure with residual income. High earning potential. Full product training and demo equipment provided.",
+      salary: "$45K-$85K",
       type: "Full-time",
-      requirements: ["1+ years sales experience", "Tech-savvy", "Strong communication skills"]
+      postedDays: 1
     },
     {
       category: "HVAC",
       title: "HVAC Sales Specialist",
       company: "Climate Control Company",
       location: "Houston, TX",
-      salary: "$60K-$110K + Commission",
-      description: "Residential HVAC replacement sales. Technical knowledge helpful but not required - full training provided. Work with warm leads from marketing campaigns.",
+      salary: "$60K-$110K",
       type: "Full-time",
-      requirements: ["Sales experience", "Customer service skills", "Self-motivated"]
+      postedDays: 7
     },
     {
       category: "Fiber/Telecom",
       title: "Fiber Internet Sales Rep",
       company: "Fiber Network Provider",
       location: "Austin, TX",
-      salary: "$50K-$95K + Bonuses",
-      description: "High-speed fiber internet sales. Fast-growing territory with new construction focus. Uncapped commission potential and performance bonuses.",
+      salary: "$50K-$95K",
       type: "Full-time",
-      requirements: ["Sales experience", "Tech comfortable", "Valid driver's license"]
+      postedDays: 6
     },
     {
       category: "Water Treatment",
       title: "Water Filtration Consultant",
       company: "Water Solutions Company",
       location: "Orlando, FL",
-      salary: "$55K-$105K + Commission",
-      description: "In-home water quality testing and filtration system sales. Full training on water chemistry and product line. Company leads and marketing support.",
+      salary: "$55K-$105K",
       type: "Full-time",
-      requirements: ["Sales background", "Consultative approach", "Problem-solving skills"]
+      postedDays: 8
     },
     {
       category: "Roofing",
       title: "Retail Roofing Sales Rep",
       company: "Roofing Services Inc",
       location: "Nashville, TN",
-      salary: "$65K-$130K + Commission",
-      description: "Retail roofing sales for residential replacements. Year-round opportunities. Company-provided leads plus self-generation. Top performers promoted to team lead roles.",
+      salary: "$65K-$130K",
       type: "Full-time",
-      requirements: ["2+ years roofing sales", "Strong closing skills", "Industry knowledge"]
+      postedDays: 4
+    },
+    {
+      category: "Solar",
+      title: "Commercial Solar Consultant",
+      company: "Enterprise Solar Solutions",
+      location: "San Diego, CA",
+      salary: "$80K-$140K",
+      type: "Full-time",
+      postedDays: 2
+    },
+    {
+      category: "HVAC",
+      title: "HVAC Territory Manager",
+      company: "Climate Solutions Group",
+      location: "Miami, FL",
+      salary: "$70K-$120K",
+      type: "Full-time",
+      postedDays: 5
+    },
+    {
+      category: "Security",
+      title: "Smart Home Sales Specialist",
+      company: "SecureLife Technologies",
+      location: "Remote (US)",
+      salary: "$50K-$95K",
+      type: "Full-time",
+      postedDays: 3
     }
   ];
+
+  const categories = ["All", "Solar", "Roofing", "Pest Control", "Windows", "HVAC", "Security", "Fiber/Telecom", "Water Treatment"];
 
   return (
     <main className="relative" style={{ backgroundColor: '#F5F3EF' }}>
@@ -138,80 +158,106 @@ export default function RolesPage() {
       </header>
 
       {/* Hero Section */}
-      <section className="relative py-32 md:py-40 px-4 pt-40 md:pt-48" style={{ backgroundColor: '#1F2937' }}>
-        <div className="max-w-5xl mx-auto">
-          <div className="text-center">
-            <h1 className="text-5xl md:text-6xl font-bold mb-6 leading-tight" style={{ color: '#F5F3EF' }}>
-              Discover High-Earning D2D Sales Jobs at Growing Companies
-            </h1>
-            <p className="text-xl md:text-2xl mb-10 leading-relaxed max-w-4xl mx-auto" style={{ color: 'rgba(245, 243, 239, 0.8)' }}>
-              Webb Jobs is a specialized D2D sales recruitment agency connecting top sales talent with leading companies across Solar, Roofing, Pest Control, HVAC, and more. Explore active, pre-vetted D2D sales opportunities.
-            </p>
-            
-            <div className="flex flex-col sm:flex-row gap-4 justify-center">
-              <a
-                href="#roles-grid"
-                className="inline-block px-8 py-4 text-center font-medium rounded-lg transition-colors"
-                style={{ backgroundColor: '#DC2626', color: '#FFFFFF' }}
-              >
-                Browse Open Roles
-              </a>
-              <a
-                href="/talent-pool"
-                className="inline-block px-8 py-4 text-center font-medium rounded-lg border-2 transition-colors"
-                style={{ borderColor: '#F5F3EF', color: '#F5F3EF' }}
-              >
-                Join Talent Pool
-              </a>
-            </div>
-          </div>
+      <section className="relative py-20 md:py-32 px-4 pt-32 md:pt-40" style={{ backgroundColor: '#FAF8F5' }}>
+        <div className="max-w-4xl mx-auto text-center">
+          <h1 className="text-5xl md:text-6xl font-bold mb-10 text-gray-900 leading-tight">
+            Find the best D2D sales jobs, curated for closers
+          </h1>
+          
+          <ul className="text-lg text-gray-700 space-y-3 mb-10 text-left max-w-2xl mx-auto">
+            <li className="flex items-start gap-3">
+              <span className="text-gray-400">•</span>
+              <span>Apply to high-earning D2D sales opportunities with a single profile.</span>
+            </li>
+            <li className="flex items-start gap-3">
+              <span className="text-gray-400">•</span>
+              <span>Connect directly with hiring managers at growing companies.</span>
+            </li>
+            <li className="flex items-start gap-3">
+              <span className="text-gray-400">•</span>
+              <span>Find Solar, Roofing, Pest Control, HVAC roles and more — only vetted D2D positions.</span>
+            </li>
+          </ul>
+          
+          <a
+            href="#jobs-list"
+            className="inline-block px-8 py-3 bg-gray-900 hover:bg-gray-800 text-white font-medium rounded transition-colors"
+          >
+            Find a job
+          </a>
+          
+          <p className="mt-6 text-gray-600">
+            Already work with Webb Jobs? <a href="/talent-pool" className="underline hover:text-gray-900">Browse privately</a>
+          </p>
         </div>
       </section>
 
-      {/* Roles Grid */}
-      <section id="roles-grid" className="py-20 px-4" style={{ backgroundColor: '#F5F3EF' }}>
-        <div className="max-w-6xl mx-auto">
-          <div className="mb-12">
-            <h2 className="text-3xl md:text-4xl font-bold text-gray-900 mb-3">
-              Featured D2D Sales Jobs & Open Roles
-            </h2>
-            <p className="text-lg text-gray-600">
-              Active positions across Solar, Roofing, Pest Control, HVAC, and more
-            </p>
+      {/* Jobs List */}
+      <section id="jobs-list" className="py-16 px-4" style={{ backgroundColor: '#F5F3EF' }}>
+        <div className="max-w-5xl mx-auto">
+          <h2 className="text-2xl font-bold text-gray-900 mb-8">
+            D2D Sales jobs added recently
+          </h2>
+          
+          {/* Category Filters */}
+          <div className="flex flex-wrap gap-3 mb-10 pb-6 border-b border-gray-300">
+            {categories.map((cat, idx) => (
+              <button
+                key={idx}
+                className={`px-4 py-2 text-sm font-medium rounded transition-colors ${
+                  cat === "All" 
+                    ? "text-gray-900" 
+                    : "text-gray-600 hover:text-gray-900"
+                }`}
+              >
+                {cat}
+              </button>
+            ))}
           </div>
           
-          <div className="grid md:grid-cols-2 lg:grid-cols-3 gap-8">
+          {/* Job Listings */}
+          <div className="space-y-6">
             {roles.map((role, idx) => (
-              <div key={idx} className="p-6 bg-white rounded-xl border border-gray-200 hover:border-gray-300 transition-all hover:shadow-lg">
-                <div className="mb-4">
-                  <span className="inline-block px-3 py-1 text-xs font-medium rounded-full" style={{ backgroundColor: 'rgba(220, 38, 38, 0.1)', color: '#DC2626' }}>
-                    {role.category.toUpperCase()}
-                  </span>
+              <div key={idx} className="flex items-center gap-6 py-6 border-b border-gray-200 hover:bg-white hover:px-6 hover:mx-[-24px] hover:rounded-lg transition-all">
+                {/* Company Logo Placeholder */}
+                <div className="flex-shrink-0 w-16 h-16 rounded-full bg-gray-900 flex items-center justify-center text-white font-bold text-xl">
+                  {role.company.charAt(0)}
                 </div>
                 
-                <h2 className="text-xl font-bold mb-2 text-gray-900">{role.title}</h2>
-                <p className="text-sm text-gray-600 mb-1">{role.company}</p>
-                <p className="text-sm text-gray-500 mb-3">📍 {role.location}</p>
-                <p className="text-sm font-semibold text-gray-900 mb-4">💰 {role.salary}</p>
-                <p className="text-sm text-gray-600 mb-4">{role.description}</p>
-                
-                <div className="mb-4 pb-4 border-b border-gray-200">
-                  <p className="text-xs font-semibold text-gray-700 mb-2">Requirements:</p>
-                  <ul className="text-xs text-gray-600 space-y-1">
-                    {role.requirements.map((req, i) => (
-                      <li key={i} className="flex items-start gap-2">
-                        <span className="text-gray-400">•</span>
-                        <span>{req}</span>
-                      </li>
-                    ))}
-                  </ul>
+                {/* Job Details */}
+                <div className="flex-1 min-w-0">
+                  <div className="flex items-baseline gap-2 mb-1">
+                    <h3 className="font-semibold text-gray-900">
+                      {role.company}
+                    </h3>
+                    <span className="text-sm text-gray-500">
+                      (about {role.postedDays} {role.postedDays === 1 ? 'day' : 'days'} ago)
+                    </span>
+                  </div>
+                  <a 
+                    href="/#contact" 
+                    className="text-lg font-medium hover:underline"
+                    style={{ color: '#3B82F6' }}
+                  >
+                    {role.title}
+                  </a>
+                  <div className="flex flex-wrap items-center gap-2 mt-2 text-sm text-gray-600">
+                    <span>{role.type}</span>
+                    <span>•</span>
+                    <span>{role.category}</span>
+                    <span>•</span>
+                    <span>{role.salary}</span>
+                    <span>•</span>
+                    <span>{role.location}</span>
+                  </div>
                 </div>
                 
+                {/* Apply Button */}
                 <a
                   href="/#contact"
-                  className="inline-block w-full text-center px-4 py-3 bg-gray-900 hover:bg-gray-800 text-white text-sm font-medium rounded transition-colors"
+                  className="flex-shrink-0 px-6 py-2 bg-gray-900 hover:bg-gray-800 text-white text-sm font-medium rounded transition-colors"
                 >
-                  Apply for This Role
+                  Apply
                 </a>
               </div>
             ))}
@@ -220,26 +266,33 @@ export default function RolesPage() {
       </section>
 
       {/* CTA Section */}
-      <section className="py-20 md:py-32 px-4" style={{ backgroundColor: '#FAF8F5' }}>
-        <div className="max-w-4xl mx-auto text-center">
-          <h2 className="text-4xl md:text-5xl font-bold mb-6 text-gray-900">
-            Don't See Your Ideal Role?
+      <section className="py-20 px-4 border-t border-gray-200" style={{ backgroundColor: '#FAF8F5' }}>
+        <div className="max-w-3xl mx-auto text-center">
+          <h2 className="text-3xl font-bold mb-4 text-gray-900">
+            Get personalized job recommendations
           </h2>
-          <p className="text-xl text-gray-600 mb-8">
-            We're always recruiting top D2D sales talent. Submit your information and we'll match you with opportunities that fit your experience and income goals.
+          <p className="text-lg text-gray-600 mb-6">
+            Don't see your ideal role? Join our talent pool and we'll match you with opportunities that fit your experience.
           </p>
           <Link
-            href="/#contact"
-            className="inline-block px-8 py-4 bg-gray-900 hover:bg-gray-800 text-white font-medium rounded transition-colors"
+            href="/talent-pool"
+            className="inline-block px-8 py-3 bg-gray-900 hover:bg-gray-800 text-white font-medium rounded transition-colors"
           >
-            Submit Your Resume
+            Join Talent Pool
           </Link>
         </div>
       </section>
 
       {/* Footer */}
       <footer className="py-8 px-4 border-t border-gray-200" style={{ backgroundColor: '#ECE9E3' }}>
-        <div className="max-w-container mx-auto text-center text-gray-600 text-sm">
+        <div className="max-w-5xl mx-auto text-center text-gray-600 text-sm">
+          <div className="flex justify-center gap-6 mb-4">
+            <Link href="/privacy" className="hover:text-gray-900 transition-colors">Privacy Policy</Link>
+            <span>•</span>
+            <Link href="/terms" className="hover:text-gray-900 transition-colors">Terms of Service</Link>
+            <span>•</span>
+            <Link href="/income-disclaimer" className="hover:text-gray-900 transition-colors">Income Disclaimer</Link>
+          </div>
           <p>&copy; {new Date().getFullYear()} Webb Jobs. All rights reserved.</p>
         </div>
       </footer>
