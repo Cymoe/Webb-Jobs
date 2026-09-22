@@ -78,9 +78,9 @@ const testimonials = [
 
 export default function Home() {
   return (
-    <main className="relative bg-white">
+    <main className="relative" style={{ backgroundColor: '#F5F3EF' }}>
       {/* Hero Section */}
-      <section className="relative py-20 md:py-32 px-4 bg-white">
+      <section className="relative py-20 md:py-32 px-4" style={{ backgroundColor: '#FAF8F5' }}>
         <div className="max-w-6xl mx-auto">
           <div className="grid md:grid-cols-2 gap-12 items-center">
             <div>
@@ -132,7 +132,7 @@ export default function Home() {
       </section>
 
       {/* Social Proof Marquee */}
-      <section className="py-8 border-y border-gray-100 bg-gray-50">
+      <section className="py-8 border-y border-gray-200" style={{ backgroundColor: '#ECE9E3' }}>
         <div className="max-w-container mx-auto px-4">
           <p className="text-center text-sm text-gray-500 mb-4">TRUSTED BY LEADING D2D COMPANIES</p>
           <Marquee pauseOnHover className="[--duration:20s]">
@@ -155,7 +155,7 @@ export default function Home() {
       </section>
 
       {/* Founder Section */}
-      <section className="py-20 md:py-32 px-4 bg-white">
+      <section className="py-20 md:py-32 px-4" style={{ backgroundColor: '#FAF8F5' }}>
         <div className="max-w-5xl mx-auto">
           <div className="grid md:grid-cols-2 gap-12 items-center">
             <div className="relative">
@@ -230,7 +230,7 @@ export default function Home() {
       </section>
 
       {/* Features Bento Grid */}
-      <section className="py-20 md:py-32 px-4 bg-gray-50">
+      <section className="py-20 md:py-32 px-4" style={{ backgroundColor: '#ECE9E3' }}>
         <div className="max-w-7xl mx-auto">
           <div className="text-center mb-16">
             <h2 className="text-4xl md:text-5xl font-bold mb-4 text-gray-900">Why Companies Choose Us</h2>
@@ -290,7 +290,7 @@ export default function Home() {
       </section>
 
       {/* Comparison Table */}
-      <section className="py-20 md:py-32 px-4 bg-gray-50">
+      <section className="py-20 md:py-32 px-4" style={{ backgroundColor: '#ECE9E3' }}>
         <div className="max-w-6xl mx-auto">
           <div className="text-center mb-16">
             <h2 className="text-4xl md:text-5xl font-bold mb-4 text-gray-900">
@@ -323,7 +323,7 @@ export default function Home() {
       </section>
 
       {/* Footer */}
-      <footer className="py-8 px-4 border-t border-gray-200 bg-gray-50">
+      <footer className="py-8 px-4 border-t border-gray-200" style={{ backgroundColor: '#ECE9E3' }}>
         <div className="max-w-container mx-auto text-center text-gray-600 text-sm">
           <p>&copy; {new Date().getFullYear()} Webb Jobs. All rights reserved.</p>
         </div>

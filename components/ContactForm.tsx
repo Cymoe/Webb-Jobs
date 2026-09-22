@@ -64,7 +64,7 @@ export default function ContactForm() {
 
   if (isComplete) {
     return (
-      <div className="bg-white rounded-lg p-8 shadow-lg border border-gray-200 text-center max-w-2xl mx-auto">
+      <div className="rounded-lg p-8 shadow-lg border border-gray-200 text-center max-w-2xl mx-auto" style={{ backgroundColor: '#FAF8F5' }}>
         <div className="w-16 h-16 bg-success rounded-full flex items-center justify-center mx-auto mb-6">
           <svg className="w-8 h-8 text-white" fill="none" stroke="currentColor" viewBox="0 0 24 24">
             <path strokeLinecap="round" strokeLinejoin="round" strokeWidth={2} d="M5 13l4 4L19 7" />
@@ -82,7 +82,7 @@ export default function ContactForm() {
   }
 
   return (
-    <div className="bg-white rounded-lg p-8 shadow-lg border border-gray-200 max-w-2xl mx-auto">
+    <div className="rounded-lg p-8 shadow-lg border border-gray-200 max-w-2xl mx-auto" style={{ backgroundColor: '#FAF8F5' }}>
       <form onSubmit={handleSubmit} className="space-y-6">
         <div>
           <label htmlFor="companyName" className="block text-sm font-medium text-gray-700 mb-2">

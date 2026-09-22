@@ -1,7 +1,7 @@
 export default function ComparisonTable() {
   return (
     <div className="overflow-x-auto">
-      <table className="w-full border-collapse bg-white shadow-lg rounded-lg overflow-hidden">
+      <table className="w-full border-collapse shadow-lg rounded-lg overflow-hidden" style={{ backgroundColor: '#FAF8F5' }}>
         <thead>
           <tr className="bg-gray-50">
             <th className="px-6 py-4 text-left text-sm font-semibold text-gray-900 border-b border-gray-200">
