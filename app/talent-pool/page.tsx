@@ -6,7 +6,7 @@ export default function TalentPoolPage() {
   return (
     <main className="relative" style={{ backgroundColor: '#F5F3EF' }}>
       {/* Header with Logo */}
-      <header className="fixed top-0 left-0 right-0 z-50 py-6 px-8 border-b border-gray-200" style={{ backgroundColor: 'rgba(245, 243, 239, 0.98)' }}>
+      <header className="fixed top-0 left-0 right-0 z-50 py-6 px-8 border-b border-gray-200 shadow-sm" style={{ backgroundColor: 'rgba(245, 243, 239, 0.98)', backdropFilter: 'blur(8px)' }}>
         <div className="max-w-7xl mx-auto flex items-center justify-between">
           <WebbJobsLogo />
           
@@ -45,7 +45,7 @@ export default function TalentPoolPage() {
       </header>
 
       {/* Hero Section */}
-      <section className="relative py-20 md:py-32 px-4 pt-32 md:pt-40" style={{ backgroundColor: '#FAF8F5' }}>
+      <section className="relative py-20 md:py-32 px-4 pt-40 md:pt-48" style={{ backgroundColor: '#FAF8F5' }}>
         <div className="max-w-4xl mx-auto">
           <div className="text-center mb-12">
             <div className="inline-flex items-center gap-2 px-4 py-2 text-gray-700 text-sm font-medium mb-6 rounded-full" style={{ backgroundColor: 'rgba(220, 38, 38, 0.1)' }}>

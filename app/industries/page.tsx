@@ -6,7 +6,7 @@ export default function IndustriesPage() {
   return (
     <main className="relative" style={{ backgroundColor: '#F5F3EF' }}>
       {/* Header with Logo */}
-      <header className="fixed top-0 left-0 right-0 z-50 py-6 px-8 border-b border-gray-200" style={{ backgroundColor: 'rgba(245, 243, 239, 0.98)' }}>
+      <header className="fixed top-0 left-0 right-0 z-50 py-6 px-8 border-b border-gray-200 shadow-sm" style={{ backgroundColor: 'rgba(245, 243, 239, 0.98)', backdropFilter: 'blur(8px)' }}>
         <div className="max-w-7xl mx-auto flex items-center justify-between">
           <WebbJobsLogo />
           
