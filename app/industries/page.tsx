@@ -28,6 +28,13 @@ export default function IndustriesPage() {
               Industries
             </Link>
             <Link 
+              href="/roles" 
+              className="text-sm text-gray-700 hover:text-gray-900 transition-colors"
+              style={{ fontFamily: 'Inter, sans-serif' }}
+            >
+              Open Roles
+            </Link>
+            <Link 
               href="/#contact" 
               className="text-sm text-gray-700 hover:text-gray-900 transition-colors"
               style={{ fontFamily: 'Inter, sans-serif' }}

@@ -104,6 +104,13 @@ export default function Home() {
               Industries
             </a>
             <a 
+              href="/roles" 
+              className="text-sm text-gray-700 hover:text-gray-900 transition-colors"
+              style={{ fontFamily: 'Inter, sans-serif' }}
+            >
+              Open Roles
+            </a>
+            <a 
               href="#contact" 
               className="text-sm text-gray-700 hover:text-gray-900 transition-colors"
               style={{ fontFamily: 'Inter, sans-serif' }}
