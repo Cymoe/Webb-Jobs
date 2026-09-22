@@ -1,5 +1,6 @@
 import ContactForm from '@/components/ContactForm';
 import ComparisonTable from '@/components/ComparisonTable';
+import ContactDropdown from '@/components/ContactDropdown';
 import AnimatedGradientText from '@/components/ui/animated-gradient-text';
 import { BentoCard, BentoGrid } from '@/components/ui/bento-grid';
 import Marquee from '@/components/ui/marquee';
@@ -110,20 +111,7 @@ export default function Home() {
             >
               Open Roles
             </a>
-            <a 
-              href="#contact" 
-              className="text-sm text-gray-700 hover:text-gray-900 transition-colors"
-              style={{ fontFamily: 'Inter, sans-serif' }}
-            >
-              Contact
-            </a>
-            <a
-              href="#contact"
-              className="px-6 py-2 bg-gray-900 hover:bg-gray-800 text-white font-medium rounded transition-colors"
-              style={{ fontFamily: 'Inter, sans-serif' }}
-            >
-              Book a Call
-            </a>
+            <ContactDropdown />
           </nav>
         </div>
       </header>
