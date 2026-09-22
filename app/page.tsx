@@ -1,6 +1,7 @@
 'use client';
 
 import CalendlySection from '@/components/CalendlySection';
+import VideoSection from '@/components/VideoSection';
 import WebbJobsLogo from '@/components/WebbJobsLogo';
 import FloatingCTA from '@/components/FloatingCTA';
 import Marquee from '@/components/ui/marquee';
@@ -431,6 +432,9 @@ export default function Home() {
           </div>
         </div>
       </section>
+
+      {/* Video Section - Pre-Booking Warmup */}
+      <VideoSection />
 
       {/* Calendly Booking Section */}
       <section id="contact" className="py-20 md:py-32 px-4">
