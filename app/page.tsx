@@ -137,7 +137,7 @@ export default function Home() {
               </div>
               
               <h1 className="text-5xl md:text-6xl font-bold mb-6 text-gray-900 leading-tight">
-                Hire 5 to 50+ Door-to-Door Sales Reps Every Month
+                Hire 5 to 50+ D2D Sales Reps Every Month
               </h1>
               
               <p className="text-xl text-gray-600 mb-8 leading-relaxed">
