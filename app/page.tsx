@@ -112,6 +112,13 @@ export default function Home() {
               Open Roles
             </a>
             <ContactDropdown />
+            <a
+              href="#contact"
+              className="px-6 py-2 bg-gray-900 hover:bg-gray-800 text-white font-medium rounded transition-colors"
+              style={{ fontFamily: 'Inter, sans-serif' }}
+            >
+              Book a Call
+            </a>
           </nav>
         </div>
       </header>
