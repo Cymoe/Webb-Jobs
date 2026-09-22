@@ -84,7 +84,7 @@ export default function Home() {
         <div className="max-w-6xl mx-auto">
           <div className="grid md:grid-cols-2 gap-12 items-center">
             <div>
-              <div className="inline-block px-3 py-1 bg-gray-100 text-gray-700 rounded-full text-sm font-medium mb-6">
+              <div className="inline-block px-3 py-1 text-gray-600 text-sm font-medium mb-6 border-b border-gray-300">
                 Door-to-Door Sales Recruiting
               </div>
               
@@ -96,23 +96,15 @@ export default function Home() {
                 We build, run, and scale your recruiting engine. From Indeed and Meta ads to qualified interviews on your calendar.
               </p>
               
-              <div className="flex flex-col sm:flex-row gap-4 mb-8">
-                <a
-                  href="#contact"
-                  className="px-8 py-4 bg-gray-900 hover:bg-gray-800 text-white font-semibold rounded-lg transition-colors text-center"
-                >
-                  Book a Strategy Call
-                </a>
-                <a
-                  href="#how-it-works"
-                  className="px-8 py-4 bg-white hover:bg-gray-50 text-gray-900 font-semibold rounded-lg border-2 border-gray-200 transition-colors text-center"
-                >
-                  How It Works
-                </a>
-              </div>
+              <a
+                href="#contact"
+                className="inline-block px-8 py-4 bg-primary hover:bg-primary-dark text-white font-medium rounded transition-colors mb-6"
+              >
+                Book a Call
+              </a>
 
               <p className="text-sm text-gray-500">
-                First interviews in 5 days. Risk-free model.
+                First interviews in 5 days. Risk-free.
               </p>
             </div>
 
@@ -128,29 +120,6 @@ export default function Home() {
               </div>
             </div>
           </div>
-        </div>
-      </section>
-
-      {/* Social Proof Marquee */}
-      <section className="py-8 border-y border-gray-200" style={{ backgroundColor: '#ECE9E3' }}>
-        <div className="max-w-container mx-auto px-4">
-          <p className="text-center text-sm text-gray-500 mb-4">TRUSTED BY LEADING D2D COMPANIES</p>
-          <Marquee pauseOnHover className="[--duration:20s]">
-            {testimonials.map((item, idx) => (
-              <div
-                key={idx}
-                className="flex items-center gap-3 px-6 py-3 bg-white rounded-lg border border-gray-200 shadow-sm"
-              >
-                <div className="w-10 h-10 rounded-full bg-gradient-to-br from-blue-500 to-purple-500 flex items-center justify-center text-white font-bold">
-                  {item.company[0]}
-                </div>
-                <div>
-                  <div className="font-semibold text-sm">{item.company}</div>
-                  <div className="text-xs text-gray-500">{item.industry}</div>
-                </div>
-              </div>
-            ))}
-          </Marquee>
         </div>
       </section>
 
@@ -171,11 +140,8 @@ export default function Home() {
             </div>
             
             <div>
-              <div className="inline-flex items-center gap-2 px-4 py-2 bg-gray-100 text-gray-700 rounded-full text-sm font-medium mb-6">
-                <svg className="w-4 h-4" fill="currentColor" viewBox="0 0 20 20">
-                  <path d="M9 6a3 3 0 11-6 0 3 3 0 016 0zM17 6a3 3 0 11-6 0 3 3 0 016 0zM12.93 17c.046-.327.07-.66.07-1a6.97 6.97 0 00-1.5-4.33A5 5 0 0119 16v1h-6.07zM6 11a5 5 0 015 5v1H1v-1a5 5 0 015-5z" />
-                </svg>
-                Founder & CEO
+              <div className="text-sm text-gray-500 mb-6 pb-2 border-b border-gray-300 inline-block">
+                Founder
               </div>
               
               <h2 className="text-4xl font-bold mb-6 text-gray-900">
@@ -229,22 +195,6 @@ export default function Home() {
         </div>
       </section>
 
-      {/* Features Bento Grid */}
-      <section className="py-20 md:py-32 px-4" style={{ backgroundColor: '#ECE9E3' }}>
-        <div className="max-w-7xl mx-auto">
-          <div className="text-center mb-16">
-            <h2 className="text-4xl md:text-5xl font-bold mb-4 text-gray-900">Why Companies Choose Us</h2>
-            <p className="text-xl text-gray-600">Everything you need to build your sales team, faster</p>
-          </div>
-          
-          <BentoGrid>
-            {features.map((feature, idx) => (
-              <BentoCard key={idx} {...feature} />
-            ))}
-          </BentoGrid>
-        </div>
-      </section>
-
       {/* Process Section */}
       <section id="how-it-works" className="py-20 md:py-32 px-4">
         <div className="max-w-container mx-auto">
@@ -273,34 +223,14 @@ export default function Home() {
             ].map((step, idx) => (
               <div
                 key={idx}
-                className="relative group bg-white p-8 rounded-2xl shadow-lg hover:shadow-xl transition-all border border-gray-200"
+                className="p-8 border-l-2 border-gray-300"
               >
-                <div className="absolute -top-4 left-8 w-12 h-12 bg-primary text-white rounded-xl flex items-center justify-center font-bold text-xl shadow-lg">
-                  {idx + 1}
-                </div>
-                <div className="pt-6">
-                  <div className="text-sm font-semibold text-gray-500 mb-2">{step.week}</div>
-                  <h3 className="text-2xl font-bold mb-4">{step.title}</h3>
-                  <p className="text-gray-600">{step.description}</p>
-                </div>
+                <div className="text-sm font-medium text-gray-500 mb-2">{step.week}</div>
+                <h3 className="text-2xl font-bold mb-4">{step.title}</h3>
+                <p className="text-gray-600">{step.description}</p>
               </div>
             ))}
           </div>
-        </div>
-      </section>
-
-      {/* Comparison Table */}
-      <section className="py-20 md:py-32 px-4" style={{ backgroundColor: '#ECE9E3' }}>
-        <div className="max-w-6xl mx-auto">
-          <div className="text-center mb-16">
-            <h2 className="text-4xl md:text-5xl font-bold mb-4 text-gray-900">
-              Our Recruiting Engine vs. Alternatives
-            </h2>
-            <p className="text-xl text-gray-600">
-              See how we stack up against traditional recruiting and DIY hiring
-            </p>
-          </div>
-          <ComparisonTable />
         </div>
       </section>
 

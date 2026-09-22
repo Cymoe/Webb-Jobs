@@ -171,9 +171,9 @@ export default function ContactForm() {
         <button
           type="submit"
           disabled={!isValid || isSubmitting}
-          className={`w-full py-4 rounded-lg font-semibold text-white transition-all ${
+          className={`w-full py-4 rounded font-medium text-white transition-all ${
             isValid && !isSubmitting
-              ? 'bg-primary hover:bg-primary-dark shadow-lg hover:shadow-xl'
+              ? 'bg-primary hover:bg-primary-dark'
               : 'bg-gray-300 cursor-not-allowed'
           }`}
         >
