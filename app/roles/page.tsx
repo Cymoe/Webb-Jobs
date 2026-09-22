@@ -131,7 +131,7 @@ export default function RolesPage() {
               className="px-6 py-2 bg-gray-900 hover:bg-gray-800 text-white font-medium rounded transition-colors"
               style={{ fontFamily: 'Inter, sans-serif' }}
             >
-              Hire with Us
+              Book Your Free Intro Call
             </Link>
           </nav>
         </div>
