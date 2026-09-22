@@ -1,10 +1,30 @@
 'use client';
 
-import { useState } from 'react';
+import { useState, useEffect } from 'react';
 import Link from 'next/link';
 
 export default function FloatingCTA() {
-  const [isVisible, setIsVisible] = useState(true);
+  const [isVisible, setIsVisible] = useState(false);
+  const [isDismissed, setIsDismissed] = useState(false);
+
+  useEffect(() => {
+    const handleScroll = () => {
+      // Show button after scrolling 600px (past hero section)
+      if (window.scrollY > 600 && !isDismissed) {
+        setIsVisible(true);
+      } else if (window.scrollY <= 600) {
+        setIsVisible(false);
+      }
+    };
+
+    window.addEventListener('scroll', handleScroll);
+    return () => window.removeEventListener('scroll', handleScroll);
+  }, [isDismissed]);
+
+  const handleDismiss = () => {
+    setIsDismissed(true);
+    setIsVisible(false);
+  };
 
   if (!isVisible) return null;
 
@@ -14,16 +34,16 @@ export default function FloatingCTA() {
       style={{ maxWidth: 'calc(100vw - 2rem)' }}
     >
       <div 
-        className="flex items-center gap-4 px-6 py-4 rounded-lg shadow-2xl border border-gray-800"
+        className="flex items-center gap-3 px-4 py-3 rounded-lg shadow-2xl border border-gray-800"
         style={{ backgroundColor: '#111827' }}
       >
         {/* Icon */}
         <div 
-          className="flex-shrink-0 w-10 h-10 rounded flex items-center justify-center"
+          className="flex-shrink-0 w-8 h-8 rounded flex items-center justify-center"
           style={{ backgroundColor: '#DC2626' }}
         >
           <svg 
-            className="w-5 h-5 text-white" 
+            className="w-4 h-4 text-white" 
             fill="none" 
             stroke="currentColor" 
             viewBox="0 0 24 24"
@@ -38,27 +58,22 @@ export default function FloatingCTA() {
         </div>
 
         {/* Text */}
-        <div className="flex-1">
-          <Link 
-            href="#contact"
-            className="text-white font-semibold hover:opacity-80 transition-opacity"
-            style={{ fontFamily: 'Inter, sans-serif' }}
-          >
-            Book Your Free Intro Call
-          </Link>
-          <p className="text-gray-400 text-xs mt-0.5" style={{ fontFamily: 'Inter, sans-serif' }}>
-            First interviews in 5 days
-          </p>
-        </div>
+        <Link 
+          href="#contact"
+          className="text-white text-sm font-semibold hover:opacity-80 transition-opacity whitespace-nowrap"
+          style={{ fontFamily: 'Inter, sans-serif' }}
+        >
+          Book Free Intro Call
+        </Link>
 
         {/* Close Button */}
         <button
-          onClick={() => setIsVisible(false)}
-          className="flex-shrink-0 w-8 h-8 rounded hover:bg-gray-800 flex items-center justify-center transition-colors"
+          onClick={handleDismiss}
+          className="flex-shrink-0 w-6 h-6 rounded hover:bg-gray-800 flex items-center justify-center transition-colors ml-2"
           aria-label="Close"
         >
           <svg 
-            className="w-4 h-4 text-gray-400 hover:text-white" 
+            className="w-3 h-3 text-gray-400 hover:text-white" 
             fill="none" 
             stroke="currentColor" 
             viewBox="0 0 24 24"
