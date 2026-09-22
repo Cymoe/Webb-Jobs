@@ -80,7 +80,7 @@ export default function Home() {
   return (
     <main className="relative" style={{ backgroundColor: '#F5F3EF' }}>
       {/* Header with Logo */}
-      <header className="fixed top-0 left-0 right-0 z-50 py-6 px-8" style={{ backgroundColor: 'rgba(245, 243, 239, 0.95)' }}>
+      <header className="fixed top-0 left-0 right-0 z-50 py-6 px-8 border-b border-gray-200" style={{ backgroundColor: 'rgba(245, 243, 239, 0.98)' }}>
         <div className="max-w-7xl mx-auto flex items-center justify-between">
           <a href="/" className="flex items-center gap-3 group">
             <svg width="32" height="48" viewBox="0 0 32 48" fill="none" xmlns="http://www.w3.org/2000/svg">
@@ -93,13 +93,34 @@ export default function Home() {
             </span>
           </a>
           
-          <div className="flex items-center gap-8">
+          <nav className="hidden md:flex items-center gap-8">
             <a 
-              href="tel:+1234567890" 
+              href="#about" 
               className="text-gray-700 hover:text-gray-900 font-medium transition-colors"
               style={{ fontFamily: 'Inter, sans-serif' }}
             >
-              (555) 123-4567
+              About
+            </a>
+            <a 
+              href="#how-it-works" 
+              className="text-gray-700 hover:text-gray-900 font-medium transition-colors"
+              style={{ fontFamily: 'Inter, sans-serif' }}
+            >
+              How It Works
+            </a>
+            <a 
+              href="#industries" 
+              className="text-gray-700 hover:text-gray-900 font-medium transition-colors"
+              style={{ fontFamily: 'Inter, sans-serif' }}
+            >
+              Industries
+            </a>
+            <a 
+              href="#contact" 
+              className="text-gray-700 hover:text-gray-900 font-medium transition-colors"
+              style={{ fontFamily: 'Inter, sans-serif' }}
+            >
+              Contact
             </a>
             <a
               href="#contact"
@@ -108,7 +129,7 @@ export default function Home() {
             >
               Book a Call
             </a>
-          </div>
+          </nav>
         </div>
       </header>
       {/* Hero Section */}
