@@ -1,3 +1,5 @@
+'use client';
+
 import ContactForm from '@/components/ContactForm';
 import ComparisonTable from '@/components/ComparisonTable';
 import ContactDropdown from '@/components/ContactDropdown';
@@ -80,6 +82,16 @@ const testimonials = [
 ];
 
 export default function Home() {
+  const handleScrollToContact = (e: React.MouseEvent) => {
+    e.preventDefault();
+    const contactSection = document.getElementById('contact');
+    if (contactSection) {
+      contactSection.scrollIntoView({ behavior: 'smooth' });
+      // Remove hash from URL so refresh starts at top
+      window.history.replaceState(null, '', '/');
+    }
+  };
+
   return (
     <main className="relative" style={{ backgroundColor: '#F5F3EF' }}>
       {/* Header with Logo */}
@@ -112,7 +124,8 @@ export default function Home() {
             <ContactDropdown />
             <a
               href="#contact"
-              className="px-6 py-2 bg-gray-900 hover:bg-gray-800 text-white font-medium rounded transition-colors"
+              onClick={handleScrollToContact}
+              className="px-6 py-2 bg-gray-900 hover:bg-gray-800 text-white font-medium rounded transition-colors cursor-pointer"
               style={{ fontFamily: 'Inter, sans-serif' }}
             >
               Book Call
@@ -135,7 +148,8 @@ export default function Home() {
               
               <a
                 href="#contact"
-                className="inline-block px-8 py-4 bg-gray-900 hover:bg-gray-800 text-white font-medium rounded transition-colors mb-6"
+                onClick={handleScrollToContact}
+                className="inline-block px-8 py-4 bg-gray-900 hover:bg-gray-800 text-white font-medium rounded transition-colors mb-6 cursor-pointer"
               >
                 Book Your Free Intro Call
               </a>

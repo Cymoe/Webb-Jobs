@@ -17,10 +17,19 @@ export default function ContactDropdown() {
       const contactSection = document.getElementById('contact');
       if (contactSection) {
         contactSection.scrollIntoView({ behavior: 'smooth' });
+        // Remove hash from URL so refresh starts at top
+        window.history.replaceState(null, '', '/');
       }
     } else {
-      // Navigate to homepage with contact hash
-      router.push('/#contact');
+      // Navigate to homepage first
+      router.push('/');
+      // Then scroll to contact after navigation
+      setTimeout(() => {
+        const contactSection = document.getElementById('contact');
+        if (contactSection) {
+          contactSection.scrollIntoView({ behavior: 'smooth' });
+        }
+      }, 100);
     }
   };
 

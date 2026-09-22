@@ -26,6 +26,16 @@ export default function FloatingCTA() {
     setIsVisible(false);
   };
 
+  const handleClick = (e: React.MouseEvent) => {
+    e.preventDefault();
+    const contactSection = document.getElementById('contact');
+    if (contactSection) {
+      contactSection.scrollIntoView({ behavior: 'smooth' });
+      // Remove hash from URL so refresh starts at top
+      window.history.replaceState(null, '', '/');
+    }
+  };
+
   if (!isVisible) return null;
 
   return (
@@ -58,13 +68,14 @@ export default function FloatingCTA() {
         </div>
 
         {/* Text */}
-        <Link 
+        <a 
           href="#contact"
-          className="text-white text-sm font-semibold hover:opacity-80 transition-opacity whitespace-nowrap"
+          onClick={handleClick}
+          className="text-white text-sm font-semibold hover:opacity-80 transition-opacity whitespace-nowrap cursor-pointer"
           style={{ fontFamily: 'Inter, sans-serif' }}
         >
           Book Free Intro Call
-        </Link>
+        </a>
 
         {/* Close Button */}
         <button
