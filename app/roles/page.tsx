@@ -170,7 +170,7 @@ export default function RolesPage() {
                 Browse Open Roles
               </a>
               <a
-                href="/#talent-pool"
+                href="/talent-pool"
                 className="inline-block px-8 py-4 bg-white hover:bg-gray-50 text-gray-900 text-center font-medium rounded border-2 border-gray-900 transition-colors"
               >
                 Join Talent Pool
