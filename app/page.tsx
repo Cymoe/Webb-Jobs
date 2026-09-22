@@ -90,13 +90,6 @@ export default function Home() {
           
           <nav className="hidden md:flex items-center gap-8">
             <a 
-              href="#about" 
-              className="text-sm text-gray-700 hover:text-gray-900 transition-colors"
-              style={{ fontFamily: 'Inter, sans-serif' }}
-            >
-              About
-            </a>
-            <a 
               href="#how-it-works" 
               className="text-sm text-gray-700 hover:text-gray-900 transition-colors"
               style={{ fontFamily: 'Inter, sans-serif' }}
