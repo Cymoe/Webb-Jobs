@@ -3,18 +3,21 @@ import Link from 'next/link';
 export default function WebbJobsLogo() {
   return (
     <Link href="/" className="flex items-center gap-3 group">
-      {/* Icon - Door/W symbol */}
+      {/* Icon - W for Webb */}
       <div className="relative w-10 h-10 rounded-full flex items-center justify-center" style={{ backgroundColor: '#DC2626' }}>
         <svg
-          className="w-5 h-5"
+          className="w-6 h-6"
           viewBox="0 0 24 24"
           fill="none"
           xmlns="http://www.w3.org/2000/svg"
         >
+          {/* Clean W shape */}
           <path
-            d="M4 20V4H9L12 8L15 4H20V20H15V12L12 16L9 12V20H4Z"
-            fill="white"
-            fillOpacity="0.95"
+            d="M3 6L6 18L9 10L12 18L15 10L18 18L21 6"
+            stroke="white"
+            strokeWidth="2.5"
+            strokeLinecap="round"
+            strokeLinejoin="round"
           />
         </svg>
       </div>
