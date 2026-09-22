@@ -1,6 +1,6 @@
 'use client';
 
-import ContactForm from '@/components/ContactForm';
+import CalendlySection from '@/components/CalendlySection';
 import WebbJobsLogo from '@/components/WebbJobsLogo';
 import FloatingCTA from '@/components/FloatingCTA';
 import Marquee from '@/components/ui/marquee';
@@ -432,21 +432,10 @@ export default function Home() {
         </div>
       </section>
 
-      {/* Final CTA */}
+      {/* Calendly Booking Section */}
       <section id="contact" className="py-20 md:py-32 px-4">
         <div className="max-w-container mx-auto">
-          <div className="text-center mb-16">
-            <h2 className="text-4xl md:text-5xl font-bold mb-6 text-gray-900">
-              Ready to Build Your Sales Team?
-            </h2>
-            <p className="text-xl text-gray-600 mb-2">
-              Book a free 30-minute strategy call. No pressure, no pitch.
-            </p>
-            <p className="text-gray-600">
-              We'll discuss your hiring goals and whether our recruiting engine is right for you.
-            </p>
-          </div>
-          <ContactForm />
+          <CalendlySection />
         </div>
       </section>
 
