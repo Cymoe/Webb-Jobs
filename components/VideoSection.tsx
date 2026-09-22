@@ -24,8 +24,33 @@ export default function VideoSection() {
           </div>
         </div>
 
+        {/* CTA Button - Direct to Calendly */}
+        <div className="mt-12 text-center">
+          <a
+            href="#contact"
+            onClick={(e) => {
+              e.preventDefault();
+              const contactSection = document.getElementById('contact');
+              if (contactSection) {
+                contactSection.scrollIntoView({ behavior: 'smooth' });
+                window.history.replaceState(null, '', '/');
+              }
+            }}
+            className="inline-block px-12 py-5 text-xl font-bold rounded-lg transition-all transform hover:scale-105 shadow-2xl"
+            style={{ 
+              backgroundColor: '#DC2626',
+              color: '#FFFFFF'
+            }}
+          >
+            Book Your Free Strategy Call →
+          </a>
+          <p className="mt-4 text-sm text-gray-600">
+            30 minutes • No commitment • First interviews in 5 days
+          </p>
+        </div>
+
         {/* Supporting Points Below Video */}
-        <div className="mt-12 grid md:grid-cols-3 gap-8">
+        <div className="mt-16 grid md:grid-cols-3 gap-8">
           <div className="text-center">
             <div className="w-12 h-12 mx-auto mb-4 rounded-full flex items-center justify-center" style={{ backgroundColor: '#DC2626' }}>
               <svg className="w-6 h-6 text-white" fill="none" stroke="currentColor" viewBox="0 0 24 24">
