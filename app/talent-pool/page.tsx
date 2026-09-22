@@ -45,7 +45,7 @@ export default function TalentPoolPage() {
       </header>
 
       {/* Hero Section */}
-      <section className="relative py-32 md:py-40 px-4 pt-40 md:pt-48" style={{ backgroundColor: '#1F2937' }}>
+      <section className="relative py-32 md:py-40 px-4 pt-48 md:pt-56" style={{ backgroundColor: '#1F2937' }}>
         <div className="max-w-4xl mx-auto">
           <div className="text-center mb-12">
             <h1 className="text-5xl md:text-6xl font-bold mb-6 leading-tight" style={{ color: '#F5F3EF' }}>
