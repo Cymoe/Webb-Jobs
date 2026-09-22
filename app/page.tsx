@@ -115,24 +115,15 @@ export default function Home() {
                 fill="none"
                 xmlns="http://www.w3.org/2000/svg"
               >
-                {/* Door frame */}
-                <rect
-                  x="20"
-                  y="10"
-                  width="160"
-                  height="300"
-                  fill="#8B8680"
-                />
-                
                 {/* Open door - perspective view */}
                 <path
-                  d="M 180 10 L 260 50 L 260 290 L 180 310 Z"
+                  d="M 80 10 L 160 50 L 160 290 L 80 310 Z"
                   fill="#DC2626"
                 />
                 
                 {/* Door edge (darker for depth) */}
                 <rect
-                  x="180"
+                  x="80"
                   y="10"
                   width="6"
                   height="300"
@@ -141,19 +132,10 @@ export default function Home() {
                 
                 {/* Door handle */}
                 <circle
-                  cx="200"
+                  cx="100"
                   cy="160"
                   r="6"
                   fill="#991B1B"
-                />
-                
-                {/* Shadow inside doorway */}
-                <rect
-                  x="30"
-                  y="20"
-                  width="140"
-                  height="280"
-                  fill="#6B6660"
                 />
               </svg>
             </div>
