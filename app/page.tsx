@@ -225,6 +225,35 @@ export default function Home() {
         </Marquee>
       </section>
 
+      {/* Results/Metrics Section */}
+      <section className="py-20 md:py-32 px-4">
+        <div className="max-w-6xl mx-auto">
+          <div className="text-center mb-16">
+            <h2 className="text-4xl md:text-5xl font-bold mb-4 text-gray-900">
+              The Numbers Speak for Themselves
+            </h2>
+            <p className="text-xl text-gray-600">
+              Real results from real D2D companies
+            </p>
+          </div>
+          
+          <div className="grid md:grid-cols-3 gap-8">
+            <div className="text-center p-8 bg-gray-50 rounded-2xl border border-gray-200">
+              <div className="text-5xl font-bold text-gray-900 mb-2">6,000+</div>
+              <div className="text-lg text-gray-600">D2D Reps Hired</div>
+            </div>
+            <div className="text-center p-8 bg-gray-50 rounded-2xl border border-gray-200">
+              <div className="text-5xl font-bold text-gray-900 mb-2">5 Days</div>
+              <div className="text-lg text-gray-600">To First Interview</div>
+            </div>
+            <div className="text-center p-8 bg-gray-50 rounded-2xl border border-gray-200">
+              <div className="text-5xl font-bold text-gray-900 mb-2">40 Days</div>
+              <div className="text-lg text-gray-600">Average Time to Hire</div>
+            </div>
+          </div>
+        </div>
+      </section>
+
       {/* Founder Section */}
       <section className="py-20 md:py-32 px-4" style={{ backgroundColor: '#FAF8F5' }}>
         <div className="max-w-5xl mx-auto">
@@ -297,6 +326,87 @@ export default function Home() {
         </div>
       </section>
 
+      {/* Services/What You Get Section */}
+      <section className="py-20 md:py-32 px-4" style={{ backgroundColor: '#FAF8F5' }}>
+        <div className="max-w-6xl mx-auto">
+          <div className="text-center mb-16">
+            <h2 className="text-4xl md:text-5xl font-bold mb-4 text-gray-900">
+              What You Get
+            </h2>
+            <p className="text-xl text-gray-600">
+              Your complete recruiting engine, managed end-to-end
+            </p>
+          </div>
+          
+          <div className="grid md:grid-cols-2 gap-8">
+            {[
+              {
+                title: "Job Ad Strategy & Creation",
+                items: [
+                  "D2D-specific job descriptions that attract closers, not retail workers",
+                  "Compelling employer brand positioning",
+                  "Platform-optimized ads for Indeed and Meta"
+                ]
+              },
+              {
+                title: "Multi-Channel Sourcing",
+                items: [
+                  "Indeed campaigns targeting D2D experience",
+                  "Meta ads reaching active job seekers",
+                  "Continuous optimization based on quality metrics"
+                ]
+              },
+              {
+                title: "Screening & Qualification",
+                items: [
+                  "Custom screening questions for D2D fit",
+                  "Phone screens with experienced D2D recruiters",
+                  "Background and reference checks"
+                ]
+              },
+              {
+                title: "Interview Coordination",
+                items: [
+                  "Automated scheduling on your calendar",
+                  "Candidate prep and confirmation",
+                  "Follow-up and feedback loops"
+                ]
+              },
+              {
+                title: "Ongoing Pipeline Management",
+                items: [
+                  "Weekly pipeline reports and metrics",
+                  "Continuous candidate nurturing",
+                  "Ad spend optimization and tracking"
+                ]
+              },
+              {
+                title: "Hiring Support",
+                items: [
+                  "Offer letter templates and guidance",
+                  "Onboarding coordination support",
+                  "90-day replacement guarantee"
+                ]
+              }
+            ].map((service, idx) => (
+              <div key={idx} className="p-8 bg-white rounded-2xl border border-gray-200">
+                <h3 className="text-2xl font-bold mb-4 text-gray-900">{service.title}</h3>
+                <ul className="space-y-3">
+                  {service.items.map((item, itemIdx) => (
+                    <li key={itemIdx} className="flex items-start gap-3">
+                      <svg className="w-6 h-6 text-gray-900 flex-shrink-0 mt-0.5" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+                        <path strokeLinecap="round" strokeLinejoin="round" strokeWidth={2} d="M5 13l4 4L19 7" />
+                      </svg>
+                      <span className="text-gray-600">{item}</span>
+                    </li>
+                  ))}
+                </ul>
+              </div>
+            ))}
+          </div>
+        </div>
+      </section>
+
       {/* Process Section */}
       <section id="how-it-works" className="py-20 md:py-32 px-4">
         <div className="max-w-container mx-auto">
@@ -330,6 +440,154 @@ export default function Home() {
                 <div className="text-sm font-medium text-gray-500 mb-2">{step.week}</div>
                 <h3 className="text-2xl font-bold mb-4">{step.title}</h3>
                 <p className="text-gray-600">{step.description}</p>
+              </div>
+            ))}
+          </div>
+        </div>
+      </section>
+
+      {/* Industries Detail Section */}
+      <section id="industries" className="py-20 md:py-32 px-4" style={{ backgroundColor: '#FAF8F5' }}>
+        <div className="max-w-6xl mx-auto">
+          <div className="text-center mb-16">
+            <h2 className="text-4xl md:text-5xl font-bold mb-4 text-gray-900">
+              Industries We Specialize In
+            </h2>
+            <p className="text-xl text-gray-600">
+              We know D2D sales recruiting inside and out
+            </p>
+          </div>
+          
+          <div className="grid md:grid-cols-2 lg:grid-cols-3 gap-6">
+            {[
+              { name: "Roofing", description: "Storm chasers, retail teams, and warranty programs" },
+              { name: "Solar", description: "Residential and commercial solar installations" },
+              { name: "Replacement Windows", description: "Home improvement and exterior remodeling" },
+              { name: "Pest Control", description: "Residential and commercial pest management" },
+              { name: "HVAC", description: "Installation, maintenance, and energy efficiency" },
+              { name: "Home Security", description: "Smart home and security systems" },
+              { name: "Water Treatment", description: "Filtration, softeners, and purification" },
+              { name: "Fiber / Telecom", description: "Internet, TV, and telecommunications" },
+              { name: "Gas & Electric", description: "Energy providers and utility services" },
+              { name: "Insurance", description: "Life, health, and property insurance" },
+              { name: "Landscaping", description: "Lawn care and landscape design" },
+              { name: "Home Services", description: "General contractors and home improvement" }
+            ].map((industry, idx) => (
+              <div key={idx} className="p-6 bg-white rounded-xl border border-gray-200">
+                <h3 className="text-xl font-bold mb-2 text-gray-900">{industry.name}</h3>
+                <p className="text-gray-600">{industry.description}</p>
+              </div>
+            ))}
+          </div>
+        </div>
+      </section>
+
+      {/* Pricing Section */}
+      <section className="py-20 md:py-32 px-4">
+        <div className="max-w-4xl mx-auto">
+          <div className="text-center mb-16">
+            <h2 className="text-4xl md:text-5xl font-bold mb-4 text-gray-900">
+              Simple, Transparent Pricing
+            </h2>
+            <p className="text-xl text-gray-600">
+              One flat rate. No surprises. No per-hire fees.
+            </p>
+          </div>
+          
+          <div className="bg-gray-50 rounded-2xl border-2 border-gray-900 p-12">
+            <div className="text-center mb-8">
+              <div className="text-5xl md:text-6xl font-bold text-gray-900 mb-4">
+                $20,000
+              </div>
+              <div className="text-xl text-gray-600 mb-2">90-Day Engagement</div>
+              <div className="text-gray-500">+ Your Ad Spend (typically $3k-5k/month)</div>
+            </div>
+            
+            <div className="border-t border-gray-300 pt-8">
+              <h3 className="text-2xl font-bold mb-6 text-gray-900 text-center">What's Included</h3>
+              <ul className="space-y-4 max-w-2xl mx-auto">
+                {[
+                  "Full recruiting engine setup and management",
+                  "Indeed and Meta ad campaigns",
+                  "Unlimited candidate screening and qualification",
+                  "Dedicated recruiting specialist",
+                  "Weekly pipeline reports",
+                  "Interview scheduling and coordination",
+                  "90-day replacement guarantee"
+                ].map((item, idx) => (
+                  <li key={idx} className="flex items-start gap-3">
+                    <svg className="w-6 h-6 text-gray-900 flex-shrink-0 mt-0.5" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+                      <path strokeLinecap="round" strokeLinejoin="round" strokeWidth={2} d="M5 13l4 4L19 7" />
+                    </svg>
+                    <span className="text-lg text-gray-700">{item}</span>
+                  </li>
+                ))}
+              </ul>
+            </div>
+            
+            <div className="text-center mt-8">
+              <a
+                href="#contact"
+                className="inline-block px-8 py-4 bg-gray-900 hover:bg-gray-800 text-white font-medium rounded transition-colors"
+              >
+                Book a Strategy Call
+              </a>
+            </div>
+          </div>
+          
+          <p className="text-center text-gray-500 mt-8">
+            No contracts. Cancel anytime. Most clients see their first hire within 40 days.
+          </p>
+        </div>
+      </section>
+
+      {/* FAQ Section */}
+      <section className="py-20 md:py-32 px-4" style={{ backgroundColor: '#FAF8F5' }}>
+        <div className="max-w-4xl mx-auto">
+          <div className="text-center mb-16">
+            <h2 className="text-4xl md:text-5xl font-bold mb-4 text-gray-900">
+              Frequently Asked Questions
+            </h2>
+          </div>
+          
+          <div className="space-y-6">
+            {[
+              {
+                question: "Do you guarantee hires?",
+                answer: "We don't guarantee hires initially because hiring depends on your interview process and offer competitiveness. We measure success by qualified interviews booked. Most clients make their first hire within 40 days, and we include a 90-day replacement guarantee for hires made through our process."
+              },
+              {
+                question: "What if I'm in a rural market or hard-to-recruit area?",
+                answer: "We've successfully recruited in markets of all sizes. Our multi-channel approach (Indeed + Meta + targeted social) reaches candidates who aren't actively job searching. We adjust our strategy based on your market dynamics."
+              },
+              {
+                question: "How is this different from posting on Indeed myself?",
+                answer: "Three key differences: (1) We write D2D-specific job ads that attract closers, not retail workers. (2) We screen and qualify every candidate before they hit your calendar. (3) We manage the entire pipeline including follow-up, scheduling, and nurturing so you never touch a resume until the final interview."
+              },
+              {
+                question: "What's the time commitment on my end?",
+                answer: "Minimal. We need 1-2 hours for the initial kickoff to understand your ideal rep profile. After that, your only job is conducting final interviews with pre-qualified candidates we send your way. Most clients spend 2-3 hours per week on interviews."
+              },
+              {
+                question: "Can I pause or cancel anytime?",
+                answer: "Yes. We operate on 90-day engagements with no long-term contracts. If you need to pause recruiting, just let us know. Most clients continue beyond 90 days because they're consistently hiring, but you're never locked in."
+              },
+              {
+                question: "How many reps can I expect to hire in 90 days?",
+                answer: "It varies by market, offer, and interview volume, but our average client hires 3-7 reps in their first 90 days. High-volume clients (with multiple interviewers and competitive offers) often hire 10-15+. We'll discuss realistic expectations on our strategy call."
+              },
+              {
+                question: "What industries do you NOT work with?",
+                answer: "We focus exclusively on D2D sales companies. We don't recruit for inside sales, retail, call centers, or non-sales roles. If your reps knock doors and close deals face-to-face, we're the right fit."
+              },
+              {
+                question: "Do you handle onboarding and training?",
+                answer: "No. We focus on recruiting qualified candidates through the interview stage. Once you make an offer, onboarding and training are on you. However, we can provide templates and guidance to help streamline your process."
+              }
+            ].map((faq, idx) => (
+              <div key={idx} className="bg-white p-8 rounded-xl border border-gray-200">
+                <h3 className="text-xl font-bold mb-3 text-gray-900">{faq.question}</h3>
+                <p className="text-gray-600 leading-relaxed">{faq.answer}</p>
               </div>
             ))}
           </div>
