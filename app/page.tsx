@@ -250,7 +250,7 @@ export default function Home() {
               </div>
               
               <h2 className="text-4xl font-bold mb-6 text-gray-900">
-                Built by Someone Who's Actually Hired 6,000+ D2D Reps
+                Built by Someone Who's Actually Done This
               </h2>
               
               <p className="text-lg text-gray-600 mb-6">
@@ -262,14 +262,8 @@ export default function Home() {
               </p>
               
               <p className="text-lg text-gray-600 mb-8">
-                This recruiting engine is everything I learned from hiring 6,000+ reps, systematized so you can scale your team without the trial and error.
+                This recruiting engine is everything I learned from years of hiring and scaling D2D sales teams, systematized so you can build your team without the trial and error.
               </p>
-              
-              <div className="flex items-center gap-4">
-                <div className="h-px flex-1 bg-gradient-to-r from-gray-200 to-transparent" />
-                <span className="text-sm text-gray-500">6,000+ successful hires</span>
-                <div className="h-px flex-1 bg-gradient-to-l from-gray-200 to-transparent" />
-              </div>
             </div>
           </div>
         </div>
