@@ -14,11 +14,14 @@ export default function FloatingCTA() {
       style={{ maxWidth: 'calc(100vw - 2rem)' }}
     >
       <div 
-        className="flex items-center gap-4 px-6 py-4 rounded-full shadow-2xl border border-gray-200"
-        style={{ backgroundColor: '#3B82F6' }}
+        className="flex items-center gap-4 px-6 py-4 rounded-lg shadow-2xl border border-gray-800"
+        style={{ backgroundColor: '#111827' }}
       >
         {/* Icon */}
-        <div className="flex-shrink-0 w-10 h-10 rounded-full bg-white/20 flex items-center justify-center">
+        <div 
+          className="flex-shrink-0 w-10 h-10 rounded flex items-center justify-center"
+          style={{ backgroundColor: '#DC2626' }}
+        >
           <svg 
             className="w-5 h-5 text-white" 
             fill="none" 
@@ -38,12 +41,12 @@ export default function FloatingCTA() {
         <div className="flex-1">
           <Link 
             href="#contact"
-            className="text-white font-semibold hover:underline"
+            className="text-white font-semibold hover:opacity-80 transition-opacity"
             style={{ fontFamily: 'Inter, sans-serif' }}
           >
             Book Your Free Intro Call
           </Link>
-          <p className="text-white/80 text-xs mt-0.5" style={{ fontFamily: 'Inter, sans-serif' }}>
+          <p className="text-gray-400 text-xs mt-0.5" style={{ fontFamily: 'Inter, sans-serif' }}>
             First interviews in 5 days
           </p>
         </div>
@@ -51,11 +54,11 @@ export default function FloatingCTA() {
         {/* Close Button */}
         <button
           onClick={() => setIsVisible(false)}
-          className="flex-shrink-0 w-8 h-8 rounded-full bg-white/20 hover:bg-white/30 flex items-center justify-center transition-colors"
+          className="flex-shrink-0 w-8 h-8 rounded hover:bg-gray-800 flex items-center justify-center transition-colors"
           aria-label="Close"
         >
           <svg 
-            className="w-4 h-4 text-white" 
+            className="w-4 h-4 text-gray-400 hover:text-white" 
             fill="none" 
             stroke="currentColor" 
             viewBox="0 0 24 24"
