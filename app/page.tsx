@@ -114,7 +114,7 @@ export default function Home() {
               className="px-6 py-2 bg-gray-900 hover:bg-gray-800 text-white font-medium rounded transition-colors"
               style={{ fontFamily: 'Inter, sans-serif' }}
             >
-              Book a Call
+              Hire with Us
             </a>
           </nav>
         </div>
@@ -136,7 +136,7 @@ export default function Home() {
                 href="#contact"
                 className="inline-block px-8 py-4 bg-gray-900 hover:bg-gray-800 text-white font-medium rounded transition-colors mb-6"
               >
-                Book a Call
+                Hire with Us
               </a>
 
               <p className="text-sm text-gray-500">
