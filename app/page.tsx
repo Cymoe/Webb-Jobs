@@ -137,11 +137,11 @@ export default function Home() {
               </div>
               
               <h1 className="text-5xl md:text-6xl font-bold mb-6 text-gray-900 leading-tight">
-                Hire 5 to 50+ D2D Sales Reps Every Month
+                Add <span style={{ color: '#F59E0B' }}>15+ Experienced Sales Reps</span> to Your Team in the Next 90 Days. <span style={{ color: '#F59E0B' }}>Guaranteed.</span>
               </h1>
               
               <p className="text-xl text-gray-600 mb-8 leading-relaxed">
-                We build, run, and scale your recruiting engine. From Indeed and Meta ads to qualified interviews on your calendar.
+                We build, run, and scale your recruiting engine, <span className="font-semibold text-gray-900">automate the pipeline</span>, and fill your calendar with <span className="font-semibold text-gray-900">A-players</span>.
               </p>
               
               <a
