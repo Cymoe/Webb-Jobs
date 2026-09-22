@@ -146,32 +146,28 @@ export default function RolesPage() {
       </header>
 
       {/* Hero Section */}
-      <section className="relative py-20 md:py-32 px-4 pt-32 md:pt-40" style={{ backgroundColor: '#FAF8F5' }}>
-        <div className="max-w-6xl mx-auto">
-          <div className="text-center mb-16">
-            <div className="inline-flex items-center gap-2 px-4 py-2 text-gray-700 text-sm font-medium mb-6 rounded-full" style={{ backgroundColor: 'rgba(220, 38, 38, 0.1)' }}>
-              <span className="w-2 h-2 rounded-full" style={{ backgroundColor: '#DC2626' }}></span>
-              FEATURED D2D SALES OPPORTUNITIES
-            </div>
-            
-            <h1 className="text-5xl md:text-6xl font-bold mb-6 text-gray-900 leading-tight">
-              Current Open Roles
+      <section className="relative py-32 md:py-40 px-4 pt-40 md:pt-48" style={{ backgroundColor: '#1F2937' }}>
+        <div className="max-w-5xl mx-auto">
+          <div className="text-center">
+            <h1 className="text-5xl md:text-6xl font-bold mb-6 leading-tight" style={{ color: '#F5F3EF' }}>
+              Discover High-Earning D2D Sales Jobs at Growing Companies
             </h1>
-            <p className="text-2xl text-gray-600 max-w-3xl mx-auto mb-8">
-              High-earning D2D sales positions we're actively recruiting for. Apply below or submit your resume for future opportunities.
+            <p className="text-xl md:text-2xl mb-10 leading-relaxed max-w-4xl mx-auto" style={{ color: 'rgba(245, 243, 239, 0.8)' }}>
+              Webb Jobs is a specialized D2D sales recruitment agency connecting top sales talent with leading companies across Solar, Roofing, Pest Control, HVAC, and more. Explore active, pre-vetted D2D sales opportunities.
             </p>
             
             <div className="flex flex-col sm:flex-row gap-4 justify-center">
               <a
                 href="#roles-grid"
-                className="inline-block px-8 py-4 text-center font-medium rounded transition-colors hover:opacity-90"
+                className="inline-block px-8 py-4 text-center font-medium rounded-lg transition-colors"
                 style={{ backgroundColor: '#DC2626', color: '#FFFFFF' }}
               >
                 Browse Open Roles
               </a>
               <a
                 href="/talent-pool"
-                className="inline-block px-8 py-4 bg-white hover:bg-gray-50 text-gray-900 text-center font-medium rounded border-2 border-gray-900 transition-colors"
+                className="inline-block px-8 py-4 text-center font-medium rounded-lg border-2 transition-colors"
+                style={{ borderColor: '#F5F3EF', color: '#F5F3EF' }}
               >
                 Join Talent Pool
               </a>
@@ -181,8 +177,17 @@ export default function RolesPage() {
       </section>
 
       {/* Roles Grid */}
-      <section id="roles-grid" className="py-20 px-4">
+      <section id="roles-grid" className="py-20 px-4" style={{ backgroundColor: '#F5F3EF' }}>
         <div className="max-w-6xl mx-auto">
+          <div className="mb-12">
+            <h2 className="text-3xl md:text-4xl font-bold text-gray-900 mb-3">
+              Featured D2D Sales Jobs & Open Roles
+            </h2>
+            <p className="text-lg text-gray-600">
+              Active positions across Solar, Roofing, Pest Control, HVAC, and more
+            </p>
+          </div>
+          
           <div className="grid md:grid-cols-2 lg:grid-cols-3 gap-8">
             {roles.map((role, idx) => (
               <div key={idx} className="p-6 bg-white rounded-xl border border-gray-200 hover:border-gray-300 transition-all hover:shadow-lg">
