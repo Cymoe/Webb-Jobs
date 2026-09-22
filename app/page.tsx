@@ -201,16 +201,17 @@ export default function Home() {
           {[
             "Roofing",
             "Solar",
-            "Windows & Doors",
+            "Replacement Windows",
             "Pest Control",
             "HVAC",
             "Home Security",
             "Water Treatment",
             "Landscaping",
-            "Telecommunications",
+            "Fiber / Telecom",
+            "Gas & Electric",
+            "Insurance",
             "Home Services",
             "Exterior Remodeling",
-            "Energy Efficiency",
           ].map((industry, idx) => (
             <div
               key={idx}
