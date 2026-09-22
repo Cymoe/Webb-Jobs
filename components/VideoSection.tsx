@@ -2,33 +2,26 @@
 
 export default function VideoSection() {
   return (
-    <section className="py-20 md:py-32 px-4" style={{ backgroundColor: '#FAF8F5' }}>
+    <section className="py-16 md:py-20 px-4" style={{ backgroundColor: '#FAF8F5' }}>
       <div className="max-w-5xl mx-auto">
-        <div className="text-center mb-12">
-          <h2 className="text-4xl md:text-5xl font-bold mb-6 text-gray-900">
-            See How We Fill Your Pipeline with Qualified D2D Reps
-          </h2>
-          <p className="text-xl text-gray-600 max-w-3xl mx-auto">
-            Watch this 3-minute video to see exactly how our recruiting engine works and why companies choose Webb Jobs over traditional recruiters.
-          </p>
-        </div>
-
-        {/* Video Container */}
-        <div className="relative rounded-2xl overflow-hidden shadow-2xl border border-gray-200" style={{ backgroundColor: '#1F2937' }}>
-          {/* Loom Embed - Responsive */}
-          <div style={{ position: 'relative', paddingBottom: '56.25%', height: 0 }}>
+        {/* Video Container - No text above */}
+        <div className="relative rounded-2xl overflow-hidden shadow-2xl border border-gray-200" style={{ backgroundColor: '#000000' }}>
+          {/* Loom Embed - Responsive 16:9 */}
+          <div style={{ position: 'relative', paddingBottom: '56.25%', height: 0, overflow: 'hidden' }}>
             <iframe
               src="https://www.loom.com/embed/c954a298a53c45dfb558460b77a79552?hide_owner=true&hide_share=true&hide_title=true&hideEmbedTopBar=true"
               frameBorder="0"
+              webkitallowfullscreen="true"
+              mozallowfullscreen="true"
               allowFullScreen
               style={{
                 position: 'absolute',
                 top: 0,
                 left: 0,
                 width: '100%',
-                height: '100%',
-                borderRadius: '16px'
+                height: '100%'
               }}
+              allow="autoplay; fullscreen; picture-in-picture"
             ></iframe>
           </div>
         </div>
