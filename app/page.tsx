@@ -109,7 +109,49 @@ export default function Home() {
             </div>
 
             <div className="relative flex items-center justify-center">
-              <div className="w-80 h-80 md:w-96 md:h-96 rounded-full bg-primary"></div>
+              <svg
+                className="w-64 h-96 md:w-80 md:h-[32rem]"
+                viewBox="0 0 200 320"
+                fill="none"
+                xmlns="http://www.w3.org/2000/svg"
+              >
+                {/* Door frame */}
+                <rect
+                  x="10"
+                  y="10"
+                  width="180"
+                  height="300"
+                  stroke="#DC2626"
+                  strokeWidth="4"
+                  fill="none"
+                />
+                {/* Door panels */}
+                <rect
+                  x="25"
+                  y="30"
+                  width="150"
+                  height="120"
+                  stroke="#DC2626"
+                  strokeWidth="3"
+                  fill="none"
+                />
+                <rect
+                  x="25"
+                  y="170"
+                  width="150"
+                  height="120"
+                  stroke="#DC2626"
+                  strokeWidth="3"
+                  fill="none"
+                />
+                {/* Door handle */}
+                <circle
+                  cx="160"
+                  cy="160"
+                  r="8"
+                  fill="#DC2626"
+                />
+              </svg>
             </div>
           </div>
         </div>
