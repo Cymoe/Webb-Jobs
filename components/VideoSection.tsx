@@ -18,7 +18,7 @@ export default function VideoSection() {
           {/* Loom Embed - Responsive */}
           <div style={{ position: 'relative', paddingBottom: '56.25%', height: 0 }}>
             <iframe
-              src="https://www.loom.com/embed/YOUR-LOOM-VIDEO-ID?hide_owner=true&hide_share=true&hide_title=true&hideEmbedTopBar=true"
+              src="https://www.loom.com/embed/c954a298a53c45dfb558460b77a79552?hide_owner=true&hide_share=true&hide_title=true&hideEmbedTopBar=true"
               frameBorder="0"
               allowFullScreen
               style={{
@@ -66,18 +66,6 @@ export default function VideoSection() {
           </div>
         </div>
 
-        {/* Setup Instructions */}
-        <div className="mt-12 p-6 bg-yellow-50 border-2 border-yellow-200 rounded-lg">
-          <p className="text-sm text-gray-700">
-            <strong>📝 Setup Required:</strong> Replace <code className="bg-yellow-100 px-2 py-1 rounded">YOUR-LOOM-VIDEO-ID</code> in <code className="bg-yellow-100 px-2 py-1 rounded">components/VideoSection.tsx</code> with your actual Loom video ID.
-          </p>
-          <p className="text-xs text-gray-600 mt-2">
-            Get the ID from your Loom share URL: <code className="bg-yellow-100 px-2 py-1 rounded">loom.com/share/<strong>abc123def456</strong></code>
-          </p>
-          <p className="text-xs text-gray-600 mt-2">
-            <strong>Pro tip:</strong> Record a 2-3 minute video explaining your process, showing your face, and addressing common objections (pricing, timeline, results).
-          </p>
-        </div>
       </div>
     </section>
   );

@@ -159,6 +159,9 @@ export default function Home() {
         </div>
       </section>
 
+      {/* Video Section - Right After Hero */}
+      <VideoSection />
+
       {/* Industries Marquee */}
       <section className="py-12 border-y border-gray-200" style={{ backgroundColor: '#FFFFFF' }}>
         <div className="mb-8 text-center">
@@ -432,9 +435,6 @@ export default function Home() {
           </div>
         </div>
       </section>
-
-      {/* Video Section - Pre-Booking Warmup */}
-      <VideoSection />
 
       {/* Calendly Booking Section */}
       <section id="contact" className="py-20 md:py-32 px-4">
