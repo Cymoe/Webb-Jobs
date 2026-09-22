@@ -237,14 +237,16 @@ export default function Home() {
                   alt="Founder"
                   width={600}
                   height={700}
-                  className="w-full h-auto object-cover grayscale-[20%]"
+                  className="w-full h-auto object-cover"
                 />
               </div>
             </div>
             
             <div>
-              <div className="text-sm text-gray-500 mb-6 pb-2 border-b border-gray-300 inline-block">
-                Founder
+              <div className="mb-6 pb-2 border-b border-gray-300 inline-block">
+                <span className="text-sm text-gray-500">Founder</span>
+                <span className="text-sm text-gray-400 mx-2">•</span>
+                <span className="text-sm text-gray-700 font-medium">Myles Webb</span>
               </div>
               
               <h2 className="text-4xl font-bold mb-6 text-gray-900">
