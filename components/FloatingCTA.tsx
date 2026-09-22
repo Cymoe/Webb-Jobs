@@ -26,9 +26,17 @@ export default function FloatingCTA() {
     setIsVisible(false);
   };
 
-  const handleClick = () => {
-    // Navigate to dedicated booking page
-    window.location.href = '/book';
+  const handleClick = (e: React.MouseEvent) => {
+    e.preventDefault();
+    const contactSection = document.getElementById('contact');
+    if (contactSection) {
+      contactSection.scrollIntoView({ behavior: 'smooth' });
+      // Remove hash from URL so refresh starts at top
+      window.history.replaceState(null, '', '/');
+    }
+    // Dismiss the button after clicking
+    setIsDismissed(true);
+    setIsVisible(false);
   };
 
   if (!isVisible) return null;
@@ -64,7 +72,7 @@ export default function FloatingCTA() {
 
         {/* Text */}
         <a 
-          href="/book"
+          href="#contact"
           onClick={handleClick}
           className="text-white text-sm font-semibold hover:opacity-80 transition-opacity whitespace-nowrap cursor-pointer"
           style={{ fontFamily: 'Inter, sans-serif' }}

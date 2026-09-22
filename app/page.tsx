@@ -1,12 +1,8 @@
 'use client';
 
 import ContactForm from '@/components/ContactForm';
-import ComparisonTable from '@/components/ComparisonTable';
-import ContactDropdown from '@/components/ContactDropdown';
 import WebbJobsLogo from '@/components/WebbJobsLogo';
 import FloatingCTA from '@/components/FloatingCTA';
-import AnimatedGradientText from '@/components/ui/animated-gradient-text';
-import { BentoCard, BentoGrid } from '@/components/ui/bento-grid';
 import Marquee from '@/components/ui/marquee';
 import Image from 'next/image';
 
@@ -94,43 +90,10 @@ export default function Home() {
 
   return (
     <main className="relative" style={{ backgroundColor: '#F5F3EF' }}>
-      {/* Header with Logo */}
+      {/* Header - Landing Page Mode (No Navigation) */}
       <header className="fixed top-0 left-0 right-0 z-50 py-6 px-8 border-b border-gray-200 shadow-sm" style={{ backgroundColor: 'rgba(245, 243, 239, 0.98)', backdropFilter: 'blur(8px)' }}>
-        <div className="max-w-7xl mx-auto flex items-center justify-between">
+        <div className="max-w-7xl mx-auto flex items-center justify-center">
           <WebbJobsLogo />
-          
-          <nav className="hidden md:flex items-center gap-8">
-            <a 
-              href="#how-it-works" 
-              className="text-sm text-gray-700 hover:text-gray-900 transition-colors"
-              style={{ fontFamily: 'Inter, sans-serif' }}
-            >
-              How It Works
-            </a>
-            <a 
-              href="/industries" 
-              className="text-sm text-gray-700 hover:text-gray-900 transition-colors"
-              style={{ fontFamily: 'Inter, sans-serif' }}
-            >
-              Industries
-            </a>
-            <a 
-              href="/roles" 
-              className="text-sm text-gray-700 hover:text-gray-900 transition-colors"
-              style={{ fontFamily: 'Inter, sans-serif' }}
-            >
-              Open Roles
-            </a>
-            <ContactDropdown />
-            <a
-              href="#contact"
-              onClick={handleScrollToContact}
-              className="px-6 py-2 bg-gray-900 hover:bg-gray-800 text-white font-medium rounded transition-colors cursor-pointer"
-              style={{ fontFamily: 'Inter, sans-serif' }}
-            >
-              Book Call
-            </a>
-          </nav>
         </div>
       </header>
       {/* Hero Section */}
