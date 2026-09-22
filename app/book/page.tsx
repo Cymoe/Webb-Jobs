@@ -1,29 +1,14 @@
 'use client';
 
 import ContactForm from '@/components/ContactForm';
-import Link from 'next/link';
-import WebbJobsLogo from '@/components/WebbJobsLogo';
 
 export default function BookPage() {
   return (
     <main className="relative min-h-screen" style={{ backgroundColor: '#F5F3EF' }}>
-      {/* Minimal Header */}
-      <header className="fixed top-0 left-0 right-0 z-50 py-6 px-8 border-b border-gray-200 shadow-sm" style={{ backgroundColor: 'rgba(245, 243, 239, 0.98)', backdropFilter: 'blur(8px)' }}>
-        <div className="max-w-7xl mx-auto flex items-center justify-between">
-          <WebbJobsLogo />
-          
-          <Link 
-            href="/"
-            className="text-sm text-gray-700 hover:text-gray-900 transition-colors"
-            style={{ fontFamily: 'Inter, sans-serif' }}
-          >
-            Back to Home
-          </Link>
-        </div>
-      </header>
+      {/* No Header - Pure Landing Page */}
 
       {/* Hero Section - Dark & Focused */}
-      <section className="relative py-32 md:py-40 px-4 pt-56 md:pt-64" style={{ backgroundColor: '#1F2937' }}>
+      <section className="relative py-20 md:py-32 px-4" style={{ backgroundColor: '#1F2937' }}>
         <div className="max-w-4xl mx-auto text-center">
           <h1 className="text-5xl md:text-6xl font-bold mb-8 leading-tight" style={{ color: '#F5F3EF' }}>
             Book Your Free 30-Minute Strategy Call
@@ -92,10 +77,11 @@ export default function BookPage() {
         </div>
       </section>
 
-      {/* Minimal Footer */}
+      {/* Minimal Footer - No Links */}
       <footer className="py-8 px-4 border-t border-gray-200" style={{ backgroundColor: '#ECE9E3' }}>
         <div className="max-w-5xl mx-auto text-center text-gray-600 text-sm">
           <p>&copy; {new Date().getFullYear()} Webb Jobs. All rights reserved.</p>
+          <p className="text-xs text-gray-500 mt-2">D2D Sales Recruiting</p>
         </div>
       </footer>
     </main>
