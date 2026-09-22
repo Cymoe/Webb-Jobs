@@ -594,6 +594,13 @@ export default function Home() {
       {/* Footer */}
       <footer className="py-8 px-4 border-t border-gray-200" style={{ backgroundColor: '#ECE9E3' }}>
         <div className="max-w-container mx-auto text-center text-gray-600 text-sm">
+          <div className="flex justify-center gap-6 mb-4">
+            <a href="/privacy" className="hover:text-gray-900 transition-colors">Privacy Policy</a>
+            <span>•</span>
+            <a href="/terms" className="hover:text-gray-900 transition-colors">Terms of Service</a>
+            <span>•</span>
+            <a href="/income-disclaimer" className="hover:text-gray-900 transition-colors">Income Disclaimer</a>
+          </div>
           <p>&copy; {new Date().getFullYear()} Webb Jobs. All rights reserved.</p>
         </div>
       </footer>
