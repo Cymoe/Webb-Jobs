@@ -104,7 +104,7 @@ export default function Home() {
               How It Works
             </a>
             <a 
-              href="#industries" 
+              href="/industries" 
               className="text-sm text-gray-700 hover:text-gray-900 transition-colors"
               style={{ fontFamily: 'Inter, sans-serif' }}
             >
@@ -446,102 +446,7 @@ export default function Home() {
         </div>
       </section>
 
-      {/* Industries Detail Section */}
-      <section id="industries" className="py-20 md:py-32 px-4" style={{ backgroundColor: '#FAF8F5' }}>
-        <div className="max-w-6xl mx-auto">
-          <div className="text-center mb-16">
-            <h2 className="text-4xl md:text-5xl font-bold mb-4 text-gray-900">
-              Industries We Specialize In
-            </h2>
-            <p className="text-xl text-gray-600">
-              We know D2D sales recruiting inside and out
-            </p>
-          </div>
-          
-          <div className="grid md:grid-cols-2 lg:grid-cols-3 gap-6">
-            {[
-              { name: "Roofing", description: "Storm chasers, retail teams, and warranty programs" },
-              { name: "Solar", description: "Residential and commercial solar installations" },
-              { name: "Replacement Windows", description: "Home improvement and exterior remodeling" },
-              { name: "Pest Control", description: "Residential and commercial pest management" },
-              { name: "HVAC", description: "Installation, maintenance, and energy efficiency" },
-              { name: "Home Security", description: "Smart home and security systems" },
-              { name: "Water Treatment", description: "Filtration, softeners, and purification" },
-              { name: "Fiber / Telecom", description: "Internet, TV, and telecommunications" },
-              { name: "Gas & Electric", description: "Energy providers and utility services" },
-              { name: "Insurance", description: "Life, health, and property insurance" },
-              { name: "Landscaping", description: "Lawn care and landscape design" },
-              { name: "Home Services", description: "General contractors and home improvement" }
-            ].map((industry, idx) => (
-              <div key={idx} className="p-6 bg-white rounded-xl border border-gray-200">
-                <h3 className="text-xl font-bold mb-2 text-gray-900">{industry.name}</h3>
-                <p className="text-gray-600">{industry.description}</p>
-              </div>
-            ))}
-          </div>
-        </div>
-      </section>
-
-      {/* Pricing Section */}
-      <section className="py-20 md:py-32 px-4">
-        <div className="max-w-4xl mx-auto">
-          <div className="text-center mb-16">
-            <h2 className="text-4xl md:text-5xl font-bold mb-4 text-gray-900">
-              Simple, Transparent Pricing
-            </h2>
-            <p className="text-xl text-gray-600">
-              One flat rate. No surprises. No per-hire fees.
-            </p>
-          </div>
-          
-          <div className="bg-gray-50 rounded-2xl border-2 border-gray-900 p-12">
-            <div className="text-center mb-8">
-              <div className="text-5xl md:text-6xl font-bold text-gray-900 mb-4">
-                $20,000
-              </div>
-              <div className="text-xl text-gray-600 mb-2">90-Day Engagement</div>
-              <div className="text-gray-500">+ Your Ad Spend (typically $3k-5k/month)</div>
-            </div>
-            
-            <div className="border-t border-gray-300 pt-8">
-              <h3 className="text-2xl font-bold mb-6 text-gray-900 text-center">What's Included</h3>
-              <ul className="space-y-4 max-w-2xl mx-auto">
-                {[
-                  "Full recruiting engine setup and management",
-                  "Indeed and Meta ad campaigns",
-                  "Unlimited candidate screening and qualification",
-                  "Dedicated recruiting specialist",
-                  "Weekly pipeline reports",
-                  "Interview scheduling and coordination",
-                  "90-day replacement guarantee"
-                ].map((item, idx) => (
-                  <li key={idx} className="flex items-start gap-3">
-                    <svg className="w-6 h-6 text-gray-900 flex-shrink-0 mt-0.5" fill="none" stroke="currentColor" viewBox="0 0 24 24">
-                      <path strokeLinecap="round" strokeLinejoin="round" strokeWidth={2} d="M5 13l4 4L19 7" />
-                    </svg>
-                    <span className="text-lg text-gray-700">{item}</span>
-                  </li>
-                ))}
-              </ul>
-            </div>
-            
-            <div className="text-center mt-8">
-              <a
-                href="#contact"
-                className="inline-block px-8 py-4 bg-gray-900 hover:bg-gray-800 text-white font-medium rounded transition-colors"
-              >
-                Book a Strategy Call
-              </a>
-            </div>
-          </div>
-          
-          <p className="text-center text-gray-500 mt-8">
-            No contracts. Cancel anytime. Most clients see their first hire within 40 days.
-          </p>
-        </div>
-      </section>
-
-      {/* FAQ Section */}
+{/* FAQ Section */}
       <section className="py-20 md:py-32 px-4" style={{ backgroundColor: '#FAF8F5' }}>
         <div className="max-w-4xl mx-auto">
           <div className="text-center mb-16">
