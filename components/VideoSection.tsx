@@ -11,8 +11,6 @@ export default function VideoSection() {
             <iframe
               src="https://www.loom.com/embed/c954a298a53c45dfb558460b77a79552?hide_owner=true&hide_share=true&hide_title=true&hideEmbedTopBar=true"
               frameBorder="0"
-              webkitallowfullscreen="true"
-              mozallowfullscreen="true"
               allowFullScreen
               style={{
                 position: 'absolute',
