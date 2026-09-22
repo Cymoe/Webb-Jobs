@@ -137,7 +137,7 @@ export default function Home() {
               </div>
               
               <h1 className="text-5xl md:text-6xl font-bold mb-6 text-gray-900 leading-tight">
-                Add <span style={{ color: '#F59E0B' }}>15+ Experienced Sales Reps</span> to Your Team in the Next 90 Days. <span style={{ color: '#F59E0B' }}>Guaranteed.</span>
+                Add <span style={{ color: '#DC2626' }}>15+ Experienced Sales Reps</span> to Your Team in the Next 90 Days. <span style={{ color: '#DC2626' }}>Guaranteed.</span>
               </h1>
               
               <p className="text-xl text-gray-600 mb-8 leading-relaxed">
