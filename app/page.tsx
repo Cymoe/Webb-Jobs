@@ -134,7 +134,7 @@ export default function Home() {
         </div>
       </header>
       {/* Hero Section */}
-      <section className="relative py-20 md:py-32 px-4 pt-40 md:pt-48" style={{ backgroundColor: '#FAF8F5' }}>
+      <section className="relative py-20 md:py-32 px-4 pt-56 md:pt-64" style={{ backgroundColor: '#FAF8F5' }}>
         <div className="max-w-6xl mx-auto">
           <div className="grid md:grid-cols-2 gap-12 items-center">
             <div>

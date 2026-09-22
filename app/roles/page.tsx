@@ -211,7 +211,7 @@ export default function RolesPage() {
       </header>
 
       {/* Hero Section */}
-      <section className="relative py-20 md:py-32 px-4 pt-40 md:pt-48" style={{ backgroundColor: '#FAF8F5' }}>
+      <section className="relative py-20 md:py-32 px-4 pt-56 md:pt-64" style={{ backgroundColor: '#FAF8F5' }}>
         <div className="max-w-4xl mx-auto text-center">
           <h1 className="text-5xl md:text-6xl font-bold mb-10 text-gray-900 leading-tight">
             Find the best D2D sales jobs, curated for closers

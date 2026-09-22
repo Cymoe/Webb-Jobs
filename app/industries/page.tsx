@@ -45,7 +45,7 @@ export default function IndustriesPage() {
       </header>
 
       {/* Hero Section */}
-      <section className="relative py-32 md:py-40 px-4 pt-40 md:pt-48" style={{ backgroundColor: '#1F2937' }}>
+      <section className="relative py-32 md:py-40 px-4 pt-56 md:pt-64" style={{ backgroundColor: '#1F2937' }}>
         <div className="max-w-6xl mx-auto">
           <div className="text-center mb-16">
             <h1 className="text-5xl md:text-6xl font-bold mb-6 leading-tight" style={{ color: '#F5F3EF' }}>
