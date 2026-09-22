@@ -148,10 +148,8 @@ export default function Home() {
               <div className="flex flex-col sm:flex-row gap-4 mb-6">
                 <a
                   href="#featured-roles"
-                  className="inline-block px-8 py-4 text-center font-medium rounded transition-colors"
+                  className="inline-block px-8 py-4 text-center font-medium rounded transition-colors hover:opacity-90"
                   style={{ backgroundColor: '#DC2626', color: '#FFFFFF' }}
-                  onMouseOver={(e) => e.currentTarget.style.backgroundColor = '#B91C1C'}
-                  onMouseOut={(e) => e.currentTarget.style.backgroundColor = '#DC2626'}
                 >
                   Browse Open Roles
                 </a>
@@ -741,10 +739,8 @@ export default function Home() {
             
             <button
               type="submit"
-              className="w-full px-8 py-4 font-medium rounded transition-colors"
+              className="w-full px-8 py-4 font-medium rounded transition-colors hover:opacity-90"
               style={{ backgroundColor: '#DC2626', color: '#FFFFFF' }}
-              onMouseOver={(e) => (e.currentTarget.style.backgroundColor = '#B91C1C')}
-              onMouseOut={(e) => (e.currentTarget.style.backgroundColor = '#DC2626')}
             >
               Submit Application
             </button>
