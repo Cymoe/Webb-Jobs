@@ -1,6 +1,7 @@
 import ContactForm from '@/components/ContactForm';
 import ComparisonTable from '@/components/ComparisonTable';
 import ContactDropdown from '@/components/ContactDropdown';
+import WebbJobsLogo from '@/components/WebbJobsLogo';
 import AnimatedGradientText from '@/components/ui/animated-gradient-text';
 import { BentoCard, BentoGrid } from '@/components/ui/bento-grid';
 import Marquee from '@/components/ui/marquee';
@@ -83,11 +84,7 @@ export default function Home() {
       {/* Header with Logo */}
       <header className="fixed top-0 left-0 right-0 z-50 py-6 px-8 border-b border-gray-200" style={{ backgroundColor: 'rgba(245, 243, 239, 0.98)' }}>
         <div className="max-w-7xl mx-auto flex items-center justify-between">
-          <a href="/" className="flex items-center group">
-            <span className="text-2xl font-semibold tracking-tight" style={{ color: '#DC2626', fontFamily: 'Inter, sans-serif' }}>
-              Webb Jobs
-            </span>
-          </a>
+          <WebbJobsLogo />
           
           <nav className="hidden md:flex items-center gap-8">
             <a 
