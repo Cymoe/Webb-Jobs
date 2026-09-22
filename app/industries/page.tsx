@@ -45,13 +45,13 @@ export default function IndustriesPage() {
       </header>
 
       {/* Hero Section */}
-      <section className="relative py-20 md:py-32 px-4 pt-32 md:pt-40" style={{ backgroundColor: '#FAF8F5' }}>
+      <section className="relative py-32 md:py-40 px-4 pt-40 md:pt-48" style={{ backgroundColor: '#1F2937' }}>
         <div className="max-w-6xl mx-auto">
           <div className="text-center mb-16">
-            <h1 className="text-5xl md:text-6xl font-bold mb-6 text-gray-900 leading-tight">
+            <h1 className="text-5xl md:text-6xl font-bold mb-6 leading-tight" style={{ color: '#F5F3EF' }}>
               Industries We Specialize In
             </h1>
-            <p className="text-2xl text-gray-600 max-w-3xl mx-auto">
+            <p className="text-xl md:text-2xl max-w-3xl mx-auto" style={{ color: 'rgba(245, 243, 239, 0.8)' }}>
               We know D2D sales recruiting inside and out. From roofing to solar, pest control to telecom — we've hired thousands of reps across every major door-to-door industry.
             </p>
           </div>
