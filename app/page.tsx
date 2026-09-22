@@ -2,6 +2,7 @@ import ContactForm from '@/components/ContactForm';
 import ComparisonTable from '@/components/ComparisonTable';
 import ContactDropdown from '@/components/ContactDropdown';
 import WebbJobsLogo from '@/components/WebbJobsLogo';
+import FloatingCTA from '@/components/FloatingCTA';
 import AnimatedGradientText from '@/components/ui/animated-gradient-text';
 import { BentoCard, BentoGrid } from '@/components/ui/bento-grid';
 import Marquee from '@/components/ui/marquee';
@@ -485,6 +486,9 @@ export default function Home() {
           <p>&copy; {new Date().getFullYear()} Webb Jobs. All rights reserved.</p>
         </div>
       </footer>
+
+      {/* Floating CTA Button */}
+      <FloatingCTA />
     </main>
   );
 }
