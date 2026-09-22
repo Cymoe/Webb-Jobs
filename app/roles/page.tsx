@@ -1,8 +1,12 @@
+'use client';
+
+import { useState } from 'react';
 import Link from 'next/link';
 import ContactDropdown from '@/components/ContactDropdown';
 import WebbJobsLogo from '@/components/WebbJobsLogo';
 
 export default function RolesPage() {
+  const [selectedCategory, setSelectedCategory] = useState("All");
   const roles = [
     {
       category: "Solar",
@@ -161,6 +165,10 @@ export default function RolesPage() {
 
   const categories = ["All", "Solar", "Roofing", "Windows", "Pest Control", "HVAC", "Security", "Water Treatment", "Fiber/Telecom", "Insurance", "Landscaping", "Gas & Electric", "Home Services"];
 
+  const filteredRoles = selectedCategory === "All" 
+    ? roles 
+    : roles.filter(role => role.category === selectedCategory);
+
   return (
     <main className="relative" style={{ backgroundColor: '#F5F3EF' }}>
       {/* Header with Logo */}
@@ -245,10 +253,11 @@ export default function RolesPage() {
             {categories.map((cat, idx) => (
               <button
                 key={idx}
+                onClick={() => setSelectedCategory(cat)}
                 className={`px-4 py-2 text-sm font-medium rounded transition-colors ${
-                  cat === "All" 
-                    ? "text-gray-900" 
-                    : "text-gray-600 hover:text-gray-900"
+                  cat === selectedCategory
+                    ? "bg-gray-900 text-white" 
+                    : "text-gray-600 hover:text-gray-900 hover:bg-gray-100"
                 }`}
               >
                 {cat}
@@ -258,7 +267,12 @@ export default function RolesPage() {
           
           {/* Job Listings */}
           <div className="space-y-6">
-            {roles.map((role, idx) => (
+            {filteredRoles.length === 0 ? (
+              <div className="text-center py-12">
+                <p className="text-lg text-gray-600">No jobs found in this category. Check back soon!</p>
+              </div>
+            ) : (
+              filteredRoles.map((role, idx) => (
               <div key={idx} className="flex items-center gap-6 py-6 border-b border-gray-200 hover:bg-white hover:px-6 hover:mx-[-24px] hover:rounded-lg transition-all">
                 {/* Company Logo Placeholder */}
                 <div className="flex-shrink-0 w-16 h-16 rounded-full bg-gray-900 flex items-center justify-center text-white font-bold text-xl">
@@ -301,7 +315,8 @@ export default function RolesPage() {
                   Apply
                 </a>
               </div>
-            ))}
+              ))
+            )}
           </div>
         </div>
       </section>
