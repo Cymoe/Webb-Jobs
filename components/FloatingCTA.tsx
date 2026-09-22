@@ -34,6 +34,9 @@ export default function FloatingCTA() {
       // Remove hash from URL so refresh starts at top
       window.history.replaceState(null, '', '/');
     }
+    // Dismiss the button after clicking
+    setIsDismissed(true);
+    setIsVisible(false);
   };
 
   if (!isVisible) return null;
