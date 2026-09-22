@@ -79,8 +79,23 @@ const testimonials = [
 export default function Home() {
   return (
     <main className="relative" style={{ backgroundColor: '#F5F3EF' }}>
+      {/* Header with Logo */}
+      <header className="fixed top-0 left-0 right-0 z-50 py-6 px-8" style={{ backgroundColor: 'rgba(245, 243, 239, 0.95)' }}>
+        <div className="max-w-7xl mx-auto flex items-center justify-between">
+          <a href="/" className="flex items-center gap-3 group">
+            <svg width="32" height="48" viewBox="0 0 32 48" fill="none" xmlns="http://www.w3.org/2000/svg">
+              <path d="M 8 2 L 14 4 L 14 44 L 8 46 Z" fill="#DC2626"/>
+              <line x1="8" y1="2" x2="8" y2="46" stroke="#991B1B" strokeWidth="1.5"/>
+              <circle cx="9.5" cy="24" r="1.5" fill="#991B1B"/>
+            </svg>
+            <span className="text-xl font-medium tracking-tight" style={{ fontFamily: 'Inter, sans-serif' }}>
+              Red Door Reps
+            </span>
+          </a>
+        </div>
+      </header>
       {/* Hero Section */}
-      <section className="relative py-20 md:py-32 px-4" style={{ backgroundColor: '#FAF8F5' }}>
+      <section className="relative py-20 md:py-32 px-4 pt-32 md:pt-40" style={{ backgroundColor: '#FAF8F5' }}>
         <div className="max-w-6xl mx-auto">
           <div className="grid md:grid-cols-2 gap-12 items-center">
             <div>
