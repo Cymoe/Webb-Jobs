@@ -49,7 +49,7 @@ export default function IClosedEmbed({
     <div className="relative">
       {!isLoaded && (
         <div
-          className="absolute inset-0 rounded-xl overflow-hidden shadow-2xl border border-gray-200 bg-white"
+          className="absolute inset-0 mx-auto max-w-[680px] rounded-lg overflow-hidden border border-gray-200 bg-white"
           style={{ minWidth: '320px', height: `${height}px`, zIndex: 10 }}
         >
           <div className="animate-pulse p-8">
@@ -89,7 +89,7 @@ export default function IClosedEmbed({
 
       <div
         ref={containerRef}
-        className="iclosed-widget rounded-xl overflow-hidden shadow-2xl border border-gray-200"
+        className="iclosed-widget"
         data-url={url}
         title={title}
         style={{
