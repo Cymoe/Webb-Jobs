@@ -86,69 +86,32 @@ export default function Home() {
       </header>
       {/* Hero Section */}
       <section className="relative py-8 md:py-12 px-4 pt-20 md:pt-24" style={{ backgroundColor: '#FAF8F5' }}>
-        <div className="max-w-6xl mx-auto">
-          <div className="grid md:grid-cols-2 gap-12 items-center">
-            <div>
-              <h1 className="text-4xl md:text-5xl font-bold mb-3 text-gray-900 leading-[1.1]">
-                Add <span style={{ color: '#DC2626' }}>15+ Experienced Sales Reps</span> to Your Team in the Next 90 Days. <span style={{ color: '#DC2626' }}>Guaranteed.</span>
-              </h1>
-              
-              <p className="text-lg text-gray-600 mb-4 leading-relaxed">
-                We build, run, and scale your recruiting engine, <span className="font-semibold text-gray-900">automate the pipeline</span>, and fill your calendar with <span className="font-semibold text-gray-900">A-players</span>.
-              </p>
-              
-              <a
-                href="#calendar"
-                onClick={(e) => {
-                  e.preventDefault();
-                  const calendarSection = document.getElementById('calendar');
-                  if (calendarSection) {
-                    calendarSection.scrollIntoView({ behavior: 'smooth', block: 'start' });
-                  }
-                }}
-                className="inline-block px-8 py-3.5 bg-gray-900 hover:bg-gray-800 text-white font-medium rounded transition-colors mb-4 cursor-pointer"
-              >
-                Book Your Free Intro Call
-              </a>
+        <div className="max-w-4xl mx-auto text-center">
+          <h1 className="text-4xl md:text-5xl font-bold mb-3 text-gray-900 leading-[1.1]">
+            Add <span style={{ color: '#DC2626' }}>15+ Experienced Sales Reps</span> to Your Team in the Next 90 Days. <span style={{ color: '#DC2626' }}>Guaranteed.</span>
+          </h1>
+          
+          <p className="text-lg text-gray-600 mb-4 leading-relaxed">
+            We build, run, and scale your recruiting engine, <span className="font-semibold text-gray-900">automate the pipeline</span>, and fill your calendar with <span className="font-semibold text-gray-900">A-players</span>.
+          </p>
+          
+          <a
+            href="#calendar"
+            onClick={(e) => {
+              e.preventDefault();
+              const calendarSection = document.getElementById('calendar');
+              if (calendarSection) {
+                calendarSection.scrollIntoView({ behavior: 'smooth', block: 'start' });
+              }
+            }}
+            className="inline-block px-8 py-3.5 bg-gray-900 hover:bg-gray-800 text-white font-medium rounded transition-colors mb-4 cursor-pointer"
+          >
+            Book Your Free Intro Call
+          </a>
 
-              <p className="text-sm text-gray-500">
-                First interviews in 5 days. Risk-free.
-              </p>
-            </div>
-
-            <div className="relative hidden md:flex items-center justify-center">
-              <svg
-                className="w-48 h-96 md:w-64 md:h-[32rem]"
-                viewBox="0 0 160 320"
-                fill="none"
-                xmlns="http://www.w3.org/2000/svg"
-              >
-                {/* Door - barely cracked open */}
-                <path
-                  d="M 40 10 L 70 20 L 70 300 L 40 310 Z"
-                  fill="#DC2626"
-                />
-                
-                {/* Door edge */}
-                <line
-                  x1="40"
-                  y1="10"
-                  x2="40"
-                  y2="310"
-                  stroke="#991B1B"
-                  strokeWidth="3"
-                />
-                
-                {/* Door handle */}
-                <circle
-                  cx="48"
-                  cy="160"
-                  r="4"
-                  fill="#991B1B"
-                />
-              </svg>
-            </div>
-          </div>
+          <p className="text-sm text-gray-500">
+            First interviews in 5 days. Risk-free.
+          </p>
         </div>
       </section>
 

@@ -3,7 +3,7 @@ import Link from 'next/link';
 export default function WebbJobsLogo() {
   return (
     <Link href="/" className="flex items-center gap-3 group">
-      {/* Icon - Bold W lettermark (Y Combinator style) */}
+      {/* Icon - Door logo (cracked open door) */}
       <div className="relative w-10 h-10 rounded-md flex items-center justify-center" style={{ backgroundColor: '#DC2626' }}>
         <svg
           className="w-6 h-6"
@@ -11,10 +11,26 @@ export default function WebbJobsLogo() {
           fill="none"
           xmlns="http://www.w3.org/2000/svg"
         >
-          {/* Solid, geometric W */}
+          {/* Simplified door - cracked open */}
           <path
-            d="M2 4L4.5 4L6.5 14L9 7L11.5 14L14 7L16.5 14L18.5 4L21 4L18 20L15 20L12 10L9 20L6 20L2 4Z"
+            d="M 8 3 L 12 4 L 12 20 L 8 21 Z"
             fill="white"
+          />
+          {/* Door edge */}
+          <line
+            x1="8"
+            y1="3"
+            x2="8"
+            y2="21"
+            stroke="#FCA5A5"
+            strokeWidth="0.8"
+          />
+          {/* Door handle */}
+          <circle
+            cx="9"
+            cy="12"
+            r="0.8"
+            fill="#FCA5A5"
           />
         </svg>
       </div>
