@@ -92,10 +92,8 @@ export default function RootLayout({
         {/* Resource Hints */}
         <link rel="preconnect" href="https://player.vimeo.com" />
         <link rel="preconnect" href="https://i.vimeocdn.com" />
-        <link rel="preconnect" href="https://assets.calendly.com" />
         <link rel="dns-prefetch" href="https://player.vimeo.com" />
         <link rel="dns-prefetch" href="https://i.vimeocdn.com" />
-        <link rel="dns-prefetch" href="https://assets.calendly.com" />
         
         {/* Apple Mobile Web App */}
         <meta name="apple-mobile-web-app-capable" content="yes" />

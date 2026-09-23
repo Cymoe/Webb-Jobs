@@ -1,7 +1,6 @@
 'use client';
 
 import { useState } from 'react';
-import CalendlyEmbed from './CalendlyEmbed';
 
 export default function VideoSection() {
   const [isVideoLoaded, setIsVideoLoaded] = useState(false);
@@ -60,19 +59,6 @@ export default function VideoSection() {
               allow="autoplay; fullscreen; picture-in-picture; clipboard-write"
             ></iframe>
           </div>
-        </div>
-
-        {/* Inline Calendar - Zero Friction Booking */}
-        <div id="calendar" className="mt-16 scroll-mt-24">
-          <div className="text-center mb-8">
-            <h3 className="text-2xl font-bold text-gray-900 mb-3">
-              Select a Time That Works for You
-            </h3>
-            <p className="text-gray-600">
-              30 minutes • No commitment • First interviews in 5 days
-            </p>
-          </div>
-          <CalendlyEmbed height={700} />
         </div>
 
         {/* Supporting Points Below Video */}
