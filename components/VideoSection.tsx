@@ -1,23 +1,59 @@
 'use client';
 
+import { useState } from 'react';
+
 export default function VideoSection() {
+  const [isVideoLoaded, setIsVideoLoaded] = useState(false);
+
   return (
     <section className="py-16 md:py-20 px-4" style={{ backgroundColor: '#FAF8F5' }}>
       <div className="max-w-5xl mx-auto">
         {/* Video Container - No text above */}
         <div className="relative rounded-2xl overflow-hidden shadow-2xl border border-gray-200" style={{ backgroundColor: '#000000' }}>
+          {/* Loading Skeleton */}
+          {!isVideoLoaded && (
+            <div 
+              className="absolute inset-0 flex items-center justify-center animate-pulse"
+              style={{ 
+                backgroundColor: '#1F2937',
+                paddingBottom: '56.25%'
+              }}
+            >
+              <div className="absolute inset-0 flex items-center justify-center">
+                <div className="text-center">
+                  <div 
+                    className="w-20 h-20 mx-auto mb-4 rounded-full flex items-center justify-center"
+                    style={{ backgroundColor: '#DC2626' }}
+                  >
+                    <svg 
+                      className="w-10 h-10 text-white" 
+                      fill="currentColor" 
+                      viewBox="0 0 20 20"
+                    >
+                      <path d="M6.3 2.841A1.5 1.5 0 004 4.11V15.89a1.5 1.5 0 002.3 1.269l9.344-5.89a1.5 1.5 0 000-2.538L6.3 2.84z" />
+                    </svg>
+                  </div>
+                  <p className="text-white text-sm opacity-60">Loading video...</p>
+                </div>
+              </div>
+            </div>
+          )}
+
           {/* Loom Embed - Responsive 16:9 */}
           <div style={{ position: 'relative', paddingBottom: '56.25%', height: 0, overflow: 'hidden' }}>
             <iframe
               src="https://www.loom.com/embed/c954a298a53c45dfb558460b77a79552?hide_owner=true&hide_share=true&hide_title=true&hideEmbedTopBar=true"
               frameBorder="0"
               allowFullScreen
+              onLoad={() => setIsVideoLoaded(true)}
               style={{
                 position: 'absolute',
                 top: 0,
                 left: 0,
                 width: '100%',
-                height: '100%'
+                height: '100%',
+                opacity: isVideoLoaded ? 1 : 0,
+                transition: 'opacity 0.5s ease-in-out'
               }}
               allow="autoplay; fullscreen; picture-in-picture"
             ></iframe>
