@@ -15,7 +15,7 @@ export default function BookPage() {
           </h1>
           
           <p className="text-xl md:text-2xl mb-12 max-w-3xl mx-auto leading-relaxed" style={{ color: 'rgba(245, 243, 239, 0.8)' }}>
-            Discover how we can fill your sales pipeline with qualified D2D reps in the next 90 days
+            Discover how we can fill your sales pipeline with qualified D2D reps in the next 6 months
           </p>
 
           {/* What Happens on the Call */}

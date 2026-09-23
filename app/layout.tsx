@@ -18,7 +18,7 @@ const ibmPlexMono = IBM_Plex_Mono({
 
 export const metadata: Metadata = {
   metadataBase: new URL('https://webbjobs.com'),
-  title: "Webb Jobs - Add 25+ Experienced Salespeople to Your Team in 90 Days",
+  title: "Webb Jobs - Add 15+ Experienced Sales Reps to Your Team in 6 Months",
   description: "We build, run, and scale your recruiting engine. Automate the pipeline and fill your calendar with A-players. First interviews in 5 days. Guaranteed results.",
   keywords: ["D2D recruiting", "door to door sales", "sales recruiting", "roofing sales", "solar sales", "home services recruiting"],
   authors: [{ name: "Webb Jobs" }],
@@ -61,7 +61,7 @@ export const metadata: Metadata = {
     },
   },
   openGraph: {
-    title: "Webb Jobs - Add 25+ Experienced Salespeople to Your Team in 90 Days",
+    title: "Webb Jobs - Add 15+ Experienced Sales Reps to Your Team in 6 Months",
     description: "We build, run, and scale your recruiting engine. Automate the pipeline and fill your calendar with A-players. First interviews in 5 days. Guaranteed results.",
     url: 'https://webbjobs.com',
     siteName: 'Webb Jobs',
@@ -70,7 +70,7 @@ export const metadata: Metadata = {
   },
   twitter: {
     card: "summary_large_image",
-    title: "Webb Jobs - Add 25+ Experienced Salespeople to Your Team in 90 Days",
+    title: "Webb Jobs - Add 15+ Experienced Sales Reps to Your Team in 6 Months",
     description: "We build, run, and scale your recruiting engine. First interviews in 5 days. Guaranteed results.",
   },
   alternates: {
