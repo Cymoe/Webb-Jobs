@@ -9,7 +9,7 @@ export default function Home() {
   return (
     <main className="relative" style={{ backgroundColor: '#F5F3EF' }}>
       {/* Header - Landing Page Mode (No Navigation) */}
-      <header className="sticky top-0 z-50 py-5 px-8 border-b border-gray-200" style={{ backgroundColor: '#F5F3EF' }}>
+      <header className="py-5 px-8 border-b border-gray-200" style={{ backgroundColor: '#F5F3EF' }}>
         <div className="max-w-7xl mx-auto flex items-center justify-center">
           <WebbJobsLogo />
         </div>
