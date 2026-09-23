@@ -2,78 +2,8 @@
 
 import VideoSection from '@/components/VideoSection';
 import WebbJobsLogo from '@/components/WebbJobsLogo';
+import MobileStickyCTA from '@/components/MobileStickyCTA';
 import Image from 'next/image';
-
-const features = [
-  {
-    Icon: () => (
-      <svg className="h-12 w-12" fill="none" stroke="currentColor" viewBox="0 0 24 24">
-        <path strokeLinecap="round" strokeLinejoin="round" strokeWidth={2} d="M13 10V3L4 14h7v7l9-11h-7z" />
-      </svg>
-    ),
-    name: "Lightning Fast",
-    description: "First qualified interviews in 5 days while others take weeks",
-    href: "#",
-    cta: "Learn more",
-    className: "col-span-3 lg:col-span-1",
-    background: (
-      <div className="absolute inset-0 bg-gray-50" />
-    ),
-  },
-  {
-    Icon: () => (
-      <svg className="h-12 w-12" fill="none" stroke="currentColor" viewBox="0 0 24 24">
-        <path strokeLinecap="round" strokeLinejoin="round" strokeWidth={2} d="M9 12l2 2 4-4m6 2a9 9 0 11-18 0 9 9 0 0118 0z" />
-      </svg>
-    ),
-    name: "Full Pipeline",
-    description: "We handle everything from ads to qualified interviews on your calendar",
-    href: "#",
-    cta: "Learn more",
-    className: "col-span-3 lg:col-span-2",
-    background: (
-      <div className="absolute inset-0 bg-gray-50" />
-    ),
-  },
-  {
-    Icon: () => (
-      <svg className="h-12 w-12" fill="none" stroke="currentColor" viewBox="0 0 24 24">
-        <path strokeLinecap="round" strokeLinejoin="round" strokeWidth={2} d="M12 8c-1.657 0-3 .895-3 2s1.343 2 3 2 3 .895 3 2-1.343 2-3 2m0-8c1.11 0 2.08.402 2.599 1M12 8V7m0 1v8m0 0v1m0-1c-1.11 0-2.08-.402-2.599-1M21 12a9 9 0 11-18 0 9 9 0 0118 0z" />
-      </svg>
-    ),
-    name: "Risk-Free Model",
-    description: "$20k / 90 days + ad spend. Results-based pricing.",
-    href: "#",
-    cta: "Learn more",
-    className: "col-span-3 lg:col-span-2",
-    background: (
-      <div className="absolute inset-0 bg-gray-50" />
-    ),
-  },
-  {
-    Icon: () => (
-      <svg className="h-12 w-12" fill="none" stroke="currentColor" viewBox="0 0 24 24">
-        <path strokeLinecap="round" strokeLinejoin="round" strokeWidth={2} d="M9 12l2 2 4-4M7.835 4.697a3.42 3.42 0 001.946-.806 3.42 3.42 0 014.438 0 3.42 3.42 0 001.946.806 3.42 3.42 0 013.138 3.138 3.42 3.42 0 00.806 1.946 3.42 3.42 0 010 4.438 3.42 3.42 0 00-.806 1.946 3.42 3.42 0 01-3.138 3.138 3.42 3.42 0 00-1.946.806 3.42 3.42 0 01-4.438 0 3.42 3.42 0 00-1.946-.806 3.42 3.42 0 01-3.138-3.138 3.42 3.42 0 00-.806-1.946 3.42 3.42 0 010-4.438 3.42 3.42 0 00.806-1.946 3.42 3.42 0 013.138-3.138z" />
-      </svg>
-    ),
-    name: "D2D Expertise",
-    description: "Years of door-to-door sales recruiting experience",
-    href: "#",
-    cta: "Learn more",
-    className: "col-span-3 lg:col-span-1",
-    background: (
-      <div className="absolute inset-0 bg-gray-50" />
-    ),
-  },
-];
-
-const testimonials = [
-  { company: "Roofing Co", industry: "Roofing" },
-  { company: "Solar Plus", industry: "Solar" },
-  { company: "Window Pro", industry: "Windows" },
-  { company: "Pest Control Inc", industry: "Pest Control" },
-  { company: "Fiber Connect", industry: "Telecom" },
-];
 
 export default function Home() {
   return (
@@ -88,7 +18,7 @@ export default function Home() {
       <section className="relative px-4 pt-32 md:pt-36 pb-4 md:pb-6" style={{ backgroundColor: '#FAF8F5' }}>
         <div className="max-w-4xl mx-auto text-center">
           <h1 className="text-4xl md:text-5xl font-bold mb-3 text-gray-900 leading-[1.1]">
-            Add <span style={{ color: '#DC2626' }}>15+ Experienced Sales Reps</span> to Your Team in the Next 90 Days. <span style={{ color: '#DC2626' }}>Guaranteed.</span>
+            Add <span style={{ color: '#DC2626' }}>15+ Experienced Sales Reps</span> to Your Team in the Next 6 Months. <span style={{ color: '#DC2626' }}>Guaranteed.</span>
           </h1>
           
           <p className="text-lg text-gray-600 mb-4 leading-relaxed">
@@ -104,14 +34,29 @@ export default function Home() {
                 calendarSection.scrollIntoView({ behavior: 'smooth', block: 'start' });
               }
             }}
-            className="inline-block px-8 py-3.5 bg-gray-900 hover:bg-gray-800 text-white font-medium rounded transition-colors mb-4 cursor-pointer"
+            className="inline-block px-8 py-3.5 text-white font-medium rounded transition-colors mb-4 cursor-pointer shadow-lg hover:shadow-xl"
+            style={{ backgroundColor: '#DC2626' }}
+            onMouseEnter={(e) => (e.currentTarget.style.backgroundColor = '#B91C1C')}
+            onMouseLeave={(e) => (e.currentTarget.style.backgroundColor = '#DC2626')}
           >
             Book Your Free Intro Call
           </a>
 
-          <p className="text-sm text-gray-500">
-            First interviews in 5 days. Risk-free.
-          </p>
+          {/* Trust indicators */}
+          <div className="flex flex-wrap justify-center gap-x-5 gap-y-1 text-sm text-gray-500">
+            {[
+              'First interviews in 5 days',
+              '90-day replacement guarantee',
+              'Built by D2D operators',
+            ].map((item) => (
+              <span key={item} className="flex items-center gap-1.5">
+                <svg className="w-4 h-4 flex-shrink-0" style={{ color: '#DC2626' }} fill="currentColor" viewBox="0 0 20 20">
+                  <path fillRule="evenodd" d="M10 18a8 8 0 100-16 8 8 0 000 16zm3.707-9.293a1 1 0 00-1.414-1.414L9 10.586 7.707 9.293a1 1 0 00-1.414 1.414l2 2a1 1 0 001.414 0l4-4z" clipRule="evenodd" />
+                </svg>
+                {item}
+              </span>
+            ))}
+          </div>
         </div>
       </section>
 
@@ -322,7 +267,7 @@ export default function Home() {
             {[
               {
                 question: "Do you guarantee hires?",
-                answer: "We don't guarantee hires initially because hiring depends on your interview process and offer competitiveness. We measure success by qualified interviews booked. Most clients make their first hire within 40 days, and we include a 90-day replacement guarantee for hires made through our process."
+                answer: "Yes. Over a 6-month engagement we guarantee 15+ experienced reps added to your team, and every hire made through our process comes with a 90-day replacement guarantee. Pace depends on your interview process and offer competitiveness, so we track qualified interviews weekly and adjust. Most clients make their first hire within 40 days."
               },
               {
                 question: "What if I'm in a rural market or hard-to-recruit area?",
@@ -338,11 +283,11 @@ export default function Home() {
               },
               {
                 question: "Can I pause or cancel anytime?",
-                answer: "Yes. We operate on 90-day engagements with no long-term contracts. If you need to pause recruiting, just let us know. Most clients continue beyond 90 days because they're consistently hiring, but you're never locked in."
+                answer: "Yes. Our guarantee is built around a 6-month engagement, but if you need to pause recruiting at any point, just let us know and we'll pause the pipeline. Most clients continue past 6 months because they're consistently hiring, but you're never locked into anything beyond the initial term."
               },
               {
-                question: "How many reps can I expect to hire in 90 days?",
-                answer: "It varies by market, offer, and interview volume, but our average client hires 3-7 reps in their first 90 days. High-volume clients (with multiple interviewers and competitive offers) often hire 10-15+. We'll discuss realistic expectations on our strategy call."
+                question: "How many reps can I expect to hire in 6 months?",
+                answer: "Pace varies by market, offer, and interview volume. Most clients hire 3-7 reps in their first 90 days and reach 15+ over the full 6-month engagement. High-volume clients (with multiple interviewers and competitive offers) often move faster. We'll discuss realistic expectations on our strategy call."
               },
               {
                 question: "What industries do you NOT work with?",
@@ -432,6 +377,8 @@ export default function Home() {
           </p>
         </div>
       </footer>
+
+      <MobileStickyCTA />
     </main>
   );
 }
