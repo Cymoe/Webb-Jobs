@@ -2,7 +2,7 @@ import Link from 'next/link';
 
 export default function WebbJobsLogo() {
   return (
-    <Link href="/" className="flex items-center gap-2 group">
+    <Link href="/" className="flex items-center gap-1 group">
       {/* Door logo - opened door (no background box) */}
       <svg
         className="w-8 h-10"
@@ -12,7 +12,7 @@ export default function WebbJobsLogo() {
       >
         {/* Door - opened wider for visibility */}
         <path
-          d="M 6 6 L 22 12 L 22 68 L 6 74 Z"
+          d="M 6 6 L 25 14 L 25 66 L 6 74 Z"
           fill="#DC2626"
         />
         
