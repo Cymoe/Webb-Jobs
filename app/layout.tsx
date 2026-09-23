@@ -17,12 +17,34 @@ const ibmPlexMono = IBM_Plex_Mono({
 });
 
 export const metadata: Metadata = {
-  title: "Webb Jobs - Add 25+ Experienced Salespeople to Your Team",
-  description: "We build, run, and scale your recruiting engine. Automate the pipeline and fill your calendar with A-players. Guaranteed.",
+  title: "Webb Jobs - Add 25+ Experienced Salespeople to Your Team in 90 Days",
+  description: "We build, run, and scale your recruiting engine. Automate the pipeline and fill your calendar with A-players. First interviews in 5 days. Guaranteed results.",
+  keywords: ["D2D recruiting", "door to door sales", "sales recruiting", "roofing sales", "solar sales", "home services recruiting"],
+  authors: [{ name: "Webb Jobs" }],
+  creator: "Webb Jobs",
+  publisher: "Webb Jobs",
+  robots: {
+    index: true,
+    follow: true,
+    googleBot: {
+      index: true,
+      follow: true,
+      'max-video-preview': -1,
+      'max-image-preview': 'large',
+      'max-snippet': -1,
+    },
+  },
   openGraph: {
-    title: "Webb Jobs - Add 25+ Experienced Salespeople to Your Team",
-    description: "We build, run, and scale your recruiting engine. Automate the pipeline and fill your calendar with A-players. Guaranteed.",
+    title: "Webb Jobs - Add 25+ Experienced Salespeople to Your Team in 90 Days",
+    description: "We build, run, and scale your recruiting engine. Automate the pipeline and fill your calendar with A-players. First interviews in 5 days. Guaranteed results.",
     type: "website",
+    locale: "en_US",
+    siteName: "Webb Jobs",
+  },
+  twitter: {
+    card: "summary_large_image",
+    title: "Webb Jobs - Add 25+ Experienced Salespeople to Your Team in 90 Days",
+    description: "We build, run, and scale your recruiting engine. First interviews in 5 days. Guaranteed results.",
   },
 };
 
