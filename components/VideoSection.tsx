@@ -42,7 +42,7 @@ export default function VideoSection() {
           </div>
 
         {/* Inline Calendar - Zero Friction Booking */}
-        <div id="calendar" className="mt-16 scroll-mt-24">
+        <div id="calendar" className="mt-16">
           <h2 className="text-center text-3xl md:text-4xl font-bold text-gray-900 mb-8 leading-tight">
             Apply To Have Us <span style={{ color: '#DC2626' }}>Build<br className="hidden md:block" /> Your Recruiting Engine.</span>
           </h2>
