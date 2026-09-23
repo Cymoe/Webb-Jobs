@@ -86,8 +86,8 @@ export default function RootLayout({
   return (
     <html lang="en">
       <head>
-        {/* Favicon - Inline data URI for immediate display */}
-        <link rel="icon" href="data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 100 100'%3E%3Crect width='100' height='100' fill='%23DC2626' rx='12'/%3E%3Cpath d='M 15 25 L 25 25 L 32 65 L 42 35 L 52 65 L 59 35 L 69 65 L 76 25 L 86 25 L 75 85 L 65 85 L 52 45 L 39 85 L 29 85 L 15 25 Z' fill='white'/%3E%3C/svg%3E" />
+        {/* Favicon - Simple W */}
+        <link rel="icon" href="data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 100 100'%3E%3Crect width='100' height='100' fill='%23DC2626'/%3E%3Ctext x='50' y='75' font-size='70' font-weight='bold' text-anchor='middle' fill='white' font-family='Arial,sans-serif'%3EW%3C/text%3E%3C/svg%3E" />
         
         {/* Resource Hints */}
         <link rel="preconnect" href="https://www.loom.com" />
