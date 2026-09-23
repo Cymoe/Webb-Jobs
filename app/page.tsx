@@ -117,7 +117,7 @@ export default function Home() {
               </p>
             </div>
 
-            <div className="relative flex items-center justify-center">
+            <div className="relative hidden md:flex items-center justify-center">
               <svg
                 className="w-48 h-96 md:w-64 md:h-[32rem]"
                 viewBox="0 0 160 320"
