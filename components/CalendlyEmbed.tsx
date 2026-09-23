@@ -14,13 +14,16 @@ export default function CalendlyEmbed({
   const [isCalendlyLoaded, setIsCalendlyLoaded] = useState(false);
 
   useEffect(() => {
-    // Load Calendly widget script
-    const script = document.createElement('script');
-    script.src = 'https://assets.calendly.com/assets/external/widget.js';
-    script.async = true;
-    document.body.appendChild(script);
+    // Check if Calendly script is already loaded
+    if (typeof window !== 'undefined' && !(window as any).Calendly) {
+      const script = document.createElement('script');
+      script.src = 'https://assets.calendly.com/assets/external/widget.js';
+      script.async = true;
+      script.defer = true;
+      document.head.appendChild(script);
+    }
 
-    // Listen for Calendly events
+    // Listen for Calendly widget to load
     const checkCalendlyLoaded = setInterval(() => {
       const calendlyWidget = document.querySelector('.calendly-inline-widget iframe');
       if (calendlyWidget) {
@@ -29,11 +32,15 @@ export default function CalendlyEmbed({
       }
     }, 500);
 
-    return () => {
-      if (document.body.contains(script)) {
-        document.body.removeChild(script);
-      }
+    // Timeout after 10 seconds
+    const timeout = setTimeout(() => {
       clearInterval(checkCalendlyLoaded);
+      setIsCalendlyLoaded(true);
+    }, 10000);
+
+    return () => {
+      clearInterval(checkCalendlyLoaded);
+      clearTimeout(timeout);
     };
   }, []);
 

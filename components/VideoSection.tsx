@@ -46,6 +46,7 @@ export default function VideoSection() {
               src="https://www.loom.com/embed/c954a298a53c45dfb558460b77a79552?hide_owner=true&hide_share=true&hide_title=true&hideEmbedTopBar=true"
               frameBorder="0"
               allowFullScreen
+              loading="lazy"
               onLoad={() => setIsVideoLoaded(true)}
               style={{
                 position: 'absolute',

@@ -1,5 +1,3 @@
-@import url('https://fonts.googleapis.com/css2?family=Crimson+Text:wght@400;600;700&family=IBM+Plex+Mono:wght@400;500;600&display=swap');
-
 @tailwind base;
 @tailwind components;
 @tailwind utilities;
@@ -16,7 +14,7 @@ html {
 }
 
 body {
-  font-family: 'Crimson Text', 'Georgia', serif;
+  font-family: var(--font-crimson), 'Georgia', serif;
   background-color: #F5F3EF;
   color: #1F2937;
   line-height: 1.7;
@@ -26,7 +24,7 @@ body {
 }
 
 h1, h2, h3, h4, h5, h6 {
-  font-family: 'Crimson Text', 'Georgia', serif;
+  font-family: var(--font-crimson), 'Georgia', serif;
   font-weight: 700;
   line-height: 1.2;
   color: #000000;
