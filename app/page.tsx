@@ -37,26 +37,9 @@ export default function Home() {
             Add <span style={{ color: '#DC2626' }}>15+ Experienced Sales Reps</span> to Your Team in the Next 6 Months. <span style={{ color: '#DC2626' }}>Guaranteed.</span>
           </h1>
           
-          <p className="text-lg text-gray-600 mb-4 leading-relaxed">
+          <p className="text-lg text-gray-600 mb-6 leading-relaxed">
             We build, run, and scale your recruiting engine, <span className="font-semibold text-gray-900">automate the pipeline</span>, and fill your calendar with <span className="font-semibold text-gray-900">A-players</span>.
           </p>
-          
-          <a
-            href="#calendar"
-            onClick={(e) => {
-              e.preventDefault();
-              const calendarSection = document.getElementById('calendar');
-              if (calendarSection) {
-                calendarSection.scrollIntoView({ behavior: 'smooth', block: 'start' });
-              }
-            }}
-            className="inline-block px-8 py-3.5 text-white font-medium rounded transition-colors mb-4 cursor-pointer shadow-lg hover:shadow-xl"
-            style={{ backgroundColor: '#DC2626' }}
-            onMouseEnter={(e) => (e.currentTarget.style.backgroundColor = '#B91C1C')}
-            onMouseLeave={(e) => (e.currentTarget.style.backgroundColor = '#DC2626')}
-          >
-            Book Your Free Intro Call
-          </a>
 
           {/* Trust indicators */}
           <div className="flex flex-wrap justify-center gap-x-3 gap-y-1 text-sm text-gray-500">
