@@ -85,7 +85,7 @@ export default function Home() {
         </div>
       </header>
       {/* Hero Section */}
-      <section className="relative py-8 md:py-12 px-4 pt-20 md:pt-24" style={{ backgroundColor: '#FAF8F5' }}>
+      <section className="relative px-4 pt-32 md:pt-36 pb-4 md:pb-6" style={{ backgroundColor: '#FAF8F5' }}>
         <div className="max-w-4xl mx-auto text-center">
           <h1 className="text-4xl md:text-5xl font-bold mb-3 text-gray-900 leading-[1.1]">
             Add <span style={{ color: '#DC2626' }}>15+ Experienced Sales Reps</span> to Your Team in the Next 90 Days. <span style={{ color: '#DC2626' }}>Guaranteed.</span>

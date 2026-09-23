@@ -16,7 +16,7 @@ export default function VideoSection() {
         strategy="lazyOnload"
       />
       
-      <section className="py-16 md:py-20 px-4" style={{ backgroundColor: '#FAF8F5' }}>
+      <section className="pt-6 md:pt-8 pb-16 md:pb-20 px-4" style={{ backgroundColor: '#FAF8F5' }}>
         <div className="max-w-5xl mx-auto">
           {/* Video Container - No text above */}
           <div className="relative rounded-2xl overflow-hidden shadow-2xl border border-gray-200" style={{ backgroundColor: '#000000' }}>
