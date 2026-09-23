@@ -31,11 +31,24 @@ export const metadata: Metadata = {
   },
   themeColor: '#DC2626',
   manifest: '/manifest.json',
-  icons: {
-    icon: '/favicon.svg',
-    shortcut: '/favicon.svg',
-    apple: '/favicon.svg',
-  },
+  icons: [
+    {
+      rel: 'icon',
+      type: 'image/svg+xml',
+      url: '/favicon.svg',
+    },
+    {
+      rel: 'icon',
+      type: 'image/png',
+      sizes: '32x32',
+      url: '/favicon.svg', // Will be converted by browser
+    },
+    {
+      rel: 'apple-touch-icon',
+      sizes: '180x180',
+      url: '/favicon.svg',
+    },
+  ],
   robots: {
     index: true,
     follow: true,
@@ -73,6 +86,11 @@ export default function RootLayout({
   return (
     <html lang="en">
       <head>
+        {/* Favicon - Multiple formats for compatibility */}
+        <link rel="icon" type="image/svg+xml" href="/favicon.svg" />
+        <link rel="alternate icon" href="/favicon.svg" />
+        <link rel="mask-icon" href="/favicon.svg" color="#DC2626" />
+        
         {/* Resource Hints */}
         <link rel="preconnect" href="https://www.loom.com" />
         <link rel="preconnect" href="https://assets.calendly.com" />

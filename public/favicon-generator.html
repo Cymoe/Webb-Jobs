@@ -1,0 +1,40 @@
+<!DOCTYPE html>
+<html>
+<body>
+<canvas id="canvas" width="512" height="512"></canvas>
+<script>
+const canvas = document.getElementById('canvas');
+const ctx = canvas.getContext('2d');
+
+// Background
+ctx.fillStyle = '#DC2626';
+ctx.roundRect(0, 0, 512, 512, 60);
+ctx.fill();
+
+// W letter
+ctx.fillStyle = 'white';
+ctx.beginPath();
+ctx.moveTo(80, 128);
+ctx.lineTo(128, 128);
+ctx.lineTo(170, 333);
+ctx.lineTo(215, 179);
+ctx.lineTo(256, 333);
+ctx.lineTo(297, 179);
+ctx.lineTo(342, 333);
+ctx.lineTo(384, 128);
+ctx.lineTo(432, 128);
+ctx.lineTo(384, 435);
+ctx.lineTo(320, 435);
+ctx.lineTo(256, 230);
+ctx.lineTo(192, 435);
+ctx.lineTo(128, 435);
+ctx.closePath();
+ctx.fill();
+
+// Download as PNG
+canvas.toBlob(function(blob) {
+  console.log('Favicon created as blob');
+});
+</script>
+</body>
+</html>
