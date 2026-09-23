@@ -1,6 +1,7 @@
 'use client';
 
 import { useState } from 'react';
+import CalendlyEmbed from './CalendlyEmbed';
 
 export default function VideoSection() {
   const [isVideoLoaded, setIsVideoLoaded] = useState(false);
@@ -60,29 +61,17 @@ export default function VideoSection() {
           </div>
         </div>
 
-        {/* CTA Button - Direct to Calendly */}
-        <div className="mt-12 text-center">
-          <a
-            href="#contact"
-            onClick={(e) => {
-              e.preventDefault();
-              const contactSection = document.getElementById('contact');
-              if (contactSection) {
-                contactSection.scrollIntoView({ behavior: 'smooth' });
-                window.history.replaceState(null, '', '/');
-              }
-            }}
-            className="inline-block px-12 py-5 text-xl font-bold rounded-lg transition-all transform hover:scale-105 shadow-2xl"
-            style={{ 
-              backgroundColor: '#DC2626',
-              color: '#FFFFFF'
-            }}
-          >
-            Book Your Free Strategy Call →
-          </a>
-          <p className="mt-4 text-sm text-gray-600">
-            30 minutes • No commitment • First interviews in 5 days
-          </p>
+        {/* Inline Calendar - Zero Friction Booking */}
+        <div className="mt-16">
+          <div className="text-center mb-8">
+            <h3 className="text-2xl font-bold text-gray-900 mb-3">
+              Select a Time That Works for You
+            </h3>
+            <p className="text-gray-600">
+              30 minutes • No commitment • First interviews in 5 days
+            </p>
+          </div>
+          <CalendlyEmbed height={700} />
         </div>
 
         {/* Supporting Points Below Video */}

@@ -1,9 +1,7 @@
 'use client';
 
-import CalendlySection from '@/components/CalendlySection';
 import VideoSection from '@/components/VideoSection';
 import WebbJobsLogo from '@/components/WebbJobsLogo';
-import FloatingCTA from '@/components/FloatingCTA';
 import Marquee from '@/components/ui/marquee';
 import Image from 'next/image';
 
@@ -79,16 +77,6 @@ const testimonials = [
 ];
 
 export default function Home() {
-  const handleScrollToContact = (e: React.MouseEvent) => {
-    e.preventDefault();
-    const contactSection = document.getElementById('contact');
-    if (contactSection) {
-      contactSection.scrollIntoView({ behavior: 'smooth' });
-      // Remove hash from URL so refresh starts at top
-      window.history.replaceState(null, '', '/');
-    }
-  };
-
   return (
     <main className="relative" style={{ backgroundColor: '#F5F3EF' }}>
       {/* Header - Landing Page Mode (No Navigation) */}
@@ -111,8 +99,14 @@ export default function Home() {
               </p>
               
               <a
-                href="#contact"
-                onClick={handleScrollToContact}
+                href="#video"
+                onClick={(e) => {
+                  e.preventDefault();
+                  const videoSection = document.querySelector('section');
+                  if (videoSection) {
+                    videoSection.scrollIntoView({ behavior: 'smooth' });
+                  }
+                }}
                 className="inline-block px-8 py-4 bg-gray-900 hover:bg-gray-800 text-white font-medium rounded transition-colors mb-6 cursor-pointer"
               >
                 Book Your Free Intro Call
@@ -436,12 +430,6 @@ export default function Home() {
         </div>
       </section>
 
-      {/* Calendly Booking Section */}
-      <section id="contact" className="py-20 md:py-32 px-4">
-        <div className="max-w-container mx-auto">
-          <CalendlySection />
-        </div>
-      </section>
 
       {/* Footer */}
       <footer className="py-8 px-4 border-t border-gray-200" style={{ backgroundColor: '#ECE9E3' }}>
@@ -456,9 +444,6 @@ export default function Home() {
           <p>&copy; {new Date().getFullYear()} Webb Jobs. All rights reserved.</p>
         </div>
       </footer>
-
-      {/* Floating CTA Button */}
-      <FloatingCTA />
     </main>
   );
 }
