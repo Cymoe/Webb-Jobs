@@ -1,11 +1,27 @@
 'use client';
 
+import { useEffect } from 'react';
 import VideoSection from '@/components/VideoSection';
 import WebbJobsLogo from '@/components/WebbJobsLogo';
 import MobileStickyCTA from '@/components/MobileStickyCTA';
 import Image from 'next/image';
 
 export default function Home() {
+  // Reloads must land at the top: opt out of browser scroll restoration, and
+  // undo the scroll Wistia triggers when it focuses the player on autoplay.
+  useEffect(() => {
+    if (window.location.hash) return;
+
+    if ('scrollRestoration' in history) {
+      history.scrollRestoration = 'manual';
+    }
+    window.scrollTo(0, 0);
+
+    const pinToTop = () => window.scrollTo(0, 0);
+    const timers = [0, 100, 400, 900, 1500].map((ms) => window.setTimeout(pinToTop, ms));
+    return () => timers.forEach(clearTimeout);
+  }, []);
+
   return (
     <main className="relative" style={{ backgroundColor: '#F5F3EF' }}>
       {/* Header - Landing Page Mode (No Navigation) */}
