@@ -1,19 +1,43 @@
 'use client';
 
+import { useRef, useState } from 'react';
 import Script from 'next/script';
 import CalendlyEmbed from './CalendlyEmbed';
 
+const MEDIA_ID = 'akuxvqjmmf';
+
+// Subset of the Wistia web component API we rely on
+type WistiaPlayerElement = HTMLElement & {
+  currentTime: number;
+  muted: boolean;
+  play: () => Promise<void>;
+};
+
 export default function VideoSection() {
+  const playerWrapRef = useRef<HTMLDivElement>(null);
+  const [hasStarted, setHasStarted] = useState(false);
+
+  // Restart from the beginning with sound, then dismiss the overlay
+  const startWithSound = () => {
+    const player = playerWrapRef.current?.querySelector('wistia-player') as WistiaPlayerElement | null;
+    if (player) {
+      player.currentTime = 0;
+      player.muted = false;
+      void player.play();
+    }
+    setHasStarted(true);
+  };
+
   return (
     <>
       {/* Wistia Player Scripts - Load Once */}
       <Script 
         src="https://fast.wistia.com/player.js" 
-        strategy="lazyOnload"
+        strategy="afterInteractive"
       />
       <Script 
         src="https://fast.wistia.com/embed/akuxvqjmmf.js" 
-        strategy="lazyOnload"
+        strategy="afterInteractive"
       />
       
       <section className="pt-6 md:pt-8 pb-16 md:pb-20 px-4" style={{ backgroundColor: '#FAF8F5' }}>
@@ -23,19 +47,57 @@ export default function VideoSection() {
             {/* Wistia Embed - Optimized for Marketing & Analytics */}
             <style dangerouslySetInnerHTML={{
               __html: `
-                wistia-player[media-id='akuxvqjmmf']:not(:defined) { 
-                  background: center / contain no-repeat url('https://fast.wistia.com/embed/medias/akuxvqjmmf/swatch'); 
+                wistia-player[media-id='${MEDIA_ID}']:not(:defined) { 
+                  background: center / contain no-repeat url('https://fast.wistia.com/embed/medias/${MEDIA_ID}/swatch'); 
                   display: block; 
                   filter: blur(5px); 
                   padding-top: 56.25%;
                 }
+                @keyframes vsl-pulse {
+                  0%, 100% { box-shadow: 0 0 0 0 rgba(220, 38, 38, 0.55); }
+                  70% { box-shadow: 0 0 0 18px rgba(220, 38, 38, 0); }
+                }
               `
             }} />
-            <div 
+            {/*
+              autoplay + muted: plays silently on load without Wistia's native
+              "Click for sound" badge. big-play-button + controls hidden so our
+              overlay is the only UI until the viewer taps in.
+            */}
+            <div
+              ref={playerWrapRef}
               dangerouslySetInnerHTML={{
-                __html: `<wistia-player media-id="akuxvqjmmf" aspect="1.7777777777777777" style="width: 100%; height: auto;"></wistia-player>`
+                __html: `<wistia-player media-id="${MEDIA_ID}" aspect="1.7777777777777777" autoplay muted big-play-button="false" controls-visible-on-load="false" player-color="dc2626" style="width: 100%; height: auto;"></wistia-player>`
               }}
             />
+
+            {/* Custom overlay: big play button + tap-for-sound, Brand Operator style */}
+            {!hasStarted && (
+              <button
+                type="button"
+                onClick={startWithSound}
+                aria-label="Play video with sound"
+                className="absolute inset-0 z-10 w-full h-full cursor-pointer bg-transparent border-0 p-0 group"
+              >
+                {/* Tap for sound pill */}
+                <span className="absolute top-4 right-4 flex items-center gap-2 px-4 py-2 rounded-full bg-black/75 text-white text-sm font-medium backdrop-blur-sm">
+                  Tap for sound
+                  <svg className="w-4 h-4" fill="currentColor" viewBox="0 0 24 24" aria-hidden="true">
+                    <path d="M3 9v6h4l5 5V4L7 9H3zm13.5 3A4.5 4.5 0 0014 7.97v8.05A4.47 4.47 0 0016.5 12zM14 3.23v2.06a7 7 0 010 13.42v2.06A9 9 0 0014 3.23z" />
+                  </svg>
+                </span>
+
+                {/* Big play button */}
+                <span
+                  className="absolute left-1/2 top-1/2 -translate-x-1/2 -translate-y-1/2 flex items-center justify-center w-24 h-16 md:w-28 md:h-20 rounded-2xl shadow-2xl transition-transform duration-200 group-hover:scale-105"
+                  style={{ backgroundColor: '#DC2626', animation: 'vsl-pulse 2.2s ease-out infinite' }}
+                >
+                  <svg className="w-8 h-8 md:w-10 md:h-10 text-white ml-1" fill="currentColor" viewBox="0 0 20 20" aria-hidden="true">
+                    <path d="M6.3 2.841A1.5 1.5 0 004 4.11V15.89a1.5 1.5 0 002.3 1.269l9.344-5.89a1.5 1.5 0 000-2.538L6.3 2.84z" />
+                  </svg>
+                </span>
+              </button>
+            )}
           </div>
 
         {/* Inline Calendar - Zero Friction Booking */}
