@@ -1,66 +1,42 @@
 'use client';
 
-import { useState } from 'react';
+import Script from 'next/script';
 import CalendlyEmbed from './CalendlyEmbed';
 
 export default function VideoSection() {
-  const [isVideoLoaded, setIsVideoLoaded] = useState(false);
-
   return (
-    <section className="py-16 md:py-20 px-4" style={{ backgroundColor: '#FAF8F5' }}>
-      <div className="max-w-5xl mx-auto">
-        {/* Video Container - No text above */}
-        <div className="relative rounded-2xl overflow-hidden shadow-2xl border border-gray-200" style={{ backgroundColor: '#000000' }}>
-          {/* Loading Skeleton */}
-          {!isVideoLoaded && (
+    <>
+      {/* Wistia Player Scripts - Load Once */}
+      <Script 
+        src="https://fast.wistia.com/player.js" 
+        strategy="lazyOnload"
+      />
+      <Script 
+        src="https://fast.wistia.com/embed/akuxvqjmmf.js" 
+        strategy="lazyOnload"
+      />
+      
+      <section className="py-16 md:py-20 px-4" style={{ backgroundColor: '#FAF8F5' }}>
+        <div className="max-w-5xl mx-auto">
+          {/* Video Container - No text above */}
+          <div className="relative rounded-2xl overflow-hidden shadow-2xl border border-gray-200" style={{ backgroundColor: '#000000' }}>
+            {/* Wistia Embed - Optimized for Marketing & Analytics */}
+            <style dangerouslySetInnerHTML={{
+              __html: `
+                wistia-player[media-id='akuxvqjmmf']:not(:defined) { 
+                  background: center / contain no-repeat url('https://fast.wistia.com/embed/medias/akuxvqjmmf/swatch'); 
+                  display: block; 
+                  filter: blur(5px); 
+                  padding-top: 56.25%;
+                }
+              `
+            }} />
             <div 
-              className="absolute inset-0 flex items-center justify-center animate-pulse"
-              style={{ 
-                backgroundColor: '#1F2937',
-                paddingBottom: '56.25%'
+              dangerouslySetInnerHTML={{
+                __html: `<wistia-player media-id="akuxvqjmmf" aspect="1.7777777777777777" style="width: 100%; height: auto;"></wistia-player>`
               }}
-            >
-              <div className="absolute inset-0 flex items-center justify-center">
-                <div className="text-center">
-                  <div 
-                    className="w-20 h-20 mx-auto mb-4 rounded-full flex items-center justify-center"
-                    style={{ backgroundColor: '#DC2626' }}
-                  >
-                    <svg 
-                      className="w-10 h-10 text-white" 
-                      fill="currentColor" 
-                      viewBox="0 0 20 20"
-                    >
-                      <path d="M6.3 2.841A1.5 1.5 0 004 4.11V15.89a1.5 1.5 0 002.3 1.269l9.344-5.89a1.5 1.5 0 000-2.538L6.3 2.84z" />
-                    </svg>
-                  </div>
-                  <p className="text-white text-sm opacity-60">Loading video...</p>
-                </div>
-              </div>
-            </div>
-          )}
-
-          {/* Vimeo Embed - Responsive 16:9 - Optimized for Speed */}
-          <div style={{ position: 'relative', paddingBottom: '56.25%', height: 0, overflow: 'hidden' }}>
-            <iframe
-              src="https://player.vimeo.com/video/738464574?badge=0&autopause=0&player_id=0&app_id=58479&dnt=1&background=0&quality=auto"
-              frameBorder="0"
-              allowFullScreen
-              loading="lazy"
-              onLoad={() => setIsVideoLoaded(true)}
-              style={{
-                position: 'absolute',
-                top: 0,
-                left: 0,
-                width: '100%',
-                height: '100%',
-                opacity: isVideoLoaded ? 1 : 0,
-                transition: 'opacity 0.5s ease-in-out'
-              }}
-              allow="autoplay; fullscreen; picture-in-picture; clipboard-write"
-            ></iframe>
+            />
           </div>
-        </div>
 
         {/* Inline Calendar - Zero Friction Booking */}
         <div id="calendar" className="mt-16 scroll-mt-24">
@@ -110,5 +86,6 @@ export default function VideoSection() {
 
       </div>
     </section>
+    </>
   );
 }
