@@ -99,12 +99,12 @@ export default function Home() {
               </p>
               
               <a
-                href="#video"
+                href="#calendar"
                 onClick={(e) => {
                   e.preventDefault();
-                  const videoSection = document.querySelector('section');
-                  if (videoSection) {
-                    videoSection.scrollIntoView({ behavior: 'smooth' });
+                  const calendarSection = document.getElementById('calendar');
+                  if (calendarSection) {
+                    calendarSection.scrollIntoView({ behavior: 'smooth', block: 'start' });
                   }
                 }}
                 className="inline-block px-8 py-4 bg-gray-900 hover:bg-gray-800 text-white font-medium rounded transition-colors mb-6 cursor-pointer"
