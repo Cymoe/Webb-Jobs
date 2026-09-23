@@ -86,10 +86,8 @@ export default function RootLayout({
   return (
     <html lang="en">
       <head>
-        {/* Favicon - Multiple formats for compatibility */}
-        <link rel="icon" type="image/svg+xml" href="/favicon.svg" />
-        <link rel="alternate icon" href="/favicon.svg" />
-        <link rel="mask-icon" href="/favicon.svg" color="#DC2626" />
+        {/* Favicon - Inline data URI for immediate display */}
+        <link rel="icon" href="data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 100 100'%3E%3Crect width='100' height='100' fill='%23DC2626' rx='12'/%3E%3Cpath d='M 15 25 L 25 25 L 32 65 L 42 35 L 52 65 L 59 35 L 69 65 L 76 25 L 86 25 L 75 85 L 65 85 L 52 45 L 39 85 L 29 85 L 15 25 Z' fill='white'/%3E%3C/svg%3E" />
         
         {/* Resource Hints */}
         <link rel="preconnect" href="https://www.loom.com" />
