@@ -1,59 +1,58 @@
 'use client';
 
-import { useEffect, useState } from 'react';
+import { useEffect, useRef, useState } from 'react';
 
-interface CalendlyEmbedProps {
+interface IClosedEmbedProps {
   url?: string;
+  title?: string;
   height?: number;
 }
 
-export default function CalendlyEmbed({ 
-  url = "https://calendly.com/teannacorvo/1-on-1",
-  height = 700 
-}: CalendlyEmbedProps) {
-  const [isCalendlyLoaded, setIsCalendlyLoaded] = useState(false);
+export default function IClosedEmbed({
+  url = 'https://app.iclosed.io/e/Cymoe/vsl-funnel',
+  title = 'VSL Funnel',
+  height = 620,
+}: IClosedEmbedProps) {
+  const containerRef = useRef<HTMLDivElement>(null);
+  const [isLoaded, setIsLoaded] = useState(false);
 
   useEffect(() => {
-    // Check if Calendly script is already loaded
-    if (typeof window !== 'undefined' && !(window as any).Calendly) {
+    const WIDGET_SRC = 'https://app.iclosed.io/assets/widget.js';
+
+    if (!document.querySelector(`script[src="${WIDGET_SRC}"]`)) {
       const script = document.createElement('script');
-      script.src = 'https://assets.calendly.com/assets/external/widget.js';
+      script.src = WIDGET_SRC;
       script.async = true;
-      script.defer = true;
-      document.head.appendChild(script);
+      document.body.appendChild(script);
     }
 
-    // Listen for Calendly widget to load
-    const checkCalendlyLoaded = setInterval(() => {
-      const calendlyWidget = document.querySelector('.calendly-inline-widget iframe');
-      if (calendlyWidget) {
-        setIsCalendlyLoaded(true);
-        clearInterval(checkCalendlyLoaded);
+    // The widget script swaps in an iframe; poll for it to cross-fade the skeleton
+    const poll = setInterval(() => {
+      if (containerRef.current?.querySelector('iframe')) {
+        setIsLoaded(true);
+        clearInterval(poll);
       }
-    }, 500);
+    }, 300);
 
-    // Timeout after 10 seconds
     const timeout = setTimeout(() => {
-      clearInterval(checkCalendlyLoaded);
-      setIsCalendlyLoaded(true);
+      clearInterval(poll);
+      setIsLoaded(true);
     }, 10000);
 
     return () => {
-      clearInterval(checkCalendlyLoaded);
+      clearInterval(poll);
       clearTimeout(timeout);
     };
   }, []);
 
   return (
     <div className="relative">
-      {/* Loading Skeleton */}
-      {!isCalendlyLoaded && (
-        <div 
+      {!isLoaded && (
+        <div
           className="absolute inset-0 rounded-xl overflow-hidden shadow-2xl border border-gray-200 bg-white"
           style={{ minWidth: '320px', height: `${height}px`, zIndex: 10 }}
         >
           <div className="animate-pulse p-8">
-            {/* Header Skeleton */}
             <div className="flex items-center gap-4 mb-6">
               <div className="w-16 h-16 rounded-full bg-gray-200"></div>
               <div className="flex-1">
@@ -62,13 +61,11 @@ export default function CalendlyEmbed({
               </div>
             </div>
 
-            {/* Meeting Details Skeleton */}
             <div className="space-y-3 mb-8">
               <div className="h-4 bg-gray-200 rounded w-1/4"></div>
               <div className="h-4 bg-gray-200 rounded w-1/3"></div>
             </div>
 
-            {/* Calendar Skeleton */}
             <div className="space-y-4">
               <div className="h-8 bg-gray-200 rounded w-1/2 mx-auto mb-6"></div>
               <div className="grid grid-cols-7 gap-2 mb-4">
@@ -83,7 +80,6 @@ export default function CalendlyEmbed({
               </div>
             </div>
 
-            {/* Loading Text */}
             <div className="text-center mt-8">
               <p className="text-gray-500 text-sm">Loading calendar...</p>
             </div>
@@ -91,15 +87,17 @@ export default function CalendlyEmbed({
         </div>
       )}
 
-      {/* Calendly Embed */}
-      <div 
-        className="calendly-inline-widget rounded-xl overflow-hidden shadow-2xl border border-gray-200" 
-        data-url={`${url}?hide_gdpr_banner=1&primary_color=dc2626`}
-        style={{ 
-          minWidth: '320px', 
+      <div
+        ref={containerRef}
+        className="iclosed-widget rounded-xl overflow-hidden shadow-2xl border border-gray-200"
+        data-url={url}
+        title={title}
+        style={{
+          width: '100%',
+          minWidth: '320px',
           height: `${height}px`,
-          opacity: isCalendlyLoaded ? 1 : 0,
-          transition: 'opacity 0.5s ease-in-out'
+          opacity: isLoaded ? 1 : 0,
+          transition: 'opacity 0.5s ease-in-out',
         }}
       ></div>
     </div>

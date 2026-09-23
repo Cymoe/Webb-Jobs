@@ -1,7 +1,7 @@
 'use client';
 
 import Script from 'next/script';
-import CalendlyEmbed from './CalendlyEmbed';
+import IClosedEmbed from './IClosedEmbed';
 
 const MEDIA_ID = 'akuxvqjmmf';
 
@@ -65,7 +65,7 @@ export default function VideoSection() {
               30 minutes • No commitment • First interviews in 5 days
             </p>
           </div>
-          <CalendlyEmbed height={700} />
+          <IClosedEmbed height={700} />
         </div>
 
         {/* Supporting Points Below Video */}
