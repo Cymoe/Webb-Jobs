@@ -85,15 +85,15 @@ export default function Home() {
         </div>
       </header>
       {/* Hero Section */}
-      <section className="relative py-16 md:py-20 px-4 pt-32 md:pt-36" style={{ backgroundColor: '#FAF8F5' }}>
+      <section className="relative py-12 md:py-16 px-4 pt-24 md:pt-28" style={{ backgroundColor: '#FAF8F5' }}>
         <div className="max-w-6xl mx-auto">
           <div className="grid md:grid-cols-2 gap-12 items-center">
             <div>
-              <h1 className="text-5xl md:text-6xl font-bold mb-6 text-gray-900 leading-tight">
+              <h1 className="text-4xl md:text-5xl font-bold mb-4 text-gray-900 leading-tight">
                 Add <span style={{ color: '#DC2626' }}>15+ Experienced Sales Reps</span> to Your Team in the Next 90 Days. <span style={{ color: '#DC2626' }}>Guaranteed.</span>
               </h1>
               
-              <p className="text-xl text-gray-600 mb-8 leading-relaxed">
+              <p className="text-lg text-gray-600 mb-6 leading-relaxed">
                 We build, run, and scale your recruiting engine, <span className="font-semibold text-gray-900">automate the pipeline</span>, and fill your calendar with <span className="font-semibold text-gray-900">A-players</span>.
               </p>
               
