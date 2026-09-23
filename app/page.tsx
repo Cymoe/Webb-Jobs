@@ -495,7 +495,12 @@ export default function Home() {
             <span>•</span>
             <a href="/income-disclaimer" className="hover:text-gray-900 transition-colors">Income Disclaimer</a>
           </div>
-          <p>&copy; {new Date().getFullYear()} Webb Jobs. All rights reserved.</p>
+          <p className="mb-4">&copy; {new Date().getFullYear()} Webb Jobs. All rights reserved.</p>
+          
+          {/* Meta Disclaimer - Required for Facebook/Meta Ads */}
+          <p className="text-xs text-gray-500 max-w-3xl mx-auto leading-relaxed">
+            This site is not a part of the Facebook™ or Meta™ website or Meta™ Inc. Additionally, this site is NOT endorsed by Facebook™ or Meta™ in any way. Results are not typical. Your results will vary based on effort, experience, and market conditions.
+          </p>
         </div>
       </footer>
     </main>
