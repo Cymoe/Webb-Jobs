@@ -9,8 +9,8 @@ interface IClosedEmbedProps {
 }
 
 export default function IClosedEmbed({
-  url = 'https://app.iclosed.io/e/Cymoe/vsl-funnel',
-  title = 'VSL Funnel',
+  url = 'https://app.iclosed.io/e/Cymoe/Intro',
+  title = 'Intro Call',
   height = 620,
 }: IClosedEmbedProps) {
   const containerRef = useRef<HTMLDivElement>(null);
