@@ -2,7 +2,6 @@
 
 import VideoSection from '@/components/VideoSection';
 import WebbJobsLogo from '@/components/WebbJobsLogo';
-import Marquee from '@/components/ui/marquee';
 import Image from 'next/image';
 
 const features = [
@@ -153,40 +152,7 @@ export default function Home() {
         </div>
       </section>
 
-      {/* Industries Marquee - Moved before video */}
-      <section className="py-12 border-y border-gray-200" style={{ backgroundColor: '#FFFFFF' }}>
-        <div className="mb-8 text-center">
-          <p className="text-sm text-gray-500 font-medium">Industries We Serve</p>
-        </div>
-        <Marquee className="py-4" pauseOnHover>
-          {[
-            "Roofing",
-            "Solar",
-            "Replacement Windows",
-            "Pest Control",
-            "HVAC",
-            "Home Security",
-            "Water Treatment",
-            "Landscaping",
-            "Fiber / Telecom",
-            "Gas & Electric",
-            "Insurance",
-            "Home Services",
-            "Exterior Remodeling",
-          ].map((industry, idx) => (
-            <div
-              key={idx}
-              className="mx-6 px-6 py-3 bg-gray-50 border border-gray-200 rounded-lg"
-            >
-              <span className="text-gray-700 font-medium whitespace-nowrap">
-                {industry}
-              </span>
-            </div>
-          ))}
-        </Marquee>
-      </section>
-
-      {/* Video Section - After Industries */}
+      {/* Video Section */}
       <VideoSection />
 
 {/* Founder Section */}
