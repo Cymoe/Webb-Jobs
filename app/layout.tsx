@@ -102,6 +102,14 @@ export default function RootLayout({
         <meta name="apple-mobile-web-app-capable" content="yes" />
         <meta name="apple-mobile-web-app-status-bar-style" content="black-translucent" />
         <meta name="apple-mobile-web-app-title" content="Webb Jobs" />
+
+        {/* iClosed Lift Widget (floating CTA launcher) */}
+        <script
+          type="text/javascript"
+          src="https://app.iclosed.io/assets/widget.js"
+          data-cta-widget="qaJ0EYcbtdI7"
+          async
+        ></script>
       </head>
       <body className={`${crimsonText.variable} ${ibmPlexMono.variable}`}>{children}</body>
     </html>
