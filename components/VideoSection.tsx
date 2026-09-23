@@ -80,7 +80,7 @@ export default function VideoSection() {
                 className="absolute inset-0 z-10 w-full h-full cursor-pointer bg-transparent border-0 p-0 group"
               >
                 {/* Tap for sound pill */}
-                <span className="absolute top-4 right-4 flex items-center gap-2 px-4 py-2 rounded-full bg-black/75 text-white text-sm font-medium backdrop-blur-sm">
+                <span className="absolute top-4 right-4 flex items-center gap-2 px-4 py-2 rounded-full bg-black/75 text-white text-sm font-medium font-sans backdrop-blur-sm">
                   Tap for sound
                   <svg className="w-4 h-4" fill="currentColor" viewBox="0 0 24 24" aria-hidden="true">
                     <path d="M3 9v6h4l5 5V4L7 9H3zm13.5 3A4.5 4.5 0 0014 7.97v8.05A4.47 4.47 0 0016.5 12zM14 3.23v2.06a7 7 0 010 13.42v2.06A9 9 0 0014 3.23z" />
