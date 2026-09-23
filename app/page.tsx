@@ -1,37 +1,21 @@
 'use client';
 
-import { useEffect } from 'react';
 import VideoSection from '@/components/VideoSection';
 import WebbJobsLogo from '@/components/WebbJobsLogo';
 import MobileStickyCTA from '@/components/MobileStickyCTA';
 import Image from 'next/image';
 
 export default function Home() {
-  // Reloads must land at the top: opt out of browser scroll restoration, and
-  // undo the scroll Wistia triggers when it focuses the player on autoplay.
-  useEffect(() => {
-    if (window.location.hash) return;
-
-    if ('scrollRestoration' in history) {
-      history.scrollRestoration = 'manual';
-    }
-    window.scrollTo(0, 0);
-
-    const pinToTop = () => window.scrollTo(0, 0);
-    const timers = [0, 100, 400, 900, 1500].map((ms) => window.setTimeout(pinToTop, ms));
-    return () => timers.forEach(clearTimeout);
-  }, []);
-
   return (
     <main className="relative" style={{ backgroundColor: '#F5F3EF' }}>
       {/* Header - Landing Page Mode (No Navigation) */}
-      <header className="fixed top-0 left-0 right-0 z-50 py-6 px-8 border-b border-gray-200 shadow-sm" style={{ backgroundColor: 'rgba(245, 243, 239, 0.98)', backdropFilter: 'blur(8px)' }}>
+      <header className="py-5 px-8 border-b border-gray-200" style={{ backgroundColor: '#F5F3EF' }}>
         <div className="max-w-7xl mx-auto flex items-center justify-center">
           <WebbJobsLogo />
         </div>
       </header>
       {/* Hero Section */}
-      <section className="relative px-4 pt-32 md:pt-36 pb-4 md:pb-6" style={{ backgroundColor: '#FAF8F5' }}>
+      <section className="relative px-4 pt-10 md:pt-14 pb-4 md:pb-6" style={{ backgroundColor: '#FAF8F5' }}>
         <div className="max-w-4xl mx-auto text-center">
           <h1 className="text-4xl md:text-5xl font-bold mb-3 text-gray-900 leading-[1.1]">
             Add <span style={{ color: '#DC2626' }}>15+ Experienced Sales Reps</span> to Your Team in the Next 6 Months. <span style={{ color: '#DC2626' }}>Guaranteed.</span>
