@@ -21,23 +21,9 @@ export default function Home() {
             Add <span style={{ color: '#DC2626' }}>15+ Experienced Sales Reps</span> to Your Team in the Next 6 Months. <span style={{ color: '#DC2626' }}>Guaranteed.</span>
           </h1>
           
-          <p className="text-lg text-gray-600 mb-6 leading-relaxed">
+          <p className="text-lg text-gray-600 leading-relaxed">
             We build, run, and scale your recruiting engine, <span className="font-semibold text-gray-900">automate the pipeline</span>, and fill your calendar with <span className="font-semibold text-gray-900">A-players</span>.
           </p>
-
-          {/* Trust indicators */}
-          <div className="flex flex-wrap justify-center gap-x-3 gap-y-1 text-sm text-gray-500">
-            {[
-              'First interviews in 5 days',
-              '90-day replacement guarantee',
-              'Built by D2D operators',
-            ].map((item, idx) => (
-              <span key={item} className="flex items-center gap-3">
-                {idx > 0 && <span aria-hidden="true">•</span>}
-                {item}
-              </span>
-            ))}
-          </div>
         </div>
       </section>
 

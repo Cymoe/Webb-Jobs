@@ -41,6 +41,20 @@ export default function VideoSection() {
             />
           </div>
 
+          {/* Trust indicators */}
+          <div className="flex flex-wrap justify-center gap-x-3 gap-y-1 text-sm text-gray-500 mt-6">
+            {[
+              'First interviews in 5 days',
+              '90-day replacement guarantee',
+              'Built by D2D operators',
+            ].map((item, idx) => (
+              <span key={item} className="flex items-center gap-3">
+                {idx > 0 && <span aria-hidden="true">•</span>}
+                {item}
+              </span>
+            ))}
+          </div>
+
         {/* Inline Calendar - Zero Friction Booking */}
         <div id="calendar" className="mt-16 scroll-mt-24">
           <div className="text-center mb-8">
