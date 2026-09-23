@@ -339,8 +339,13 @@ export default function Home() {
           <p className="mb-4">&copy; {new Date().getFullYear()} Webb Jobs. All rights reserved.</p>
           
           {/* Meta Disclaimer - Required for Facebook/Meta Ads */}
-          <p className="text-xs text-gray-500 max-w-3xl mx-auto leading-relaxed">
+          <p className="text-xs text-gray-500 max-w-3xl mx-auto leading-relaxed mb-6">
             This site is not a part of the Facebook™ or Meta™ website or Meta™ Inc. Additionally, this site is NOT endorsed by Facebook™ or Meta™ in any way. Results are not typical. Your results will vary based on effort, experience, and market conditions.
+          </p>
+
+          {/* Guarantee Terms */}
+          <p className="text-xs text-gray-500 max-w-4xl mx-auto leading-relaxed">
+            The Webb Jobs growth guarantee is available only to door-to-door sales organizations that (1) apply and are approved, (2) sign a services agreement, and (3) have an active recruiting need for field sales representatives at signing. The guarantee target is 15+ experienced sales representatives successfully recruited and hired within 6 months of program start. If the target is not reached in that window, Webb Jobs will continue providing the contracted services at no additional service fee until it is reached. This service commitment is the exclusive remedy under the guarantee; fees already paid are non-refundable. Each hire made through our process comes with a 90-day replacement guarantee—if a hire does not work out within 90 days, we will replace them at no additional cost. Client results shown in our advertising (including named case studies) reflect those clients' actual, documented experiences and are not typical; your results will vary based on your interview process, offer competitiveness, market conditions, comp structure, and participation in the program. Webb Jobs is a recruiting and marketing systems company; we are not an employer, insurance carrier, or agency, and nothing in our advertising is an offer of employment or income to sales representatives. The initial strategy call is free and carries no obligation.
           </p>
         </div>
       </footer>
