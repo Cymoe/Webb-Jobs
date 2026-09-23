@@ -90,9 +90,11 @@ export default function RootLayout({
         <link rel="icon" href="data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 100 100'%3E%3Crect width='100' height='100' fill='%23DC2626'/%3E%3Ctext x='50' y='75' font-size='70' font-weight='bold' text-anchor='middle' fill='white' font-family='Arial,sans-serif'%3EW%3C/text%3E%3C/svg%3E" />
         
         {/* Resource Hints */}
-        <link rel="preconnect" href="https://www.loom.com" />
+        <link rel="preconnect" href="https://player.vimeo.com" />
+        <link rel="preconnect" href="https://i.vimeocdn.com" />
         <link rel="preconnect" href="https://assets.calendly.com" />
-        <link rel="dns-prefetch" href="https://www.loom.com" />
+        <link rel="dns-prefetch" href="https://player.vimeo.com" />
+        <link rel="dns-prefetch" href="https://i.vimeocdn.com" />
         <link rel="dns-prefetch" href="https://assets.calendly.com" />
         
         {/* Apple Mobile Web App */}

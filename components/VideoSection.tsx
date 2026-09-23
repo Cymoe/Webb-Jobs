@@ -40,10 +40,10 @@ export default function VideoSection() {
             </div>
           )}
 
-          {/* Loom Embed - Responsive 16:9 */}
+          {/* Vimeo Embed - Responsive 16:9 - Optimized for Speed */}
           <div style={{ position: 'relative', paddingBottom: '56.25%', height: 0, overflow: 'hidden' }}>
             <iframe
-              src="https://www.loom.com/embed/c954a298a53c45dfb558460b77a79552?hide_owner=true&hide_share=true&hide_title=true&hideEmbedTopBar=true"
+              src="https://player.vimeo.com/video/738464574?badge=0&autopause=0&player_id=0&app_id=58479&dnt=1&background=0&quality=auto"
               frameBorder="0"
               allowFullScreen
               loading="lazy"
@@ -57,7 +57,7 @@ export default function VideoSection() {
                 opacity: isVideoLoaded ? 1 : 0,
                 transition: 'opacity 0.5s ease-in-out'
               }}
-              allow="autoplay; fullscreen; picture-in-picture"
+              allow="autoplay; fullscreen; picture-in-picture; clipboard-write"
             ></iframe>
           </div>
         </div>
