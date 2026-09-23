@@ -57,14 +57,9 @@ export default function VideoSection() {
 
         {/* Inline Calendar - Zero Friction Booking */}
         <div id="calendar" className="mt-16 scroll-mt-24">
-          <div className="text-center mb-8">
-            <h3 className="text-2xl font-bold text-gray-900 mb-3">
-              Select a Time That Works for You
-            </h3>
-            <p className="text-gray-600">
-              30 minutes • No commitment • First interviews in 5 days
-            </p>
-          </div>
+          <h2 className="text-center text-3xl md:text-4xl font-bold text-gray-900 mb-8 leading-tight">
+            Apply To Have Us <span style={{ color: '#DC2626' }}>Build<br className="hidden md:block" /> Your Recruiting Engine.</span>
+          </h2>
           <IClosedEmbed height={700} />
         </div>
 
