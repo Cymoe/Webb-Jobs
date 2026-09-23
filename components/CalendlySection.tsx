@@ -51,19 +51,9 @@ export default function CalendlySection() {
       {/* Calendly Embed */}
       <div 
         className="calendly-inline-widget rounded-xl overflow-hidden shadow-2xl border border-gray-200" 
-        data-url="https://calendly.com/YOUR-CALENDLY-USERNAME/30min?hide_gdpr_banner=1&primary_color=dc2626"
+        data-url="https://calendly.com/teannacorvo/1-on-1?hide_gdpr_banner=1&primary_color=dc2626"
         style={{ minWidth: '320px', height: '700px' }}
       ></div>
-
-      {/* Instructions for user */}
-      <div className="mt-8 p-6 bg-yellow-50 border-2 border-yellow-200 rounded-lg">
-        <p className="text-sm text-gray-700">
-          <strong>📝 Setup Required:</strong> Replace <code className="bg-yellow-100 px-2 py-1 rounded">YOUR-CALENDLY-USERNAME</code> in <code className="bg-yellow-100 px-2 py-1 rounded">components/CalendlySection.tsx</code> with your actual Calendly username.
-        </p>
-        <p className="text-xs text-gray-600 mt-2">
-          Example: <code className="bg-yellow-100 px-2 py-1 rounded">https://calendly.com/myles-webb/30min</code>
-        </p>
-      </div>
     </div>
   );
 }
