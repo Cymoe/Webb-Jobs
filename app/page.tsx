@@ -274,58 +274,6 @@ export default function Home() {
         </div>
       </section>
 
-
-      {/* Final CTA - Booking Section */}
-      <section className="py-20 md:py-24 px-4" style={{ backgroundColor: '#1F2937' }}>
-        <div className="max-w-4xl mx-auto text-center">
-          <h2 className="text-3xl md:text-4xl font-bold mb-6 text-white">
-            Ready to Build Your Sales Team?
-          </h2>
-          <p className="text-xl text-gray-300 mb-8 max-w-2xl mx-auto">
-            You've seen how we work. Now let's discuss your hiring goals and create a custom recruiting plan.
-          </p>
-          
-          <a
-            href="#calendar"
-            onClick={(e) => {
-              e.preventDefault();
-              const calendarSection = document.getElementById('calendar');
-              if (calendarSection) {
-                calendarSection.scrollIntoView({ behavior: 'smooth', block: 'start' });
-              }
-            }}
-            className="inline-block px-12 py-5 text-xl font-bold rounded-lg transition-all transform hover:scale-105 shadow-2xl"
-            style={{ 
-              backgroundColor: '#DC2626',
-              color: '#FFFFFF'
-            }}
-          >
-            Book Your Free Strategy Call ↑
-          </a>
-          
-          <div className="flex flex-wrap justify-center gap-6 text-sm text-gray-400 mt-8">
-            <div className="flex items-center gap-2">
-              <svg className="w-5 h-5" style={{ color: '#DC2626' }} fill="currentColor" viewBox="0 0 20 20">
-                <path fillRule="evenodd" d="M10 18a8 8 0 100-16 8 8 0 000 16zm3.707-9.293a1 1 0 00-1.414-1.414L9 10.586 7.707 9.293a1 1 0 00-1.414 1.414l2 2a1 1 0 001.414 0l4-4z" clipRule="evenodd" />
-              </svg>
-              <span className="font-medium">30 minutes</span>
-            </div>
-            <div className="flex items-center gap-2">
-              <svg className="w-5 h-5" style={{ color: '#DC2626' }} fill="currentColor" viewBox="0 0 20 20">
-                <path fillRule="evenodd" d="M10 18a8 8 0 100-16 8 8 0 000 16zm3.707-9.293a1 1 0 00-1.414-1.414L9 10.586 7.707 9.293a1 1 0 00-1.414 1.414l2 2a1 1 0 001.414 0l4-4z" clipRule="evenodd" />
-              </svg>
-              <span className="font-medium">No commitment</span>
-            </div>
-            <div className="flex items-center gap-2">
-              <svg className="w-5 h-5" style={{ color: '#DC2626' }} fill="currentColor" viewBox="0 0 20 20">
-                <path fillRule="evenodd" d="M10 18a8 8 0 100-16 8 8 0 000 16zm3.707-9.293a1 1 0 00-1.414-1.414L9 10.586 7.707 9.293a1 1 0 00-1.414 1.414l2 2a1 1 0 001.414 0l4-4z" clipRule="evenodd" />
-              </svg>
-              <span className="font-medium">First interviews in 5 days</span>
-            </div>
-          </div>
-        </div>
-      </section>
-
       {/* Guarantee Terms Section */}
       <section className="py-12 px-4" style={{ backgroundColor: '#FAF8F5' }}>
         <div className="max-w-4xl mx-auto">
