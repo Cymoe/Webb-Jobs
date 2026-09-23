@@ -2,35 +2,35 @@ import Link from 'next/link';
 
 export default function WebbJobsLogo() {
   return (
-    <Link href="/" className="flex items-center gap-3 group">
-      {/* Door logo - cracked open door (no background box) */}
+    <Link href="/" className="flex items-center gap-2 group">
+      {/* Door logo - opened door (no background box) */}
       <svg
         className="w-8 h-10"
         viewBox="0 0 40 80"
         fill="none"
         xmlns="http://www.w3.org/2000/svg"
       >
-        {/* Door - barely cracked open */}
+        {/* Door - opened wider for visibility */}
         <path
-          d="M 10 2 L 18 4 L 18 76 L 10 78 Z"
+          d="M 6 6 L 22 12 L 22 68 L 6 74 Z"
           fill="#DC2626"
         />
         
         {/* Door edge */}
         <line
-          x1="10"
-          y1="2"
-          x2="10"
-          y2="78"
+          x1="6"
+          y1="6"
+          x2="6"
+          y2="74"
           stroke="#991B1B"
           strokeWidth="1.5"
         />
         
         {/* Door handle */}
         <circle
-          cx="12"
+          cx="10"
           cy="40"
-          r="1.5"
+          r="1.8"
           fill="#991B1B"
         />
       </svg>
