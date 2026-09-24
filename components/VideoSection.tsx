@@ -1,7 +1,7 @@
 'use client';
 
 import { useState } from 'react';
-import CalendlyEmbed from './CalendlyEmbed';
+import IClosedEmbed from './IClosedEmbed';
 
 export default function VideoSection() {
   const [isVideoLoaded, setIsVideoLoaded] = useState(false);
@@ -62,17 +62,17 @@ export default function VideoSection() {
           </div>
         </div>
 
-        {/* Inline Calendar - Zero Friction Booking */}
+        {/* Inline Form - Zero Friction Booking */}
         <div id="calendar" className="mt-16 scroll-mt-24">
           <div className="text-center mb-8">
             <h3 className="text-2xl font-bold text-gray-900 mb-3">
-              Select a Time That Works for You
+              Get Your Free Recruiting Audit
             </h3>
             <p className="text-gray-600">
-              30 minutes • No commitment • First interviews in 5 days
+              Fill out the form below and we'll analyze your recruiting needs
             </p>
           </div>
-          <CalendlyEmbed height={700} />
+          <IClosedEmbed height={620} />
         </div>
 
         {/* Supporting Points Below Video */}
