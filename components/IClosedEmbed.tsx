@@ -9,8 +9,8 @@ interface IClosedEmbedProps {
 }
 
 export default function IClosedEmbed({
-  url = 'https://app.iclosed.io/e/Cymoe/Intro',
-  title = 'Intro Call',
+  url = 'https://app.iclosed.io/e/Cymoe/audit',
+  title = 'Free Recruiting Audit',
   height = 620,
 }: IClosedEmbedProps) {
   const containerRef = useRef<HTMLDivElement>(null);
